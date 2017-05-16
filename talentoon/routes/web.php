@@ -18,7 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::get('/admin', 'AdminController@index');
-
 Route::resource('categories.posts','PostsController');
 Route::resource('category','CategoriesController');
+Route::prefix('admin')->group(function(){
+  Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+  Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+  Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
