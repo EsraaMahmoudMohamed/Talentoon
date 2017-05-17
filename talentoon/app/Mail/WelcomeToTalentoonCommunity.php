@@ -28,9 +28,6 @@ class WelcomeToTalentoonCommunity extends Mailable
      */
     public function build()
     {
-        return $this->from('mina.zakaria.iti@gmail.com')
-                // ->view('emails.orders.shipped')
-                ->text('test email');
-        // return $this->view('view.name');
+        return $this->view('emails.welcome');
     }
 }
