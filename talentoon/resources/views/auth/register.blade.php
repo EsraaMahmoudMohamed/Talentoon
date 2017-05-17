@@ -50,6 +50,16 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
+                            <label for="gender" class="col-md-4 control-label">Gender</label>
+                            <div class="col-md-6">
+                        <select class="form-control" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+
+                        </select>
+                    </div>
+                    </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
@@ -72,6 +82,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
