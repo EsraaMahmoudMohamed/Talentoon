@@ -1,0 +1,39 @@
+<h1><center> Top posts</center></h1>
+<div class="container">
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="post in topposts | limitTo:3">
+    <div class="thumbnail">
+
+            <img src="{{post.media.media_url}}" class="img-circle" style="  height: 80px;"/>
+
+           <p>{{post.title}}</p>
+          <p>{{post.description}}</p>
+          <p>{{post.created_at}}</p>
+    </div>
+        <a href="#!/post/{{post.id}}" class="btn btn-default" role="button">details</a>
+
+    </div>
+  </div>
+</div>
+
+<!-- <a href="#!/posts" class="btn btn-primary" role="button">show more</a> -->
+<h1><center> Events</center></h1>
+<div class="container">
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="event in events | limitTo:3">
+    <div class="thumbnail">
+
+            <img src="{{event.media.media_url}}" class="img-circle" style="  height: 80px;"/>
+
+           <p>{{event.desc}}</p>
+          <p>Location : {{event.loc}}</p>
+          <p>Date from {{event.date_from}}  To {{event.date_to}}</</p>
+          <p>Time from {{event.time_from}} To {{event.time_to}}</p>
+
+
+    </div>
+        <a href="#!/event/{{event.id}}" class="btn btn-default" role="button">details</a>
+
+    </div>
+  </div>
+</div>
