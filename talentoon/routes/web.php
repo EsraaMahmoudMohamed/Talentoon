@@ -42,3 +42,6 @@ Route::prefix('admin')->group(function(){
 });
 Route::get('/uploads/multiple','UploadController@uploded');
 Route::post('/uploads/multipleuploded','UploadController@multiple_upload');
+
+
+Route::get('post/like/{id}', ['as' => 'post.like', 'uses' => 'LikeController@likePost']);
