@@ -60,14 +60,17 @@ class UploadController extends Controller
             $entry->original_filename = $filename;
             $entry->filename = $file->getFilename() . '.' . $extension;
             $entry->save();
+            dd('saved');
                 }
         }
-        if ($uploadcount == $file_count) {
-            Session::flash('success', 'Upload successfully');
-            return Redirect::to('upload');
-        } else {
-            return Redirect::to('upload')->withInput()->withErrors($validator);
-        }
+
+//        if ($uploadcount == $file_count) {
+//            Session::flash('success', 'Upload successfully');
+//            return Redirect::to('upload');
+//        } else {
+//            return Redirect::to('upload')->withInput()->withErrors($validator);
+//        }
+
     }
 
     public function single_upload(Request $request)
@@ -75,6 +78,7 @@ class UploadController extends Controller
         dd($request);
         //getting the post data
             // $files = Input::file('images');
+
 
         //Making counting of uploaded images
         // $file_count = count($files);

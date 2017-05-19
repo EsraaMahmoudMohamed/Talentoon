@@ -1,0 +1,34 @@
+[{
+    "id": 1,
+    "name": "category1",
+      "image": "json/images/nexus1.png"
+
+    },
+    {
+      "id": 2,
+      "name": "category2",
+        "image": "json/images/htc2.png"
+
+      },
+    {
+      "id": 3,
+      "name": "category3",
+        "image": "json/images/htc1.png"
+
+      },{
+
+
+      "id": 5,
+      "name": "category4",
+        "image": "json/images/sam1.png"
+
+      },
+      {
+        "id": 5,
+        "name": "category5",
+          "image": "json/images/nexus2.png"
+
+        }
+
+
+]
