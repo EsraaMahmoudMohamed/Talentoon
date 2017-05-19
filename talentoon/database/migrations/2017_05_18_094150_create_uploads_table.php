@@ -15,9 +15,10 @@ class CreateUploadsTable extends Migration
     {
         Schema::create('uploads', function (Blueprint $table){
             $table->increments('id');
+            $table->string('media_type');
+            $table->string('media_source');
+            $table->integer('source_id');
             $table->string('filename');
-            $table->string('mime');//to define type of uploaded file
-            $table->string('original_filename');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
