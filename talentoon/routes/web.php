@@ -27,3 +27,5 @@ Route::prefix('admin')->group(function(){
   Route::get('posts','AdminController@posts')->name('admin.posts');
   Route::get('posts/{id}','AdminController@posts')->name('admin.posts.destroy');
 });
+Route::get('/uploads/multiple','UploadController@uploded');
+Route::post('/uploads/multipleuploded','UploadController@multiple_upload');
