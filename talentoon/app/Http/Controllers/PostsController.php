@@ -18,4 +18,10 @@ class PostsController extends Controller
         Post::create($request->all());
         return redirect('/post');
        }
+
+       public function show($postId)
+        {
+            $post=Post::find($postId);
+            return view('posts.show',['post'=>$post]);
+        }
 }
