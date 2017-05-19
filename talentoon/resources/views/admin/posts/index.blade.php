@@ -15,8 +15,23 @@
 
                   <td>{{$post->title}}</td>
                   <td>{{$post->description}}</td>
-                  <td><a class="btn btn-danger" href="{{route('admin.posts.destroy',$post->id)}}">Delete</a>
-                  <a class="btn btn-danger" href="{{route('admin.posts.edit',$post->id)}}">Edit</a></td>
+                  <td><form method="post" action="{{route('post.destroy',$post->id)}}">
+                  <input name="_method" type="hidden" value="DELETE">
+                  <div class="form-group">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                       <button type="submit" class="btn btn-primary">Delete</button>
+                       </div>
+                    </form>
+                  <a class="btn btn-danger" href="{{route('post.edit',$post->id)}}">Edit</a>
+                  <a class="btn btn-danger" href="{{route('post.show',$post->id)}}">Show</a>
+
+                  @if ($post->is_approved == 1)
+                  <a class="btn btn-danger" href="{{route('post.unapprove',$post->id)}}">Un Approve</a>
+                  @else
+                  <a class="btn btn-danger" href="{{route('post.approve',$post->id)}}">Approve</a>
+
+                  @endif
+                </td>
 
           </tr>
           @endforeach

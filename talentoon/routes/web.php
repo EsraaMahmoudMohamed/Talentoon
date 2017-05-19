@@ -23,11 +23,17 @@ Route::resource('category','CategoriesController');
 Route::prefix('admin')->group(function(){
   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-  Route::get('/', 'AdminController@index')->name('admin.dashboard');
-  Route::get('posts','AdminController@posts')->name('admin.posts');
-  Route::get('posts/{id}','AdminController@deletePost')->name('admin.posts.destroy');
-  Route::get('posts/{id}/edit','AdminController@editPost')->name('admin.posts.edit');
-  Route::put('posts/{id}','AdminController@updatePost')->name('admin.posts.update');
+  Route::get('/', 'Admin\AdminController@index')->name('admin.dashboard');
+
+  Route::resource('post','Admin\AdminPostController');
+
+  // Route::get('post','AdminController@posts')->name('admin.post');
+  // Route::DELETE('post{id}','AdminController@deletePost')->name('admin.post.destroy');
+  // Route::get('post/{id}/edit','AdminController@editPost')->name('admin.post.edit');
+  // Route::put('post/{id}','AdminController@updatePost')->name('admin.post.update');
+  Route::get('/post/{id}/approve', 'Admin\AdminPostController@isApprove')->name('post.approve');
+  Route::get('/post/{id}/unapprove', 'Admin\AdminPostController@unApprove')->name('post.unapprove');
+
 
 });
 Route::get('/uploads/multiple','UploadController@uploded');
