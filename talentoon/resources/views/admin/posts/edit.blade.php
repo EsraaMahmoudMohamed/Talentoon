@@ -6,8 +6,7 @@
 @section('body')
 
     welcome from Edit post
-    {{--<form method="POST" action="/admin/posts">--}}
-    <form method="POST" action="{{route('admin.posts.update',['id'=>$post->id])}}">
+    <form method="POST" action="{{route('post.update',$post->id)}}}">
         {{csrf_field()}}
         {{method_field('PUT')}}
         <label> Enter title</label>
