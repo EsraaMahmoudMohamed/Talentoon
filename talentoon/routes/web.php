@@ -25,7 +25,10 @@ Route::prefix('admin')->group(function(){
   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
   Route::get('/', 'AdminController@index')->name('admin.dashboard');
   Route::get('posts','AdminController@posts')->name('admin.posts');
-  Route::get('posts/{id}','AdminController@posts')->name('admin.posts.destroy');
+  Route::get('posts/{id}','AdminController@deletePost')->name('admin.posts.destroy');
+  Route::get('posts/{id}/edit','AdminController@editPost')->name('admin.posts.edit');
+  Route::put('posts/{id}','AdminController@updatePost')->name('admin.posts.update');
+
 });
 Route::get('/uploads/multiple','UploadController@uploded');
 Route::post('/uploads/multipleuploded','UploadController@multiple_upload');

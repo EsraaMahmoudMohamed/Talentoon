@@ -31,4 +31,21 @@ class AdminController extends Controller
         $posts= Post::all();
         return view('admin.posts.index',['posts'=>$posts]);
     }
+    public function deletePost($postId){
+        $post=Post::findOrFail($postId);
+        $post->delete();
+        return redirect()->route('admin.posts');
+    }
+    public function editPost($postId){
+        $post=Post::find($postId);
+        return view('admin.posts.edit',['post'=> $post]);
+
+    }
+    public function updatePost(Request $request,$postId)
+    {
+
+    Post::find($postId)->update($request->all());
+    return redirect()->route('admin.posts');
+
+}
 }
