@@ -12,13 +12,6 @@
 
     </ul>
 
-    <li>All Comments</li>
-      @foreach($comments as $comment)
-          <li>Comment:->  {{$comment->content}}</li>
-               @endforeach
-            </ul>
-
-
 
 
           @if(count($errors) > 0)
@@ -31,14 +24,4 @@
               </div>
           @endif
 
-          {{--<form method="POST" action="/posts">--}}
-          <form method="POST" action="{{route('comment.store',$post->id)}}">
-              {{csrf_field()}}
-              <label> Enter comment</label>
-              <input type="text" name="content">
-              <br>
-
-              <input type="submit" value="comment" >
-
-          </form>
 @endsection
