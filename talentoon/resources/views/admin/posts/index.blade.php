@@ -5,18 +5,21 @@
 
 @section('body')
 
-    <table class="table table-striped">
+    <table class="table table-striped" border="1">
       <thead>
-          <th>Post title</th><th>Post Description</th><th>action</th>
+          <th>title</th><th>Description</th><th  colspan="4">action</th>
       </thead>
       <tbody>
+          @foreach ($posts as $post)
           <tr>
-                @foreach ($posts as $post)
+
                   <td>{{$post->title}}</td>
                   <td>{{$post->description}}</td>
-                  <td><a class="btn btn-danger" href="{{admin.posts.destroy}}">Delete</a></td>
-                @endforeach
+                  <td><a class="btn btn-danger" href="{{route('admin.posts.destroy',$post->id)}}">Delete</a>
+                  <a class="btn btn-danger" href="{{route('admin.posts.edit',$post->id)}}">Edit</a></td>
+
           </tr>
+          @endforeach
       </tbody>
     </table>
 
