@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesTalentsTable extends Migration
+class CreateCategoryMentorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CreateCategoriesTalentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories_talents', function (Blueprint $table) {
+        Schema::create('category_mentors', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('talent_id')->unsigned();
+            $table->integer('mentor_id')->unsigned();
             $table->integer('category_id')->unsigned();
-            $table->addColumn('tinyInteger','status',['length'=>1,'default'=>2]);
-            $table->integer('level');
-            $table->date('from_when');
-            $table->text('description');
-            $table->foreign('talent_id')->references('id')->on('users')->onDelete('cascade');
+            $table->boolean('status');
+            $table->integer('years_of_experience');
+            $table->text('experience');
+            $table->foreign('mentor_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -34,6 +34,6 @@ class CreateCategoriesTalentsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('category_mentors');
     }
 }

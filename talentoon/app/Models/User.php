@@ -1,15 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Support\Facades\Route;
 
-class Admin extends Authenticatable
+class User extends Authenticatable
 {
     use Notifiable;
-    protected $guard='admin';
 
     /**
      * The attributes that are mass assignable.
@@ -17,7 +15,8 @@ class Admin extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'email', 'password','last_name','date_of_birth','gender','login_token','pending','type','is_active',
+        'signup_type','image','phone','country_id'
     ];
 
     /**
