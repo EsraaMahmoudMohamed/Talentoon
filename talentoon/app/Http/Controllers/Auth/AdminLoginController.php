@@ -24,9 +24,13 @@ class AdminLoginController extends Controller
          'password' => 'required|min:6',
      ]);
 
-      //attemp to log the user in this function return true or false
+      //attempt to log the user in this function return true or false
+      //guard used to authenticate and register users
+      //if authentication attempt is successful and the user is logged in
       if(Auth::guard('admin')->attempt(['email'=>$request->email,'password'=>$request->password],$request->remember)){
       //if scusess ,then redirect to intented location
+      //function will redirect the user to the URL they
+      // were trying to access before being caught by the authentication filter.
       return redirect()->intended(route('admin.dashboard'));
 
       }
