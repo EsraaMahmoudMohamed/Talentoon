@@ -20,6 +20,16 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('categories.posts','PostsController');
 Route::resource('category','CategoriesController');
+Route::resource('/posts','PostsController');
+
+
+Route::get('/posts/create', 'PostsController@create');
+Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
+
+
+
+
+
 Route::prefix('admin')->group(function(){
   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
@@ -38,3 +48,6 @@ Route::prefix('admin')->group(function(){
 });
 Route::get('/uploads/multiple','UploadController@uploded');
 Route::post('/uploads/multipleuploded','UploadController@multiple_upload');
+
+
+Route::get('post/like/{id}', ['as' => 'post.like', 'uses' => 'LikeController@likePost']);
