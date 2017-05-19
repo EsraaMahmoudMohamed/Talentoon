@@ -36,6 +36,8 @@ Route::prefix('admin')->group(function(){
   Route::get('/', 'Admin\AdminController@index')->name('admin.dashboard');
 
   Route::resource('post','Admin\AdminPostController');
+  Route::resource('category','Admin\AdminCategoryController');
+
 
   // Route::get('post','AdminController@posts')->name('admin.post');
   // Route::DELETE('post{id}','AdminController@deletePost')->name('admin.post.destroy');

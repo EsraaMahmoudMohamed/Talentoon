@@ -47,6 +47,8 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li><a href="{{ route('post.index') }}">Posts</a></li>
+                            <li><a href="{{ route('category.index') }}">Categories</a></li>
+
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->first_name }} <span class="caret"></span>
@@ -79,7 +81,7 @@
                                     <li>
 
 
-                    
+
                                     </li>
                                 </ul>
                             </li>

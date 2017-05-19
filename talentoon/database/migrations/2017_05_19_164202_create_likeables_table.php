@@ -13,7 +13,6 @@ class CreateLikeablesTable extends Migration
      */
     public function up()
     {
-        Schema::create('likeables', function (Blueprint $table) {
             Schema::create('likeables', function (Blueprint $table) {
                 $table->increments('id');
                 $table->integer('user_id');
@@ -22,7 +21,6 @@ class CreateLikeablesTable extends Migration
                 $table->softDeletes();
                 $table->timestamps();
             });
-        });
     }
 
     /**

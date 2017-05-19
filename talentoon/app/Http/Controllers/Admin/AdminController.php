@@ -16,7 +16,6 @@ class AdminController extends Controller
     {
         $this->middleware('auth:admin');
     }
-
     /**
      * Show the application dashboard.
      *
