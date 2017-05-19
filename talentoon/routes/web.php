@@ -37,6 +37,8 @@ Route::prefix('admin')->group(function(){
 
   Route::resource('post','Admin\AdminPostController');
   Route::resource('category','Admin\AdminCategoryController');
+  Route::resource('user','Admin\AdminUserController');
+
 
 
   // Route::get('post','AdminController@posts')->name('admin.post');
@@ -45,6 +47,8 @@ Route::prefix('admin')->group(function(){
   // Route::put('post/{id}','AdminController@updatePost')->name('admin.post.update');
   Route::get('/post/{id}/approve', 'Admin\AdminPostController@isApprove')->name('post.approve');
   Route::get('/post/{id}/unapprove', 'Admin\AdminPostController@unApprove')->name('post.unapprove');
+  Route::get('/user/{id}/block', 'Admin\AdminUserController@block_user')->name('user.block_user');
+  Route::get('/user/{id}/active', 'Admin\AdminUserController@active_user')->name('user.active_user');
 
 
 });
