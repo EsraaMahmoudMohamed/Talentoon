@@ -1,36 +1,32 @@
 @extends('layouts.admin')
 @section('title')
-    post show
+    category show
 @endsection
 
 @section('body')
+<a class="btn btn-danger" href="{{route('category.create')}}">Create</a>
 
     <table class="table table-striped" border="1">
       <thead>
-          <th>title</th><th>Description</th><th  colspan="4">action</th>
+          <th>title</th><th>Image</th><th  colspan="4">action</th>
       </thead>
       <tbody>
-          @foreach ($posts as $post)
+          @foreach ($categories as $category)
           <tr>
 
-                  <td>{{$post->title}}</td>
-                  <td>{{$post->description}}</td>
-                  <td><form method="post" action="{{route('post.destroy',$post->id)}}">
+                  <td>{{$category->title}}</td>
+                  <td>{{$category->image}}</td>
+                  <td><form method="post" action="{{route('category.destroy',$category->id)}}">
                   <input name="_method" type="hidden" value="DELETE">
                   <div class="form-group">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                        <button type="submit" class="btn btn-primary">Delete</button>
                        </div>
                     </form>
-                  <a class="btn btn-danger" href="{{route('post.edit',$post->id)}}">Edit</a>
-                  <a class="btn btn-danger" href="{{route('post.show',$post->id)}}">Show</a>
+                  <a class="btn btn-danger" href="{{route('category.edit',$category->id)}}">Edit</a>
+                  <a class="btn btn-danger" href="{{route('category.show',$category->id)}}">Show</a>
 
-                  @if ($post->is_approved == 1)
-                  <a class="btn btn-danger" href="{{route('post.unapprove',$post->id)}}">Un Approve</a>
-                  @else
-                  <a class="btn btn-danger" href="{{route('post.approve',$post->id)}}">Approve</a>
 
-                  @endif
                 </td>
 
           </tr>

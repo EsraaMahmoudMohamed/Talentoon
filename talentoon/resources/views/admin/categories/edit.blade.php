@@ -6,14 +6,14 @@
 @section('body')
 
     welcome from Edit post
-    <form method="POST" action="{{route('post.update',$post->id)}}}">
+    <form method="POST" action="{{route('category.update',$category->id)}}}">
         {{csrf_field()}}
         {{method_field('PUT')}}
         <label> Enter title</label>
-        <input type="text" name="title" value="{{$post->title}}">
+        <input type="text" name="title" value="{{$category->title}}">
         <br>
         <label> Enter description</label>
-        <input type=""text name="description" value="{{$post->description}}">
+        <input type=""text name="image" value="{{$category->image}}">
         <input type="submit" value="Update post" >
 
     </form>

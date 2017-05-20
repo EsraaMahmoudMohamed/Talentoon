@@ -162,14 +162,13 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        
 
         /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         StreamLab\StreamLabProvider\StreamLabServiceProvider::class,
-
+        Laravel\Passport\PassportServiceProvider::class,
         /*
          * Application Service Providers...
          */
