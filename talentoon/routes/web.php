@@ -38,6 +38,8 @@ Route::prefix('admin')->group(function(){
   Route::resource('post','Admin\AdminPostController');
   Route::resource('category','Admin\AdminCategoryController');
   Route::resource('user','Admin\AdminUserController');
+  Route::resource('mentor','Admin\AdminMentorController');
+  Route::resource('news','Auth\AdminNewsController');
 
 
 
@@ -49,6 +51,9 @@ Route::prefix('admin')->group(function(){
   Route::get('/post/{id}/unapprove', 'Admin\AdminPostController@unApprove')->name('post.unapprove');
   Route::get('/user/{id}/block', 'Admin\AdminUserController@block_user')->name('user.block_user');
   Route::get('/user/{id}/active', 'Admin\AdminUserController@active_user')->name('user.active_user');
+  Route::get('/mentor/{id}/be_mentor', 'Admin\AdminMentorController@be_mentor')->name('mentor.be_mentor');
+  Route::get('/mentor/{id}/unmentor', 'Admin\AdminMentorController@unmentor')->name('mentor.unmentor');
+
 
 
 });

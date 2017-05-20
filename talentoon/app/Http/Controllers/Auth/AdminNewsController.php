@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Post;
+use App\Models\News;
 use App\Models\Category;
-use Auth;
-use App\Admin;
+use Illuminate\Support\Facades\DB;
 
 
-class AdminCategoryController extends Controller
+class AdminNewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,9 +21,14 @@ class AdminCategoryController extends Controller
          $this->middleware('auth:admin');
      }
     public function index()
-    {      //
-        $categories= Category::all();
-        return view('admin.categories.index',['categories'=>$categories]);
+    {
+        //
+        $news=DB::table('news')
+            ->join('admins', 'admins.id', '=', 'news.admin_id')
+            ->join('categories', 'categories.id', '=', 'news.category_id')
+            ->select('admins.*', 'news.*','categories.*')
+            ->get();
+        return view('admin.news.index',['news'=>$news]);
     }
 
     /**
@@ -35,8 +39,9 @@ class AdminCategoryController extends Controller
     public function create()
     {
         //
-        return view('admin.categories.create');
+        $categories= Category::all();
 
+        return view('admin.news.create',['categories'=>$categories]);
     }
 
     /**
@@ -48,9 +53,9 @@ class AdminCategoryController extends Controller
     public function store(Request $request)
     {
         //
+        News::create($request->all());
+        return redirect()->route('news.index');
 
-        Category::create($request->all());
-        return redirect()->route('category.index');
     }
 
     /**
@@ -62,8 +67,8 @@ class AdminCategoryController extends Controller
     public function show($id)
     {
         //
-        $category=Category::find($id);
-        return view('admin.categories.show',['category'=>$category]);
+        $news=News::find($id);
+        return view('admin.news.show',['news'=>$news]);
     }
 
     /**
@@ -75,8 +80,8 @@ class AdminCategoryController extends Controller
     public function edit($id)
     {
         //
-        $category=Category::find($id);
-        return view('admin.categories.edit',['category'=> $category]);
+        $news=News::find($id);
+        return view('admin.news.edit',['news'=> $news]);
     }
 
     /**
@@ -89,8 +94,8 @@ class AdminCategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
-        Category::find($id)->update($request->all());
-        return redirect()->route('category.index');
+        News::find($id)->update($request->all());
+        return redirect()->route('news.index');
     }
 
     /**
@@ -102,8 +107,9 @@ class AdminCategoryController extends Controller
     public function destroy($id)
     {
         //
-        $category=Category::findOrFail($id);
-        $category->delete();
-        return redirect()->route('category.index');
+        $news=News::findOrFail($id);
+        $news->delete();
+        return redirect()->route('news.index');
     }
+
 }

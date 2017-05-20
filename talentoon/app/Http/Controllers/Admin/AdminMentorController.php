@@ -4,27 +4,32 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Post;
-use App\Models\Category;
-use Auth;
+use App\Models\CategoryMentor;
+use Illuminate\Support\Facades\DB;
 use App\Admin;
+use App\User;
+use Auth;
 
-
-class AdminCategoryController extends Controller
+class AdminMentorController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-     public function __construct()
-     {
-         $this->middleware('auth:admin');
-     }
     public function index()
-    {      //
-        $categories= Category::all();
-        return view('admin.categories.index',['categories'=>$categories]);
+    {
+
+        //
+        // $mentors= CategoryMentor::all();
+
+        $mentors = DB::table('category_mentors')
+            ->join('users', 'users.id', '=', 'category_mentors.mentor_id')
+            ->join('categories', 'categories.id', '=', 'category_mentors.category_id')
+            ->select('users.*', 'category_mentors.*','categories.*')
+            ->get();
+
+        return view('admin.mentors.index',['mentors'=>$mentors]);
     }
 
     /**
@@ -35,8 +40,6 @@ class AdminCategoryController extends Controller
     public function create()
     {
         //
-        return view('admin.categories.create');
-
     }
 
     /**
@@ -48,9 +51,6 @@ class AdminCategoryController extends Controller
     public function store(Request $request)
     {
         //
-
-        Category::create($request->all());
-        return redirect()->route('category.index');
     }
 
     /**
@@ -62,8 +62,6 @@ class AdminCategoryController extends Controller
     public function show($id)
     {
         //
-        $category=Category::find($id);
-        return view('admin.categories.show',['category'=>$category]);
     }
 
     /**
@@ -75,8 +73,6 @@ class AdminCategoryController extends Controller
     public function edit($id)
     {
         //
-        $category=Category::find($id);
-        return view('admin.categories.edit',['category'=> $category]);
     }
 
     /**
@@ -89,8 +85,6 @@ class AdminCategoryController extends Controller
     public function update(Request $request, $id)
     {
         //
-        Category::find($id)->update($request->all());
-        return redirect()->route('category.index');
     }
 
     /**
@@ -102,8 +96,17 @@ class AdminCategoryController extends Controller
     public function destroy($id)
     {
         //
-        $category=Category::findOrFail($id);
-        $category->delete();
-        return redirect()->route('category.index');
     }
+    public function be_mentor($id){
+            DB::table('category_mentors')->where('mentor_id', $id)->update(['status' => 1]);
+
+        return redirect()->route('mentor.index');
+
+
+    }
+        public function unmentor($id){
+            DB::table('category_mentors')->where('mentor_id', $id)->update(['status' => 0]);
+            return redirect()->route('mentor.index');
+
+        }
 }
