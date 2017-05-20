@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\Models\Category;
 use Auth;
 use App\Admin;
+use Illuminate\Support\Facades\Input;
 
 
 class AdminCategoryController extends Controller
@@ -49,7 +50,23 @@ class AdminCategoryController extends Controller
     {
         //
 
-        Category::create($request->all());
+        // Category::create($request->all());
+        // return redirect()->route('category.index');
+
+        $data=$request->all();
+        $fileName = 'null';
+        if ($request->hasFile('image')) {
+            if($request->file('image')->isValid()) {
+            $destinationPath = public_path('uploads/files');
+           $extension =$request->file('image')->getClientOriginalExtension();
+           $fileName = uniqid().'.'.$extension;
+           $request->file('image')->move($destinationPath, $fileName);
+   }
+   }
+         Category::create([
+            'title' => $data['title'],
+            'image' => $fileName,
+        ]);
         return redirect()->route('category.index');
     }
 

@@ -16,14 +16,14 @@
         </div>
     @endif
 
-        <form method="POST" action="{{route('category.store')}}">
+        <form method="POST" action="{{route('category.store')}}" enctype="multipart/form-data">
         {{csrf_field()}}
         <label> Enter title</label>
             <input type="text" name="title">
             <br>
             <label> Enter image</label>
 
-            <input type="text" name="image">
+            <input type="file" name="image">
         <input type="submit" value="Save category" >
 
     </form>
