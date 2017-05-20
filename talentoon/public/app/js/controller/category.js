@@ -1,24 +1,24 @@
-angular.module('myApp').controller("categories",function($scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,ModalService){
-	
+angular.module('myApp').controller("categories",function($scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader){
+
 	var filesuploaded = []
     var filesmentoruploaded = []
 	var talent = {}
     var mentor = {}
 
-
-    $scope.show = function() {
-        ModalService.showModal({
-            templateUrl: 'talent_complete_profile.html',
-            controller: "talents"
-        }).then(function(modal) {
-            modal.element.modal();
-            modal.close.then(function(result) {
-                $scope.message = "You said " + result;
-            });
-        });
-    };
-
-
+	//
+    // $scope.show = function() {
+    //     ModalService.showModal({
+    //         templateUrl: 'talent_complete_profile.html',
+    //         controller: "talents"
+    //     }).then(function(modal) {
+    //         modal.element.modal();
+    //         modal.close.then(function(result) {
+    //             $scope.message = "You said " + result;
+    //         });
+    //     });
+    // };
+	//
+	//
 
 
 
@@ -68,7 +68,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 
 
 
-    
+
 
 
 	$scope.categories=categories;
@@ -128,7 +128,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
             return this.queue.length < 10;
         }
     });
-  
+
     // an async filter
     uploader.filters.push({
         name: 'asyncFilter',
@@ -211,7 +211,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
             return this.queue.length < 10;
         }
     });
-  
+
     // an async filter
     ment_uploader.filters.push({
         name: 'asyncFilter',

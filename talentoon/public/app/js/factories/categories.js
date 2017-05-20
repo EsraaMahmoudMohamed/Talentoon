@@ -6,13 +6,14 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'json/categories.json' ,
+				url:'http://localhost:8000/api/category' ,
 				method:'GET'
 
 			}).then(function(res){
-				// console.log(res);
-				if(res.data.length){
-					def.resolve(res.data)
+				console.log(res.data.data);
+				if(res.data.data.length){
+					console.log(res.data);
+					def.resolve(res.data.data)
 				}else{
 					def.reject('there is no data ')
 				}

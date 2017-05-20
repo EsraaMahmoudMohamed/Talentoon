@@ -14,7 +14,7 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() 
     {
         $categories= Category::all();
         return response()->json(['data' => $categories,'status' => '1','message' => 'data sent successfully']);
