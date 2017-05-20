@@ -68,6 +68,29 @@ return {
 			})
 			return def.promise ;
 
+		},
+		addpost:function(postdata){
+
+			var def =$q.defer();
+			$http({
+				url:'addpost url' ,
+				method:'GET',
+				data:postdata
+
+			}).then(function(res){
+
+				if(res.data.length){
+					def.resolve(res.data)
+				}else{
+					def.reject('there is no data ')
+				}
+
+			},function(err){
+				// console.log(err);
+				def.reject(err);
+			})
+			return def.promise ;
+
 		}
 
 		}

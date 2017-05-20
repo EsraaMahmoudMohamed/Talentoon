@@ -37,4 +37,24 @@ $routeProvider.when('/',{
 	controller:'categories'
 })
 
+
+
+.when('/category/:category_id/addpost',{
+	templateUrl:'views/addpost.html',
+	controller:'addpost'
+})
+
+//user routes
+.when('/register',{
+	templateUrl:'views/register.html',
+	controller:'register'
+
+})
+
+.when('/login',{
+	templateUrl:'views/login.html' ,
+	controller:'login'
+
+})
+
 })

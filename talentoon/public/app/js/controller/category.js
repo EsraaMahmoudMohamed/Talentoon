@@ -13,17 +13,16 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 
 	//get all posts under category
 	var index= $routeParams['category_id'];
-	$scope.cat_id=index;
-	$rootScope.user_id=1;
+$scope.cat_id=index;
+var user_id=1;
+categories.getCategoryPosts(index).then(function(data){
 
-	categories.getCategoryPosts(index).then(function(data){
+    $scope.category_posts=data;
+console.log($scope.category_posts);
+} , function(err){
+    console.log(err);
 
-		$scope.category_posts=data;
-	    console.log($scope.category_posts);
-	} , function(err){
-		console.log(err);
-
-	});
+});
 
 	// subscrib in category
 	// categories.subscribe(index,user_id).then(function(data){
