@@ -6,13 +6,14 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'json/categories.json' ,
+				url:'http://localhost:8000/api/category' ,
 				method:'GET'
 
 			}).then(function(res){
-				// console.log(res);
-				if(res.data.length){
-					def.resolve(res.data)
+				console.log(res.data.data);
+				if(res.data.data.length){
+					console.log(res.data);
+					def.resolve(res.data.data)
 				}else{
 					def.reject('there is no data ')
 				}
@@ -64,6 +65,52 @@ return {
 				}
 
 			},function(err){
+				def.reject(err);
+			})
+			return def.promise ;
+
+		},
+		addpost:function(postdata){
+
+			var def =$q.defer();
+			$http({
+				url:'addpost url' ,
+				method:'GET',
+				data:postdata
+
+			}).then(function(res){
+
+				if(res.data.length){
+					def.resolve(res.data)
+				}else{
+					def.reject('there is no data ')
+				}
+
+			},function(err){
+				// console.log(err);
+				def.reject(err);
+			})
+			return def.promise ;
+
+		},
+		addevent:function(eventdata){
+
+			var def =$q.defer();
+			$http({
+				url:'addevent url' ,
+				method:'GET',
+				data:eventdata
+
+			}).then(function(res){
+
+				if(res.data.length){
+					def.resolve(res.data)
+				}else{
+					def.reject('there is no data ')
+				}
+
+			},function(err){
+				// console.log(err);
 				def.reject(err);
 			})
 			return def.promise ;

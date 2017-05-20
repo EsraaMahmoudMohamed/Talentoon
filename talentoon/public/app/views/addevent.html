@@ -1,0 +1,40 @@
+<div class="container" >
+<form ng-submit="submitted=true ; newevent(addevent.$valid)" name="addevent"  novalidate >
+	<div class="field">
+	<label>Event Title</label>
+		<input type="text" name="title" required ng-model="event.title" class="form-control">
+			<p class="error" ng-if="addevent.title.$error.required && submitted" >please enter your post title</p>
+	</div>
+  <div class="field">
+	<label> Event Description</label>
+		<input type="text" name="title" required ng-model="event.description" class="form-control">
+			<p class="error" ng-if="addevent.description.$error.required && submitted" >please enter your post description</p>
+	</div>
+  <div class="field">
+<label>Date From </label>
+  <input type="date" name="date_form" required ng-model="event.date_form" class="form-control" >
+    <p class="error" ng-if="addevent.date_form.$error.required && submitted" >please enter your event date  from</p>
+</div>
+    <div class="field">
+  <label>Date To </label>
+    <input type="date" name="date_to" required ng-model="event.date_to" class="form-control" >
+      <p class="error" ng-if="addevent.date_to.$error.required && submitted" >please enter your event date to</p>
+  </div>
+  <div class="field">
+	<label>Time From </label>
+		<input type="time" name="time_from" required ng-model="event.time_from" class="form-control">
+			<p class="error" ng-if="addevent.time_from.$error.required && submitted" >please enter your event time from</p>
+	</div>
+  <div class="field">
+  <label>Time To </label>
+		<input type="time" name="time_to" required ng-model="event.time_to" class="form-control" >
+			<p class="error" ng-if="addevent.time_to.$error.required && submitted" >please enter your event time to</p>
+	</div>
+
+
+  <input type="hidden" name="category_id"  ng-model="event.category_id" class="form-control" value="{{cat_id}}">
+
+	   <button type="submit" name="button">Add Event</button>
+</form>
+
+</div>

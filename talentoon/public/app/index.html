@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
-	<title>angular js</title>
+	<title>Angular js</title>
 	<!-- scripts -->
-	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
-	<script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
 
-	
+
+	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<!-- <script type="text/javascript" src="node_modules/angular-modal-service/dst/angular-modal-service.js"></script> -->
+	<script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
+	<!-- <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+
+
+
+
+
   	<!-- angular file upload -->
     <script type="text/javascript"  src="node_modules/angular-file-upload/dist/angular-file-upload.js"></script>
 
 
 	<!-- controller -->
 	<script type="text/javascript" src="js/controller/app.js"></script>
-	<script type="text/javascript" src="js/controller/route.js"></script>
+	<script type="text/javascript" src="js/route.js"></script>
 	<script type="text/javascript" src="js/controller/category.js"></script>
+	<script type="text/javascript" src="js/controller/talent.js"></script>
   <script type="text/javascript" src="js/controller/home.js"></script>
+  <script type="text/javascript" src="js/controller/addpost.js"></script>
+	<script type="text/javascript" src="js/controller/register.js"></script>
+	<script type="text/javascript" src="js/controller/login.js"></script>
+	<script type="text/javascript" src="js/controller/addevent.js"></script>
+
+
+
 	<!-- factory -->
 	<script type="text/javascript" src="js/factories/categories.js"></script>
 	<script type="text/javascript" src="js/factories/home.js"></script>
+		<script type="text/javascript" src="js/factories/user.js"></script>
+
 
 
 <!-- style -->
@@ -37,6 +55,8 @@
         <li class="active"><a href="#!/">home <span class="sr-only">(current)</span></a></li>
 
          <li><a href="#!/categories">All category</a></li>
+          <li ><a href="#!/register">register </a></li>
+				<li ><a href="#!/login">login</a></li>
       </ul>
 
 

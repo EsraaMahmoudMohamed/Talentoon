@@ -1,5 +1,6 @@
 <?php
-
+// PgHNAYObANG9921LsxueAqtXU5EqSUcvBEWpxf0q
+// LkddD7IrSdr1ao51QTwQl548PiYedvFd5PhduynG
 return [
 
     /*
@@ -42,7 +43,7 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
+            'driver' => 'passport',
             'provider' => 'users',
         ],
         'admin' => [

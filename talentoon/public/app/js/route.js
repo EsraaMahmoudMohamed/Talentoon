@@ -37,4 +37,45 @@ $routeProvider.when('/',{
 	controller:'categories'
 })
 
+
+
+
+
+//user choose to be a talent under a certain category
+.when('/category/betalent/:category_id/:user_id',{
+	controller:'talents'
+})
+
+
+
+//user choose to be a mentor under a certain category
+.when('/category/bementor/:category_id/:user_id',{
+	controller:'mentors'
+})
+
+
+//add post
+.when('/category/:category_id/addpost',{
+	templateUrl:'views/addpost.html',
+	controller:'addpost'
+})
+//add event
+.when('/category/:category_id/addevent',{
+	templateUrl:'views/addevent.html',
+	controller:'addevents'
+})
+
+//user routes
+.when('/register',{
+	templateUrl:'views/register.html',
+	controller:'register'
+
+})
+
+.when('/login',{
+	templateUrl:'views/login.html' ,
+	controller:'login'
+
+})
+
 })
