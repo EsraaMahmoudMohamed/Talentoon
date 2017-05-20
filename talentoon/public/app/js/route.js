@@ -54,10 +54,15 @@ $routeProvider.when('/',{
 })
 
 
-
+//add post
 .when('/category/:category_id/addpost',{
 	templateUrl:'views/addpost.html',
 	controller:'addpost'
+})
+//add event
+.when('/category/:category_id/addevent',{
+	templateUrl:'views/addevent.html',
+	controller:'addevents'
 })
 
 //user routes

@@ -18,10 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('/uploads/singleuploded','UploadController@single_upload');
 Route::post('/categorytalent','CategoryTalentController@store');
-
 Route::get('/categorytalent/{talent_id}','CategoryTalentController@update');
-
-
-
 Route::resource('category','CategoriesController');
+Route::get('/categorymentor','CategoryMentorController@update');
 
