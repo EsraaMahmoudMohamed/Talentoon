@@ -40,6 +40,7 @@ $routeProvider.when('/',{
 
 
 
+
 //user choose to be a talent under a certain category
 .when('/category/betalent/:category_id/:user_id',{
 	controller:'talents'
@@ -54,6 +55,22 @@ $routeProvider.when('/',{
 
 
 
+.when('/category/:category_id/addpost',{
+	templateUrl:'views/addpost.html',
+	controller:'addpost'
+})
 
+//user routes
+.when('/register',{
+	templateUrl:'views/register.html',
+	controller:'register'
+
+})
+
+.when('/login',{
+	templateUrl:'views/login.html' ,
+	controller:'login'
+
+})
 
 })
