@@ -16,7 +16,7 @@
         </div>
     @endif
 
-        <form method="POST" action="{{route('post.store')}}">
+        <form method="POST" action="{{route('categories.posts.store',['id'=>1])}}">
         {{csrf_field()}}
         <label> Enter title</label>
             <input type="text" name="title">

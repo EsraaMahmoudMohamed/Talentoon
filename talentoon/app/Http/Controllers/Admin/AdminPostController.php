@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+
 class AdminPostController extends Controller
 {
 
@@ -73,7 +74,6 @@ class AdminPostController extends Controller
         public function unApprove($id){
             DB::table('posts')->where('id', $id)->update(['is_approved' => 0]);
             return redirect()->route('post.index');
-
 
         }
 
