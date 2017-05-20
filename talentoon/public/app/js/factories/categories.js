@@ -92,6 +92,29 @@ return {
 			})
 			return def.promise ;
 
+		},
+		addevent:function(eventdata){
+
+			var def =$q.defer();
+			$http({
+				url:'addevent url' ,
+				method:'GET',
+				data:eventdata
+
+			}).then(function(res){
+
+				if(res.data.length){
+					def.resolve(res.data)
+				}else{
+					def.reject('there is no data ')
+				}
+
+			},function(err){
+				// console.log(err);
+				def.reject(err);
+			})
+			return def.promise ;
+
 		}
 
 		}
