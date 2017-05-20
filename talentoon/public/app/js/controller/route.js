@@ -37,4 +37,23 @@ $routeProvider.when('/',{
 	controller:'categories'
 })
 
+
+
+
+//user choose to be a talent under a certain category
+.when('/category/betalent/:category_id/:user_id',{
+	controller:'talents'
+})
+
+
+
+//user choose to be a mentor under a certain category
+.when('/category/bementor/:category_id/:user_id',{
+	controller:'mentors'
+})
+
+
+
+
+
 })
