@@ -5,6 +5,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 	var talent = {}
     var mentor = {}
 
+    console.log('iam here')
 	//
     // $scope.show = function() {
     //     ModalService.showModal({
@@ -72,7 +73,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 
             $http({
               method  : 'POST',
-              url     : 'http://172.16.2.239:8000/api/test2',
+              url     : 'http://localhost:8000/api/uploads/singleuploded',
               processData: false,
               transformRequest: function (data) {
                   var formData = new FormData();
@@ -195,7 +196,8 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 	//files with ng file upload
 	var uploader = $scope.uploader = new FileUploader({
         // url: 'http://172.16.2.239:8000/api/test'
-        url: 'upload.php'
+        // url: 'upload.php'
+        url: 'http://localhost:8000/api/uploads/singleuploded'
     });
 
     // FILTERS
@@ -277,7 +279,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
     //files with ng file upload
     var ment_uploader = $scope.ment_uploader = new FileUploader({
         // url: 'http://172.16.2.239:8000/api/test'
-        url:'upload.php'
+        // url:'upload.php'
 
     });
 

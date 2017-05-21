@@ -6,7 +6,7 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'http://172.16.2.239:8000/api/category' ,
+				url:'http://localhost:8000/api/category' ,
 				method:'GET'
 
 			}).then(function(res){
@@ -29,7 +29,7 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'http://172.16.2.239:8000/api/category/'+index ,
+				url:'http://localhost:8000/api/category/'+index ,
 				method:'GET'
 			}).then(function(res){
 				console.log("response is " , res.data.posts);
