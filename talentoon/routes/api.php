@@ -21,4 +21,5 @@ Route::post('/categorytalent','CategoryTalentController@store');
 Route::get('/categorytalent/{talent_id}','CategoryTalentController@update');
 Route::resource('category','CategoriesController');
 Route::get('/categorymentor','CategoryMentorController@update');
-
+Route::get('/categorysubscribe','CategorySubscribeController@store');
+Route::get('/categoryunsubscribe','CategorySubscribeController@update');
