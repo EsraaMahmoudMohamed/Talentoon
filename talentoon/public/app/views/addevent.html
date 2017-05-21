@@ -7,8 +7,13 @@
 	</div>
   <div class="field">
 	<label> Event Description</label>
-		<input type="text" name="title" required ng-model="event.description" class="form-control">
-			<p class="error" ng-if="addevent.description.$error.required && submitted" >please enter your post description</p>
+		<input type="text" name="description" required ng-model="event.description" class="form-control">
+			<p class="error" ng-if="addevent.description.$error.required && submitted" >please enter your event description</p>
+	</div>
+	<div class="field">
+	<label> Event Location</label>
+		<input type="text" name="location" required ng-model="event.location" class="form-control">
+			<p class="error" ng-if="addevent.location.$error.required && submitted" >please enter your event location</p>
 	</div>
   <div class="field">
 <label>Date From </label>

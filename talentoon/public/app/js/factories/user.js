@@ -3,7 +3,7 @@ angular.module('myApp').factory("user",function($http,$q){
 return {
 		register:function(userdata){
 			$http({
-				url:'http://localhost:8000/api/signup' ,
+				// url:'http://localhost:8000/api/signup' ,
 				method:'POST',
 				data:userdata
 
@@ -22,7 +22,7 @@ return {
 
     login:function(userdata){
       $http({
-        url:'http://localhost:8000/api/login' ,
+        // url:'http://localhost:8000/api/login' ,
         method:'POST',
 				data:userdata
 

@@ -9,7 +9,7 @@ class CategoryTalentController extends Controller
 {
 
     public function store(Request $request){
-
+        
         $CTS_Obj=new CategoryTalentService();
 
         $response=$CTS_Obj->beTalent($request);
