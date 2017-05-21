@@ -7,21 +7,9 @@ use App\Services\CategoryTalentService;
 
 class CategoryTalentController extends Controller
 {
-    
     public function store(Request $request){
         
-        $CTS_Obj=new CategoryTalentService();
-        
-        $response=$CTS_Obj->beTalent($request);      
-        return $response;
-        
-    }
-    
-    public function update(Request $request,$talent_id,$category_id) {
-        
-        $CTS_Obj=new CategoryTalentService();
-        
-        $response=$CTS_Obj->updateTalent($request,$talent_id,$category_id);      
-        return $response;
-    }
+        $CategoryTalentServiceObj=new CategoryTalentService();
+        $CategoryTalentServiceObj->beTalent($request);
+    } 
 }

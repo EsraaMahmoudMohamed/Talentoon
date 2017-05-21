@@ -6,7 +6,7 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'http://localhost:8000/api/category' ,
+				 url:'http://localhost:8000/api/category' ,
 				method:'GET'
 
 			}).then(function(res){

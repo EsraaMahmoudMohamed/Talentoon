@@ -13,4 +13,17 @@ angular.module('myApp').controller("showreview", function($scope, $http,showrevi
   });
 
 
+
+  $scope.review = function(vaild) {
+    if (vaild) {
+      var reviewdata = $scope.review
+      console.log(reviewdata);
+      // review.addreview(reviewdata)
+
+    }
+
+
+
+  }
+
 })
