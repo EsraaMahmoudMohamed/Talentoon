@@ -49,11 +49,13 @@
                             <li><a href="{{ route('post.index') }}">Posts</a></li>
                             <li><a href="{{ route('category.index') }}">Categories</a></li>
                             <li><a href="{{ route('user.index') }}">users</a></li>
+                            <li><a href="{{ route('mentor.index') }}">Mentors</a></li>
+                            <li><a href="{{ route('news.index') }}">News</a></li>
 
 
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->first_name }} <span class="caret"></span>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
