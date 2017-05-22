@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+//use Dingo\Api\Routing\Router;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,7 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('/uploads/singleuploded','UploadController@single_upload');
 Route::post('/categorytalent','CategoryTalentController@store');
-Route::get('/categorytalent/{talent_id}','CategoryTalentController@update');
+//Route::get('/categorytalent/{talent_id}',[
+//    'before' => 'jwt-auth',
+//    'use'=>'CategoryTalentController@update'
+//]);
 Route::resource('category','CategoriesController');
 Route::get('/categorymentor','CategoryMentorController@update');
 
+Route::post('/signup','JWTAuth\SignUpController@signup');
+Route::post('/login','JWTAuth\LoginController@login');
+Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
