@@ -21,3 +21,5 @@ Route::post('/categorytalent','CategoryTalentController@store');
 
 
 Route::resource('category','CategoriesController');
+Route::post('/test', 'UploadController@test');
+Route::post('/test2', 'UploadController@test2');

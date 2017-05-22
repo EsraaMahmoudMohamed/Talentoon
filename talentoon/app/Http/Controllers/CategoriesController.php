@@ -14,7 +14,7 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() 
+    public function index()
     {
         $categories= Category::all();
         return response()->json(['data' => $categories,'status' => '1','message' => 'data sent successfully']);
@@ -53,7 +53,8 @@ class CategoriesController extends Controller
     public function show($id)
     {
         $category=Category::find($id);
-        $posts=Post::where('category_id','=', $id);
+        $posts=Post::where('category_id','=', $id)->get();
+        // dd($posts);
         // dd(response()->json(['category_details' => $category,'posts' => $posts,'status' => '1','message' => 'data sent successfully']));
         return response()->json(['category_details' => $category,'posts' => $posts,'status' => '1','message' => 'data sent successfully']);
         // return view('category.show',['category'=>$category]);
