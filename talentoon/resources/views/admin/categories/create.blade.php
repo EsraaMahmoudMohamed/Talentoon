@@ -23,7 +23,7 @@
             <br>
             <label> Enter image</label>
 
-            <input type="text" name="image">
+            <input type="file" name="image">
         <input type="submit" value="Save category" >
 
     </form>

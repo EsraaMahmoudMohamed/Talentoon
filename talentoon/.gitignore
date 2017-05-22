@@ -11,3 +11,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 .env
+/talentoon/composer.json
+/talentoon/composer.lock
+/talentoon/config/app.php
