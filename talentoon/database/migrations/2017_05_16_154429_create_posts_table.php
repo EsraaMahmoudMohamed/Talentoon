@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->string('description');
-            $table->boolean('is_approved');
+            $table->boolean('is_approved')->default(0);
             $table->integer('category_id')->unsigned();
             $table->integer('user_id')->unsigned();
         });
