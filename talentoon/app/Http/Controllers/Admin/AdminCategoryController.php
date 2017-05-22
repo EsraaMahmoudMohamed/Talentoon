@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Category;
+use Auth;
+use App\Admin;
 
 
 class AdminCategoryController extends Controller
@@ -20,8 +22,7 @@ class AdminCategoryController extends Controller
          $this->middleware('auth:admin');
      }
     public function index()
-    {
-        //
+    {      //
         $categories= Category::all();
         return view('admin.categories.index',['categories'=>$categories]);
     }
