@@ -154,6 +154,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 	categories.getAllCategory().then(function(data){
 		console.log(data);
 		$scope.categories=data;
+        // console.log("la2aa sha3`alaa",$scope.categories);
 
 	} , function(err){
 		console.log(err);
@@ -180,6 +181,7 @@ $scope.comment={};
     categories.getCategoryPosts(index).then(function(data){
         console.log("inside controller" , data)
         $scope.category_posts=data;
+        console.log("la2aa",$scope.category_posts);
 
     console.log($scope.category_posts);
     } , function(err){
