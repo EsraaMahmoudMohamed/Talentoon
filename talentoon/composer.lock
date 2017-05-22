@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "c808ef0ec570dbe2241a4298b133366e",
-=======
     "content-hash": "5c631893b61c7ac8de527a02b7b5c41a",
->>>>>>> c5db93d55e2435402f3e271cc0fd6063251c7d50
     "packages": [
         {
             "name": "5dmatweb/streamlab",
@@ -2532,8 +2528,6 @@
                 "laravel",
                 "tymon"
             ],
-<<<<<<< HEAD
-=======
             "time": "2017-04-06T19:57:45+00:00"
         },
         {
@@ -2584,7 +2578,6 @@
                 "env",
                 "environment"
             ],
->>>>>>> c5db93d55e2435402f3e271cc0fd6063251c7d50
             "time": "2016-09-01T10:05:43+00:00"
         }
     ],
