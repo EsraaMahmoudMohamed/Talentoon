@@ -1,39 +1,96 @@
 <h1><center> Top posts</center></h1>
+
 <div class="container">
-<div class="row">
-  <div class="col-sm-6 col-md-4" ng-repeat="post in topposts | limitTo:3">
-    <div class="thumbnail">
+    <h1>TOP POSTS</h1>
+    <div class="row">
+        <div class="col-sm-6 col-md-4  categorySection " ng-repeat="post in topposts | limitTo:3">
+            <div class="thumbnail">
+                <!--                    <img src="http://placehold.it/350x250">-->
+                <img src="{{post.media.media_url}}" style=" height:200px">
+                <div class="caption">
+                    <p>{{post.title}}</p>
+                   <p>{{post.description}}</p>
+                   <p>{{post.created_at}}</p>
 
-            <img src="{{post.media.media_url}}" class="img-circle" style="  height: 80px;"/>
+                    <a class="userPic"><img src="Imgs/Persons/face1.jpg" alt=""> Ahmed Zaki </a>
 
-           <p>{{post.title}}</p>
-          <p>{{post.description}}</p>
-          <p>{{post.created_at}}</p>
-    </div>
-        <a href="#!/post/{{post.id}}" class="btn btn-default" role="button">details</a>
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8 ">
+                            <a href="#" class="interactions"><i class="fa fa-heart" aria-hidden="true"></i>  <span class="badge">12</span></a>
 
-    </div>
+                            <a href="#" class="interactions">  <i class="fa fa-commenting" aria-hidden="true"></i>       <span class="badge">35</span></a>
+
+                        </div>
+
+                        <div class="col-lg-4 col-md-8 col-sm-2 ">
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                        </div>
+                        <a href="#!/post/{{post.id}}" class="btn btn-default" role="button">details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
   </div>
 </div>
 
 <!-- <a href="#!/posts" class="btn btn-primary" role="button">show more</a> -->
-<h1><center> Events</center></h1>
 <div class="container">
-<div class="row">
-  <div class="col-sm-6 col-md-4" ng-repeat="event in events | limitTo:3">
-    <div class="thumbnail">
+    <h1>EVENTS</h1>
+    <div class="row">
+        <div class="col-sm-6 col-md-4  categorySection" ng-repeat="event in events | limitTo:3">
+            <div class="thumbnail">
+                <!--                    <img src="http://placehold.it/350x250">-->
+                <img src="{{event.media.media_url}}" style="height:200px">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 ">
+                        <a href="#"><p>{{event.desc}}</p>></a>
+                    </div>
 
-            <img src="{{event.media.media_url}}" class="img-circle" style="  height: 80px;"/>
+                    <div class="col-lg-4 col-md-8 col-sm-2 ">
+                        <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="caption">
 
-           <p>{{event.desc}}</p>
-          <p>Location : {{event.loc}}</p>
-          <p>Date from {{event.date_from}}  To {{event.date_to}}</</p>
-          <p>Time from {{event.time_from}} To {{event.time_to}}</p>
+                 <p>Location : {{event.loc}}</p>
+                 <p>Date from {{event.date_from}}  To {{event.date_to}}</</p>
+                 <p>Time from {{event.time_from}} To {{event.time_to}}</p>
 
 
-    </div>
-        <a href="#!/event/{{event.id}}" class="btn btn-default" role="button">details</a>
 
-    </div>
+                    <div class="row">
+                        <div class="eventScd col-lg-8 col-md-6 col-sm-12">
+
+
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                <a href="#">
+                                <p>25
+                                <span class="label label-default"> Aug - 30 Aug</span> <span class="label label-default">09:00 - 10:00 PM</span>
+                                </p>
+                                </a>
+
+
+                        </div>
+
+                          <div class=" location col-lg-4 col-md-8 col-sm-2 ">
+                        <i class="fa fa-share-alt" aria-hidden="true"></i>
+
+                    </div>
+
+                    </div>
+
+                    <a class="userPic">
+                        <span>Mintoring by : </span>
+                        <img src="Imgs/Persons/face1.jpg" alt="">
+                        Ali ibrahim
+                    </a>
+                    <a href="#!/event/{{event.id}}" class="btn btn-default" role="button">details</a>
+                </div>
+            </div>
+        </div>
   </div>
 </div>
