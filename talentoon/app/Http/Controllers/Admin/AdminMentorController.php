@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\CategoryMentor;
 use Illuminate\Support\Facades\DB;
-use App\Admin;
-use App\User;
+use App\Models\Admin;
+use App\Models\User;
 use Auth;
 
 class AdminMentorController extends Controller

@@ -5,6 +5,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 	var talent = {}
     var mentor = {}
 
+    console.log('iam here')
 	//
     // $scope.show = function() {
     //     ModalService.showModal({
@@ -36,11 +37,88 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 			talent.files_of_initial_review = filesuploaded;
 
 			console.log("Talent Object is ",talent);
+
+
+
+
+            var fd = new FormData()
+            console.log("file descriptionnnnn",fd)
+            for (var i in filesuploaded) {
+                fd.append("fileToUpload",filesuploaded[i]);
+            }
+            var config = {headers: {'Content-Type': undefined}};
+            var url = "upload.php"
+            // var url =  "http://172.16.2.239:8000/api/test"
+
+            console.log("________________In Form Data______________________")
+
+            var httpPromise = $http.post(url, fd, config);
+            console.log(httpPromise)
+            console.log("________________After HTTP Promise Form Data______________________")
+
+
+
+
 		}else{
 			alert("sorry files is required")
 		}
 
 	}
+
+
+
+     $scope.submit = function() {
+            // $scope.form.image = filesuploaded;
+            console.log("inside submit scope " ,filesuploaded)
+
+            $http({
+              method  : 'POST',
+              url     : 'http://localhost:8000/api/uploads/singleuploded',
+              processData: false,
+              transformRequest: function (data) {
+                  var formData = new FormData();
+                  for(var i =0;i< filesuploaded.length;i++){
+                        formData.append("file", filesuploaded[i]); 
+                        console.log("file in loop",filesuploaded[i]) 
+                  }
+                  
+                  return formData;  
+              },  
+              data : filesuploaded,
+              headers: {
+                     'Content-Type': undefined,
+                     'Process-Data':false
+              }
+           }).then(function(data){
+                // alert(data);
+                console.log("thennnnnnn",data)
+           });
+
+    };
+
+
+
+
+    $scope.uploadedFile = function(element) {
+            $scope.currentFile = element.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(event) {
+              $scope.image_source = event.target.result
+              $scope.$apply(function($scope) {
+                $scope.files = element.files;
+              });
+            }
+                    reader.readAsDataURL(element.files[0]);
+    }
+
+
+
+
+
+
+
+
 
 
 
@@ -100,8 +178,9 @@ $scope.comment={};
     $scope.cat_id=index;
     var user_id=1;
     categories.getCategoryPosts(index).then(function(data){
-
+        console.log("inside controller" , data)
         $scope.category_posts=data;
+
     console.log($scope.category_posts);
     } , function(err){
         console.log(err);
@@ -128,7 +207,9 @@ $scope.comment={};
 
 	//files with ng file upload
 	var uploader = $scope.uploader = new FileUploader({
-        url: 'upload.php'
+        // url: 'http://172.16.2.239:8000/api/test'
+        // url: 'upload.php'
+        url: 'http://localhost:8000/api/uploads/singleuploded'
     });
 
     // FILTERS
@@ -202,16 +283,16 @@ $scope.comment={};
 
 
 
-
-
-
+    console.log("Scope_Mentor_Uploader",$scope.ment_uploader)
 
     //Mentor Uploader
 
 
     //files with ng file upload
     var ment_uploader = $scope.ment_uploader = new FileUploader({
-        url: 'upload.php'
+        // url: 'http://172.16.2.239:8000/api/test'
+        // url:'upload.php'
+
     });
 
     // FILTERS

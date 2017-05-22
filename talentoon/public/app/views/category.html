@@ -62,6 +62,22 @@
 
 <h1>Please Complete Your Profile to be MaWhooB.. ()</h1>
 
+<h1>Hello mina</h1>
+
+    <!-- Form Start -->
+    <form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">
+
+      <input ng-model="form.image" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
+      <input type="submit" id="submit" value="Submit" />
+      <br/>
+      <img ng-src="{{image_source}}" style="width:300px;">
+
+    </form>
+    <!-- Form End -->
+<h1>end Hello mina</h1>
+
+
+
 <form ng-submit="completeTalentProfile()" name="complete_profile">
   <label>Talent Description</label>
   <input type="text" name="description" required ng-model="talent.description">
