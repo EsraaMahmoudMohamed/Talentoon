@@ -1,0 +1,256 @@
+//sass --watch Sass\CategoriesSass.scss:Css\CategoriesCss.css
+
+@font-face{
+    font-family:regular;
+    src:url(../../Fonts/Roboto-Regular.ttf)
+}
+
+@font-face{
+    font-family:medium;
+    src:url(../../Fonts/Roboto-Medium.ttf)
+}
+
+@font-face{
+    font-family:blak;
+    src:url(../../Fonts/Roboto-Black.ttf)
+}
+
+@font-face{
+    font-family:bold;
+    src:url(../../Fonts/Roboto-Bold.ttf)
+}
+
+@font-face{
+    font-family:boldco;
+    src:url(../../Fonts/Roboto-BoldCondensed.ttf)
+}
+
+@font-face{
+    font-family:light;
+    src:url(../../Fonts/Roboto-Light.ttf)
+}
+
+@font-face{
+    font-family:thin;
+    src:url(../../Fonts/Roboto-Thin.ttf)
+}
+
+
+
+$yellow:#FFB733;
+$purplel:#6A0C38;
+$purpled:#45132E;
+$white:#FFFFFF;
+$black:#231F20;
+$gray:#808285;
+$grayl:#E4E4E4;
+
+
+
+
+body{
+    font-size: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: $grayl;
+}
+
+.navbar{
+    background-color: transparent;
+
+    border:0px;
+    border-radius:0px;
+    padding: 1% 0%;
+    .navbar-header{
+        .navbar-toggle{
+
+            background-color: $white;
+            .icon-bar{
+                background-color: $yellow;
+            }
+
+
+        }
+
+        .navbar-brand{
+            padding:  5px;
+            padding-left: 10px;
+            img{
+                height: 100%;
+                display: inline-block;
+            }
+
+        }
+
+    }
+    .navbar-collapse{
+        color: $purplel;
+        .navbar-right{
+            li{
+                font-size: 16px;
+                font-family: medium;
+                margin-left: 5px;
+                margin-right: 5px;
+                a{
+                    color:$purplel;
+                    .dropdown{
+                        .caret{
+                            color: $yellow;
+                        }
+                        .dropdown-toggle{
+
+
+                        }  
+
+                        .dropdown-menu{
+                            li{
+
+                                a{
+
+                                }
+                            } 
+                        } 
+
+                    }  
+                    .search{
+                        padding-bottom:15px;
+                        padding-top:10px;
+
+                        .glyphicon-search{
+                            font-size: 25px;
+
+                        }  
+
+
+                        .loginbtn{
+                            background-color: $yellow;
+                            .btn-default{
+
+                            }
+                        }
+
+                        .languagebtn{
+
+                        }
+
+                    }
+                }
+            }  
+        }
+    }
+
+}
+
+
+
+
+
+
+
+.categorySection{
+    //width:33.3%;
+    margin-top:25px;
+    //margin-right:10px;
+
+    .thumbnail{
+        padding: 0px;
+        img{
+            width: 358px;
+            margin:0px;
+
+        }
+        .caption{
+
+            h3{
+                color:$yellow;
+                font-family: bold;
+                font-size: 20px;
+                text-align: center;
+            }
+            p{
+                font-family: regular;
+                font-size: 16px;
+                text-align: center;
+
+                .btnAction{
+                    background-color:$purplel
+                        ;
+                    color:$white;
+                    font-family: medium;
+                    font-size: 16px;
+                    border: 0px;
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+
+
+
+
+                }
+            }
+        }  
+    }
+}
+
+
+footer{
+    font-size: 14px;
+    background-color: $purplel;
+
+    color:$grayl;
+    .row{
+        padding: 25px;
+        .footerSection{
+            ul{
+                h4{
+                    color: $white;
+                }
+                li{
+                    color:$gray;
+                }
+
+                .includedUl{
+                    li{
+                        margin: 10px;  
+
+                        i{
+                            color: $yellow;
+                            font-size: 35px; 
+
+                        } 
+                    }
+                }
+
+                .inputEmail{
+                    border:3px $gray solid;
+                    border-radius:10%;
+                    margin-top:10px;
+
+                    .glyphicon-envelope{
+                        color:$gray;
+                        padding:5px;
+                        margin-left: 10px;
+                    }
+                    input{
+                        background-color: transparent;
+                        border: 0px;
+                        padding:5px;
+                    }
+                }
+
+                .emailBtn
+                {
+                    border:3px $yellow solid;
+                    color: $yellow;
+                    border-radius:10%;
+                    padding: 5px 10px;
+                    width: 100px;
+                    margin-top: 8px;
+
+                }
+            }
+        }
+    }
+
+}
+
+
