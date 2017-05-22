@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\CategoryMentorService;
 use Illuminate\Support\Facades\Auth;
-
 class CategoryMentorController extends Controller
 {
     //
@@ -29,6 +28,5 @@ class CategoryMentorController extends Controller
         }else{
             return response()->json(['status' => 0, 'message' => 'unkown action']);
         }
-
     }
 }
