@@ -62,3 +62,6 @@ Route::post('/uploads/multipleuploded','UploadController@multiple_upload');
 
 
 Route::get('post/like/{id}', ['as' => 'post.like', 'uses' => 'LikeController@likePost']);
+
+
+Route::resource('initial_reviews','InitialReviewController');

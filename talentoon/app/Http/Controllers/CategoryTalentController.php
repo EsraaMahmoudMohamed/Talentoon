@@ -11,5 +11,5 @@ class CategoryTalentController extends Controller
         
         $CategoryTalentServiceObj=new CategoryTalentService();
         $CategoryTalentServiceObj->beTalent($request);
-    } 
+    }
 }

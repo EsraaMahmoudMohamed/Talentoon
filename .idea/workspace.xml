@@ -2,242 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="508a07bf-cf4d-45bb-a8ff-83d8ff927fa6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/StreamLab/fb-pro.png" afterPath="$PROJECT_DIR$/talentoon/public/StreamLab/fb-pro.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/htc1.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/htc1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/htc11.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/htc11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/htc2.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/htc2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/htc22.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/htc22.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/iphone1.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/iphone1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/iphone11.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/iphone11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/nexus1.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/nexus1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/nexus11.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/nexus11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/nexus2.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/nexus2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/nexus22.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/nexus22.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/sam1.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/sam1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/sam11.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/sam11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/sam2.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/sam2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/sam22.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/sam22.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/images/talentoon.jpg" afterPath="$PROJECT_DIR$/talentoon/public/app/json/images/talentoon.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/screenshots/home.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/screenshots/home.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/screenshots/search.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/screenshots/search.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/screenshots/signle.png" afterPath="$PROJECT_DIR$/talentoon/public/app/json/screenshots/signle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular.min.js.gzip" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular.min.js.gzip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/uploads/01 first steps.pdf" afterPath="$PROJECT_DIR$/talentoon/public/uploads/01 first steps.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591caa46beda1.png" afterPath="$PROJECT_DIR$/talentoon/public/uploads/files/591caa46beda1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6c6ba75e6.png" afterPath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6c6ba75e6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6e5c7724e.png" afterPath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6e5c7724e.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6ed70e444.png" afterPath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6ed70e444.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6fa6b089f.png" afterPath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6fa6b089f.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d7043bfda8.png" afterPath="$PROJECT_DIR$/talentoon/public/uploads/files/591d7043bfda8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/Auth/AdminLoginController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/Auth/AdminLoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryMentorController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryMentorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentsController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CommentController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CommentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/LikeController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/LikeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/UploadController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/UploadController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Mail/WelcomeToTalentoonCommunity.php" afterPath="$PROJECT_DIR$/talentoon/app/Mail/WelcomeToTalentoonCommunity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Models/CategoryMentor.php" afterPath="$PROJECT_DIR$/talentoon/app/Models/CategoryMentor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Models/CategoryTalent.php" afterPath="$PROJECT_DIR$/talentoon/app/Models/CategoryTalent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Models/Comment.php" afterPath="$PROJECT_DIR$/talentoon/app/Models/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Models/Country.php" afterPath="$PROJECT_DIR$/talentoon/app/Models/Country.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Models/Like.php" afterPath="$PROJECT_DIR$/talentoon/app/Models/Like.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Models/Subscriber.php" afterPath="$PROJECT_DIR$/talentoon/app/Models/Subscriber.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Models/Upload.php" afterPath="$PROJECT_DIR$/talentoon/app/Models/Upload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Services/CategoryTalentsService.php" afterPath="$PROJECT_DIR$/talentoon/app/Services/CategoryTalentsService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/config/stream_lab.php" afterPath="$PROJECT_DIR$/talentoon/config/stream_lab.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_16_154429_create_posts_table.php" afterPath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_16_154429_create_posts_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_18_094150_create_uploads_table.php" afterPath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_18_094150_create_uploads_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_141412_create_category_talents_table.php" afterPath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_141412_create_category_talents_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_152318_create_category_mentors_table.php" afterPath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_152318_create_category_mentors_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_154728_create_subscribers_table.php" afterPath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_154728_create_subscribers_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_164202_create_likeables_table.php" afterPath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_164202_create_likeables_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_170624_create_comments_table.php" afterPath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_170624_create_comments_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/hist" afterPath="$PROJECT_DIR$/talentoon/hist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/StreamLab/StreamLab.js" afterPath="$PROJECT_DIR$/talentoon/public/StreamLab/StreamLab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/css/style.css" afterPath="$PROJECT_DIR$/talentoon/public/app/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/index.html" afterPath="$PROJECT_DIR$/talentoon/public/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/controller/app.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/controller/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/controller/category.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/controller/category.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/controller/home.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/controller/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/controller/route.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/controller/route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/directives/star-rating.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/directives/star-rating.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/factories/home.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/factories/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/filter/round.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/filter/round.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/categories.json" afterPath="$PROJECT_DIR$/talentoon/public/app/json/categories.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/events.json" afterPath="$PROJECT_DIR$/talentoon/public/app/json/events.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/package.json" afterPath="$PROJECT_DIR$/talentoon/public/app/json/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/json/posts.json" afterPath="$PROJECT_DIR$/talentoon/public/app/json/posts.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/LICENSE.md" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/README.md" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/angular-route.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/angular-route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/angular-route.min.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/angular-route.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/angular-route.min.js.map" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/angular-route.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/bower.json" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/index.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/package.json" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular-route/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/LICENSE.md" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/LICENSE.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/README.md" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular-csp.css" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular-csp.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular.min.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular.min.js.map" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/angular.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/bower.json" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/index.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/package.json" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/angular/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/CHANGELOG.md" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/README.md" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap-theme.css.map" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap-theme.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap-theme.min.css.map" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap-theme.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap.min.css.map" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/css/bootstrap.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/js/npm.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/dist/js/npm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/.jshintrc" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/.jshintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/bs-commonjs-generator.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/bs-commonjs-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/bs-glyphicons-data-generator.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/bs-glyphicons-data-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/bs-lessdoc-parser.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/bs-lessdoc-parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/bs-raw-files-generator.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/bs-raw-files-generator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/configBridge.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/npm-shrinkwrap.json" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/npm-shrinkwrap.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/sauce_browsers.yml" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/grunt/sauce_browsers.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/affix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/js/transition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/alerts.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/alerts.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/badges.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/badges.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/bootstrap.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/breadcrumbs.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/breadcrumbs.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/button-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/buttons.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/buttons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/carousel.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/carousel.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/close.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/close.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/code.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/code.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/component-animations.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/component-animations.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/dropdowns.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/dropdowns.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/glyphicons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/grid.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/grid.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/input-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/jumbotron.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/jumbotron.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/labels.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/labels.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/list-group.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/list-group.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/media.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/media.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/alerts.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/alerts.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/background-variant.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/background-variant.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/border-radius.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/border-radius.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/buttons.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/buttons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/center-block.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/center-block.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/clearfix.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/clearfix.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/forms.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/gradients.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/gradients.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/grid-framework.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/grid-framework.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/grid.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/grid.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/hide-text.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/hide-text.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/image.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/image.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/labels.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/labels.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/list-group.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/list-group.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/nav-divider.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/nav-divider.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/nav-vertical-align.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/nav-vertical-align.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/opacity.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/opacity.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/pagination.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/pagination.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/panels.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/panels.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/progress-bar.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/progress-bar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/reset-filter.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/reset-filter.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/reset-text.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/reset-text.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/resize.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/resize.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/responsive-visibility.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/responsive-visibility.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/size.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/size.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/tab-focus.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/tab-focus.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/table-row.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/table-row.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/text-emphasis.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/text-emphasis.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/text-overflow.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/text-overflow.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/mixins/vendor-prefixes.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/modals.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/modals.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/navbar.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/navbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/navs.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/navs.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/normalize.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/normalize.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/pager.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/pager.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/pagination.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/pagination.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/panels.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/panels.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/popovers.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/popovers.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/print.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/print.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/progress-bars.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/progress-bars.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/responsive-embed.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/responsive-embed.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/responsive-utilities.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/responsive-utilities.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/scaffolding.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/scaffolding.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/tables.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/tables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/theme.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/thumbnails.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/thumbnails.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/tooltip.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/tooltip.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/type.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/utilities.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/utilities.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/wells.less" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/less/wells.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/package.json" afterPath="$PROJECT_DIR$/talentoon/public/app/node_modules/bootstrap/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/package.json" afterPath="$PROJECT_DIR$/talentoon/public/app/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/categories.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/categories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/category.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/home.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/post.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/post.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/admin/posts/edit.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/admin/posts/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/admin/posts/index.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/admin/posts/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/auth/admin-login.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/auth/admin-login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/emails/welcome.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/emails/welcome.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/test.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/test.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/button.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/button.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/footer.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/footer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/header.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/layout.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/message.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/message.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/panel.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/panel.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/promotion.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/promotion.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/promotion/button.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/promotion/button.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/subcopy.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/subcopy.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/table.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/table.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/themes/default.css" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/html/themes/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/button.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/button.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/footer.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/footer.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/header.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/layout.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/layout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/message.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/message.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/panel.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/panel.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/promotion.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/promotion.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/promotion/button.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/promotion/button.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/subcopy.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/subcopy.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/table.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/mail/markdown/table.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/notifications/email.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/notifications/email.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/pagination/bootstrap-4.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/pagination/bootstrap-4.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/pagination/default.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/pagination/default.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/pagination/simple-bootstrap-4.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/resources/views/vendor/pagination/simple-default.blade.php" afterPath="$PROJECT_DIR$/talentoon/resources/views/vendor/pagination/simple-default.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/controller/showreview.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/controller/showreview.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/showreview.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/showreview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/routes/api.php" afterPath="$PROJECT_DIR$/talentoon/routes/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/routes/web.php" afterPath="$PROJECT_DIR$/talentoon/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -251,7 +21,107 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ReviewMedia.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/app/Models/ReviewMedia.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Country.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Country.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InitialReview.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/talentoon/app/Models/InitialReview.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InitialReviewController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/InitialReviewController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+              <folding>
+                <element signature="e#40#69#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_05_21_143804_create_review_media_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_21_143804_create_review_media_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_05_21_163343_create_initial_reviews_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_21_163343_create_initial_reviews_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="74" column="3" lean-forward="false" selection-start-line="74" selection-start-column="3" selection-end-line="81" selection-end-column="0" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryTalentsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>DB</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -263,11 +133,20 @@
         <option value="$PROJECT_DIR$/talentoon/app/Models/Like.php" />
         <option value="$PROJECT_DIR$/talentoon/app/Models/User.php" />
         <option value="$PROJECT_DIR$/talentoon/app/Models/Post.php" />
-        <option value="$PROJECT_DIR$/talentoon/routes/web.php" />
         <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/LikeController.php" />
         <option value="$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_170624_create_comments_table.php" />
         <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/CommentController.php" />
+        <option value="$PROJECT_DIR$/talentoon/database/migrations/2017_05_21_163343_create_review_media_table.php" />
+        <option value="$PROJECT_DIR$/talentoon/database/migrations/2017_05_21_143804_create_initial_reviews_table.php" />
+        <option value="$PROJECT_DIR$/talentoon/app/Models/InitialReview.php" />
+        <option value="$PROJECT_DIR$/talentoon/database/migrations/2017_05_21_143804_create_review_media_table.php" />
+        <option value="$PROJECT_DIR$/talentoon/routes/web.php" />
+        <option value="$PROJECT_DIR$/talentoon/app/Models/ReviewMedia.php" />
         <option value="$PROJECT_DIR$/talentoon/app/Models/Comment.php" />
+        <option value="$PROJECT_DIR$/talentoon/routes/api.php" />
+        <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/InitialReviewController.php" />
+        <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentController.php" />
+        <option value="$PROJECT_DIR$/talentoon/app/Http/Middleware/VerifyCsrfToken.php" />
       </list>
     </option>
   </component>
@@ -302,8 +181,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -344,7 +223,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -362,11 +241,55 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talentoon" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talentoon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Middleware" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -381,6 +304,9 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/talentoon/app/Models" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/talentoon/app/Models" />
     </key>
@@ -456,17 +382,18 @@
       <workItem from="1495211779519" duration="2817000" />
       <workItem from="1495214803174" duration="627000" />
       <workItem from="1495217652263" duration="350000" />
+      <workItem from="1495378297302" duration="20503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3794000" />
+    <option name="totallyTimeSpent" value="24297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28055343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -492,52 +419,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_170624_create_comments_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/LikeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Like.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_164202_create_likeables_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -545,24 +432,276 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/CommentController.php">
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="480">
+          <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_170624_create_comments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_172047_create_news_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="29" lean-forward="true" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_16_165912_add_user_id_to_posts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_152318_create_category_mentors_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_19_141412_create_category_talents_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="40" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="74" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/CategoryMentor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Services/CategoryTalentService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#32#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryMentorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="66" column="61" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="66" selection-end-column="61" />
+          <folding>
+            <element signature="e#7#389#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoriesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="180">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/User.php">
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Subscriber.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Like.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/CategoryTalent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Country.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/LikeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/CommentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="32" column="56" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="32" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="74" column="3" lean-forward="false" selection-start-line="74" selection-start-column="3" selection-end-line="81" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_21_143804_create_review_media_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/database/migrations/2017_05_21_163343_create_initial_reviews_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/ReviewMedia.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/InitialReviewController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+          <folding>
+            <element signature="e#40#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Middleware/VerifyCsrfToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/InitialReview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
