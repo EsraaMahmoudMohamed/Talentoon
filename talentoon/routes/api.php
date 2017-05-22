@@ -29,7 +29,7 @@ Route::post('/categorytalent','CategoryTalentController@store');
 Route::get('/categorytalent/{talent_id}','CategoryTalentController@update');
 
 Route::resource('category','CategoriesController');
-<<<<<<< HEAD
+
 
 Route::resource('initial_reviews','InitialReviewController');
 
@@ -46,8 +46,6 @@ Route::post('/store','InitialReviewController@store');
 Route::get('/get_media_for_initial_review/{category_talent_id}/{category_mentor_id}','InitialReviewController@get_media_for_initial_review');
 
 
-
-=======
 Route::post('/test', 'UploadController@test');
 Route::post('/test2', 'UploadController@test2');
 Route::get('/categorymentor','CategoryMentorController@update');
@@ -59,5 +57,3 @@ Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
 
 Route::get('/categorysubscribe','CategorySubscribeController@store');
 Route::get('/categoryunsubscribe','CategorySubscribeController@update');
->>>>>>> 61a68ff414bef66c469d04f5a6845ed0801d012b
-
