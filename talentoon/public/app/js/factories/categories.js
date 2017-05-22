@@ -77,14 +77,14 @@ return {
 		addpost:function(postdata){
 
 			var def =$q.defer();
+			// console.log('the url ya esraa', 'http://172.16.2.239:8000/api/categories/'+postdata.category_id+'/posts');
 			$http({
-				url:'addpost url' ,
-				method:'GET',
+				url:'http://localhost:8000/api/categories/'+postdata.category_id+'/posts',
+				method:'POST',
 				data:postdata
-
 			}).then(function(res){
-
-				if(res.data.length){
+                console.log("add post ",res)
+				if(res.data){
 					def.resolve(res.data)
 				}else{
 					def.reject('there is no data ')
