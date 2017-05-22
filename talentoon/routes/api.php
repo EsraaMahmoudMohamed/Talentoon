@@ -16,15 +16,28 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::resource('comment','CommentController');
 Route::post('/uploads/singleuploded','UploadController@single_upload');
 Route::post('/categorytalent','CategoryTalentController@store');
+
 //Route::get('/categorytalent/{talent_id}',[
 //    'before' => 'jwt-auth',
 //    'use'=>'CategoryTalentController@update'
 //]);
+
+
+Route::get('/categorytalent/{talent_id}','CategoryTalentController@update');
+
 Route::resource('category','CategoriesController');
+Route::post('/test', 'UploadController@test');
+Route::post('/test2', 'UploadController@test2');
 Route::get('/categorymentor','CategoryMentorController@update');
+
 
 Route::post('/signup','JWTAuth\SignUpController@signup');
 Route::post('/login','JWTAuth\LoginController@login');
 Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
+
+Route::get('/categorysubscribe','CategorySubscribeController@store');
+Route::get('/categoryunsubscribe','CategorySubscribeController@update');
+

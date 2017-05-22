@@ -3,6 +3,7 @@
 <head>
 	<title>Angular js</title>
 	<!-- scripts -->
+	<meta charset="UTF-8">
 
 
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
@@ -10,7 +11,6 @@
 	<script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
 	<!-- <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
-
 
 
 
@@ -29,6 +29,8 @@
 	<script type="text/javascript" src="js/controller/register.js"></script>
 	<script type="text/javascript" src="js/controller/login.js"></script>
 	<script type="text/javascript" src="js/controller/addevent.js"></script>
+	<script type="text/javascript" src="js/controller/showreview.js"></script>
+	<script type="text/javascript" src="js/controller/jquery-3.1.1.js"></script>
 
 
 
@@ -36,37 +38,124 @@
 	<script type="text/javascript" src="js/factories/categories.js"></script>
 	<script type="text/javascript" src="js/factories/home.js"></script>
 		<script type="text/javascript" src="js/factories/user.js"></script>
+		<script type="text/javascript" src="js/factories/showreview.js"></script>
+
+
 
 
 
 <!-- style -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+		<link rel="stylesheet" href="libs/bootstrap/bootstrap.css">
+		<!-- <link rel="stylesheet" href="css/Style/Sass/CategoriesSass.scss"> -->
+		<link rel="stylesheet" href="css/Style/Css/CategoriesCss.css">
+		<link rel="stylesheet" href="css/Style/Css/CategorySelected.css">
+		<link rel="stylesheet" href="css/Style/Css/font-awesome.css">
+		<!-- <link rel="stylesheet" href="css/Style/Css/animate.css"> -->
+
 </head>
 <body>
-
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-				<li class="active"><img src="json/images/talentoon.jpg" class="img-square" style="  height: 55px;"/></li>
-
-        <li class="active"><a href="#!/">home <span class="sr-only">(current)</span></a></li>
-
-         <li><a href="#!/categories">All category</a></li>
-          <li ><a href="#!/register">register </a></li>
-				<li ><a href="#!/login">login</a></li>
-      </ul>
+	<nav class="navbar navbar-default">
+			<div class="container">
+					<!-- mobile display -->
+					<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#"><img src="Imgs/logo.png"></a>
+					</div>
 
 
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+									<li><a href="#!/">Home</a></li>
+									<li><a href="#!/categories">Categories</a></li>
+									<li><a href="#">Workshops</a></li>
+									<li><a href="#">Posts</a></li>
+									<!--mn esraa-->
+									<li ><a href="#!/register">register </a></li>
+								<li ><a href="#!/login">login</a></li>
+								<li ><a href="#!/showreview">Show Review</a></li>
+								<!--mn esraa-->
+									<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+													<li><a href="#">Online store</a></li>
+													<li><a href="#">Blog</a></li>
+													<li><a href="#">Competition</a></li>
+													<li><a href="#">Questionnaire</a></li>
+											</ul>
+									</li>
+
+									<li><a href="#" class="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+									<li class="loginbtn"><button class="btn btn-default" href="#!/login" type="submit">Log In</button></li>
+									<li class="languagebtn"><a href="#">AR</a></li>
+							</ul>
+					</div>
+			</div>
+			</div>
+
+	</nav>
+
+
 
 <div ng-view></div>
+<footer>
+		<div class="container">
+				<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12 footerSection">
+								<ul>
+										<h4>Links</h4>
+										<li>Workshops</li>
+										<li>Categories</li>
+										<li>Posts</li>
+										<li>Blog</li>
+								</ul>
+						</div>
 
+						<div class="col-md-3 col-sm-6 col-xs-12 footerSection">
+								<ul class="list-unstyled">
+										<h4> Stay Tuned</h4>
+										<li>Connect with us and
+												stay in the loop</li>
 
+										<ul class="list-inline list-unstyled includedUl">
+												<br>
+												<li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
+												<li><i class="fa fa-twitter-square" aria-hidden="true"></i></li>
+												<li><i class="fa fa-google-plus-square" aria-hidden="true"></i></li>
+										</ul>
+								</ul>
+						</div>
 
+						<div class="col-md-3 col-sm-6 col-xs-12 footerSection">
+								<ul class="list-unstyled">
+										<h4>Email Updated</h4>
+										<li>Be the first to hear about our news
+												and announcements</li>
+										<li class="inputEmail"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><input type="text" placeholder="Email Address"></li>
+								</ul>
+						</div>
+
+						<div class="col-md-3 col-sm-6 col-xs-12 footerSection">
+								<ul class="list-unstyled">
+										<h4>Contact us</h4>
+										<li>Questions ? we've got
+												answers.
+												<br>Try us.</li>
+										<li class="emailBtn">Email Us</li>
+								</ul>
+						</div>
+				</div>
+		</div>
+</footer>
+
+<!-- <script src="libs/JS/jquery-3.1.1.js"></script> -->
+<script src="libs/JS/bootstrap.js"></script>
 </body>
 </html>

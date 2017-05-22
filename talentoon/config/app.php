@@ -168,8 +168,10 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         StreamLab\StreamLabProvider\StreamLabServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
+
         /*
          * Application Service Providers...
          */

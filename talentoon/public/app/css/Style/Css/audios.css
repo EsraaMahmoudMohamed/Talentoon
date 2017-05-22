@@ -1,0 +1,63 @@
+.video{
+    
+    display: inline-block;
+}/*Play button*/
+#songPlay{
+ display: inline-block;
+}
+/*Pause button*/
+#songPause{
+ display: inline-block;
+}
+/*Stop button*/
+#songStop{
+ display: inline-block;
+}
+/*Play/Pause button*/
+#songPlayPause{
+ display: inline-block;
+}
+/*Song location slider*/
+#songSlider{
+    width: 500px;
+    height: 10px;
+    background-color: black;
+     display: inline-block;
+}
+/*Track progress bar*/
+#trackProgress{
+    width: 0px;
+    height: 10px;
+    background-color: red;
+     display: inline-block;
+}
+/*Volume Up Button*/
+#volumeUp{
+ display: inline-block;
+}
+/*Volume Down Button*/
+#volumeDown{
+ display: inline-block;
+}
+/*Volume Meter*/
+#volumeMeter{
+    width: 500px;
+    height: 10px;
+    background-color: black;
+     display: inline-block;
+}
+/*Volume Location Meter*/
+#volumeStatus{
+    height: 10px;
+    background-color: green;
+     display: inline-block;
+}
+
+#songTime{
+       display: inline-block;
+}
+
+i{
+    font-size: 20px;
+    color:purple;
+}

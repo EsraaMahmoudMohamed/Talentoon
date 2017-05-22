@@ -78,4 +78,9 @@ $routeProvider.when('/',{
 
 })
 
+.when('/showreview',{
+	templateUrl:'views/showreview.html' ,
+	controller:'showreview'
+
+})
 })

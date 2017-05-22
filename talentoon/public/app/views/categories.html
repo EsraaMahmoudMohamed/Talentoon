@@ -1,17 +1,17 @@
 <h1><center>All Category</center></h1>
- <div class="container">
-<div class="row">
-  <div class="col-sm-6 col-md-4" ng-repeat="category in categories">
-    <div class="thumbnail">
-            <img src="{{category.image}}" class="img-circle" style="  height: 80px;"/>
 
-           <h2>{{category.title}}</h2>
-  <p><a href="#!/category/{{category.id}}" class="btn btn-info" role="button">Go To Me</a></p></td></tr>
-
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4  categorySection" ng-repeat="category in categories">
+            <div class="thumbnail">
+                <!--                    <img src="http://placehold.it/350x250">-->
+                <img src="{{category.image}}" style="height:200px">
+                <div class="caption">
+                    <h3>{{category.title}}</h3>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p  class="btnAction"><a href="#!/category/{{category.id}}" class="btn btn-primary btnAction" role="button">Discover More</a></p>
+                </div>
+            </div>
         </div>
-
-
-    </div>
+      </div>
   </div>
-</div>

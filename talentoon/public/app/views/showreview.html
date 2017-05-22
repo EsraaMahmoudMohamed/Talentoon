@@ -1,0 +1,38 @@
+<br>
+ <div class="container">
+  <div ng-repeat="review in allreview track by $index">
+    <div class="thumbnail">
+      <div ng-repeate="media in review.media track by $index">
+            <img src="{{media[0].filename}}" class="img-circle" style="  height: 80px;"/>
+          </div>
+
+           <p>{{review.from_when}}</p>
+          <p>{{review.description}}</p>
+          <p>{{review.created_at}}</p>
+          <input type="hidden" ng-model="review.category_id" value="{{review.category_id}}">
+          <input type="hidden" ng-model="review.talent_id" value="{{review.talent_id}}">
+
+    </div>
+    <from ng-submit="submitted=true ; review(review.$valid)" name="review"  novalidate>
+    <div class="field">
+      <label>Level  </label>
+      <select name="level" ng-model="review.level" >
+    <option   value="1" >Level 1</option>
+    <option   value="2" >Level 2</option>
+    <option   value="3" >Level 3</option>
+    <option   value="4" >Level 4</option>
+    <option   value="5" >Level 5</option>
+    <option   value="6" >Level 6</option>
+    <option   value="7" >Level 7</option>
+    <option   value="8" >Level 8</option>
+    <option   value="9" >Level 9</option>
+    <option   value="10" >Level 10</option>
+
+
+    </select>
+    </div>
+<button type="submit" name="button">add review</button>
+  </form>
+    </div>
+
+</div>
