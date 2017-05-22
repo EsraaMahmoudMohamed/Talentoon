@@ -2,7 +2,7 @@
  <div class="container">
   <div ng-repeat="review in allreview track by $index">
     <div class="thumbnail">
-      <div ng-repeate="media in review.media">
+      <div ng-repeate="media in review.media track by $index">
             <img src="{{media[0].filename}}" class="img-circle" style="  height: 80px;"/>
           </div>
 
@@ -13,7 +13,7 @@
           <input type="hidden" ng-model="review.talent_id" value="{{review.talent_id}}">
 
     </div>
-    <from ng-submit="submitted=true ; review(review.$valid)" name="review"  novalidate>
+    <from ng-submit="submitted = true; review(review.$valid)" name="review"  novalidate>
     <div class="field">
       <label>Level  </label>
       <select name="level" ng-model="review.level" >

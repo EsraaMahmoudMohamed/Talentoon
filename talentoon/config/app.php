@@ -169,6 +169,8 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         StreamLab\StreamLabProvider\StreamLabServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
+        'Tymon\JWTAuth\Providers\JWTAuthServiceProvider',
+
         /*
          * Application Service Providers...
          */
@@ -227,6 +229,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'JWTAuth' => 'Tymon\JWTAuth\Facades\JWTFactory'
 
     ],
 

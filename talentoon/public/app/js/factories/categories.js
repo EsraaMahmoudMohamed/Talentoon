@@ -6,14 +6,19 @@ return {
 
 			var def =$q.defer();
 			$http({
-				 url:'http://localhost:8000/api/category' ,
+				url:'http://localhost:8000/api/category' ,
+				// url:'json/categories.json',
 				method:'GET'
 
 			}).then(function(res){
-				console.log(res.data.data);
+				// console.log(res.data.data);
 				if(res.data.data.length){
+				// if(res.data.length){
 					console.log(res.data);
 					def.resolve(res.data.data)
+					// def.resolve(res.data)
+
+
 				}else{
 					def.reject('there is no data ')
 				}
@@ -29,15 +34,14 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'json/posts.json' ,
+				url:'http://localhost:8000/api/category/'+index ,
 				method:'GET'
-
 			}).then(function(res){
-				// console.log(res);
-				if(res.data.length){
-		     def.resolve(res.data);
+				console.log("response is " , res.data.posts);
+				if(res.data.posts.length){
+		     			def.resolve(res.data.posts);
+		     			console.log("res.data.posts is " , res.data.posts )
 						// def.resolve(res.data[index])
-
 				}else{
 					def.reject('there is no data ')
 				}

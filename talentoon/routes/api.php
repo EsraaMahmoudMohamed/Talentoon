@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+//use Dingo\Api\Routing\Router;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,9 +20,44 @@ Route::resource('comment','CommentController');
 Route::post('/uploads/singleuploded','UploadController@single_upload');
 Route::post('/categorytalent','CategoryTalentController@store');
 
+//Route::get('/categorytalent/{talent_id}',[
+//    'before' => 'jwt-auth',
+//    'use'=>'CategoryTalentController@update'
+//]);
+
+
 Route::get('/categorytalent/{talent_id}','CategoryTalentController@update');
+
 Route::resource('category','CategoriesController');
+<<<<<<< HEAD
+
+Route::resource('initial_reviews','InitialReviewController');
+
+
+
+//this is called for when the talent choose to be talent and he needs to upload three of his work
+Route::post('/store_media','InitialReviewController@store_media');
+
+//this is to store initial review of one mentor on one talent on all the three files uploaded
+Route::post('/store','InitialReviewController@store');
+
+
+//to get all media related to mentor and talent
+Route::get('/get_media_for_initial_review/{category_talent_id}/{category_mentor_id}','InitialReviewController@get_media_for_initial_review');
+
+
+
+=======
+Route::post('/test', 'UploadController@test');
+Route::post('/test2', 'UploadController@test2');
 Route::get('/categorymentor','CategoryMentorController@update');
+
+
+Route::post('/signup','JWTAuth\SignUpController@signup');
+Route::post('/login','JWTAuth\LoginController@login');
+Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
+
 Route::get('/categorysubscribe','CategorySubscribeController@store');
 Route::get('/categoryunsubscribe','CategorySubscribeController@update');
+>>>>>>> 61a68ff414bef66c469d04f5a6845ed0801d012b
 
