@@ -160,6 +160,18 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 
 	});
 
+$scope.comment={};
+	$scope.addcomment= function(valid) {
+    if (valid) {
+      var comment = $scope.comment
+      console.log(comment);
+			console.log("vaild in add comment");
+
+    }
+		else{
+			console.log("error in add comment");
+		}
+  }
 
 	//get all posts under category
 	var index= $routeParams['category_id'];

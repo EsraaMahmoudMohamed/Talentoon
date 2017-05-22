@@ -1,4 +1,4 @@
-angular.module('myApp',["ngRoute","angularFileUpload"]) ;
+angular.module('myApp',["ngRoute","angularFileUpload","ngStorage"]) ;
 
 angular.module("myApp").run(function($rootScope,$location){
 

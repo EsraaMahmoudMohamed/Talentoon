@@ -73,20 +73,45 @@ class UploadController extends Controller
 
     }
 
+    public function test (Request $request){
+        if(!empty($_FILES['image'])){
+
+        // $ext = $f->getClientOriginalExtension();
+
+		// $ext = pathinfo($_FILES['image']['name'],PATHINFO_EXTENSION);
+                // $image = time().'.'.$ext;
+            $x= move_uploaded_file($_FILES["image"]['tmp_name'], 'uploads/'.$_FILES["image"]["name"]);
+		echo "Image uploaded successfully as ".$_FILES['image']['name'];
+        return response()->json(['request'=> $x,'message' => 'data sent successfully']);
+
+	}else{
+		echo "Image Is Empty";
+	}
+
+    }
+
+    public function test2 (Request $request){
+        if ( !empty( $_FILES ) ) {
+            $tempPath = $_FILES[ 'file' ][ 'tmp_name' ];
+            return response()->json(['request'=>$_FILES,'message' => 'data sent successfully']);
+
+            $x= move_uploaded_file($_FILES["image"]['tmp_name'], 'uploads/'.$_FILES["image"]["name"]);
+            return response()->json(['request'=>$x,'message' => 'data sent successfully']);
+
+            $uploadPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $_FILES[ 'file' ][ 'name' ];
+            move_uploaded_file( $tempPath, $uploadPath );
+            $answer = array( 'answer' => 'File transfer completed' );
+            $json = json_encode( $answer );
+            echo $json;
+        } else {
+            echo 'No files';
+        }
+
+
+    }
+
     public function single_upload(Request $request)
     {
-        dd($request);
-        //getting the post data
-            // $files = Input::file('images');
-
-
-        //Making counting of uploaded images
-        // $file_count = count($files);
-
-        //start count how many uploaded
-        // $uploadcount = 0;
-
-        // foreach ($files as $file) {
             $rules = array('file' => 'required|mimes:png,gif,jpeg,jpg,txt,pdf');//required|mimes:png,gif,jpeg,txt,pdf
             $validator = Validator::make(array('file' => $file), $rules);
             if ($validator->passes()) {
