@@ -6,17 +6,17 @@ return {
 
 			var def =$q.defer();
 			$http({
-				// url:'http://localhost:8000/api/category' ,
-				url:'json/categories.json',
+				url:'http://localhost:8000/api/category' ,
+				// url:'json/categories.json',
 				method:'GET'
 
 			}).then(function(res){
 				// console.log(res.data.data);
-				// if(res.data.data.length){
-				if(res.data.length){
+				if(res.data.data.length){
+				// if(res.data.length){
 					console.log(res.data);
-					// def.resolve(res.data.data)
-					def.resolve(res.data)
+					def.resolve(res.data.data)
+					// def.resolve(res.data)
 
 
 				}else{
