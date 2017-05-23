@@ -91,7 +91,9 @@ class UploadController extends Controller
     }
 
     public function test2 (Request $request){
+        dd($request);
         if ( !empty( $_FILES ) ) {
+
             $tempPath = $_FILES[ 'file' ][ 'tmp_name' ];
             return response()->json(['request'=>$_FILES,'message' => 'data sent successfully']);
 

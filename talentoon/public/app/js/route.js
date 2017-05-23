@@ -9,6 +9,11 @@ $routeProvider.when('/',{
 	templateUrl:'views/post.html',
 	controller:'homec'
 })
+
+.when('/initial_review',{
+	templateUrl:'views/initial_review.html',
+	controller:'initial_review'
+})
 //all category
 .when('/categories',{
 	templateUrl:'views/categories.html',
