@@ -23,23 +23,23 @@
 <div class="container">
   <div ng-repeat="post in category_posts track by $index">
 
-    <!-- <form name="comment_form" ng-submit="submitted=true ; addcomment(comment_form.$valid)" novalidate> -->
-      <!-- <input type="hidden" name="user_id"  ng-model="post.user_id" value="{{post.title}}">
+     <!-- <form name="comment_form" ng-submit="submitted=true ; addcomment(comment_form.$valid)" novalidate> -->
+       <!-- <input type="hidden" name="user_id"  ng-model="post.user_id" value="{{post.title}}">
               <input type="hidden" name="category_id"  ng-model="post.category_id" value="{{post.title}}">
               <input type="hidden" name="commentable_type"  ng-model="post.commentable_type" value="{{post.title}}"> -->
 
-
-      <!-- <input type="hidden" name="category_id" ng-model="comment.category_id" class="form-control" value="{{post.category_id}}">
+<!--
+       <input type="hidden" name="category_id" ng-model="comment.category_id" class="form-control" value="{{post.category_id}}">
       <input type="hidden" name="user_id" ng-model="comment.user_id" class="form-control" value="{{user_id}}">
-      <textarea rows="4" cols="50" name="text" ng-model="comment.text">.</textarea>
+      <textarea rows="4" cols="50" name="text" ng-model="comment.text">.</textarea> -->
 
-      <button type="submit" name="button">add comment</button>
-    </form> -->
+      <!-- <button type="submit" name="button">add comment</button> -->
+    <!-- </form> -->
     <div class="thumbnail">
       <img src="{{post.media.media_url}}" class="img-circle" style="height:80px;" />
-      <p>{{post.title}}</p>
-      <p>{{post.description}}</p>
-      <p>{{post.created_at}}</p>
+      <h4 style="color:Purple ">{{post.title}}</h4>
+      <h4 style="color:Purple ">{{post.description}}</h4>
+      <h4 style="color:Purple ">{{post.created_at}}</h4>
     </div>
   </div>
 
