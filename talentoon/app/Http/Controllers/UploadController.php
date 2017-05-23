@@ -85,8 +85,6 @@ class UploadController extends Controller
 
     }
 
-
-
     public function single_upload(Request $request)
     {
             $rules = array('file' => 'required|mimes:png,gif,jpeg,jpg,txt,pdf');//required|mimes:png,gif,jpeg,txt,pdf
