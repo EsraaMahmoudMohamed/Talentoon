@@ -10,11 +10,21 @@
 		<input type="text" name="description" required ng-model="post.description" class="form-control">
 			<p class="error" ng-if="addpost.description.$error.required && submitted" >please enter your post description</p>
 	</div>
+
+
+	<div class="field">
+		<label>Upload Post File</label>
+		<input name="file" ng-model="file" type="file" class="form-control input-lg" >
+	</div>
+
+
   <input type="hidden" name="category_id"  ng-model="post.category_id" class="form-control" value="{{cat_id}}">
 
-	<button type="submit" name="button">OK</button>
+	<button  type="submit" name="button">OK</button>
 	<!-- <p type="submit" class="btnAction"><a class="btn btn-primary btnAction" role="button">Discover More</a></p> -->
 
 </form>
 
 </div>
+<br>
+<br>
