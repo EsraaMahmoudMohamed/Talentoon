@@ -114,7 +114,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
                 $scope.files = element.files;
               });
             }
-                    reader.readAsDataURL(element.files[0]);
+        reader.readAsDataURL(element.files[0]);
     }
 
 

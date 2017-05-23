@@ -38,6 +38,28 @@ class PostsController extends Controller
     {
         //Mail::to('mina.zakaria.zakher@gmail.com')->send(new WelcomeMina());
         // dd($request->all());
+
+//
+//        return response()->json(['request ya nada' => $request->all(),'message' => 'data saved successfully']);
+//
+//
+//
+//        if(!empty($_FILES['file_one'])) {
+//
+//            // $ext = $f->getClientOriginalExtension();
+//
+//            // $ext = pathinfo($_FILES['image']['name'],PATHINFO_EXTENSION);
+//            // $image = time().'.'.$ext;
+////            $x = move_uploaded_file($_FILES['file_one']['tmp_name'], 'uploads/');
+//            echo "Image uploaded successfully as " . $_FILES['file_one']['name'];
+//            return response()->json(['request' => $x, 'message' => 'data sent successfully']);
+//        }
+//
+
+
+
+
+
         Post::create($request->all());
         return response()->json(['status' => '1','message' => 'data saved successfully']);
         // return redirect('/post');
