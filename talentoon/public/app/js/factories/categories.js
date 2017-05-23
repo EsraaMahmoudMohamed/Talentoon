@@ -6,7 +6,7 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'http://172.16.2.239:8000/api/category' ,
+				url:'http://localhost:8000/api/category' ,
 				// url:'json/categories.json',
 				method:'GET'
 
@@ -30,11 +30,40 @@ return {
 			return def.promise ;
 
 		},
+    // getUser:function(){
+    //
+    //     var def =$q.defer();
+    //     $http({
+    //         url:'http://172.16.2.239:8000/api/category' ,
+    //         // url:'json/categories.json',
+    //         method:'GET'
+    //
+    //     }).then(function(res){
+    //
+    //         if(res.data.data.length){
+    //
+    //             console.log(res.data);
+    //             def.resolve(res.data.data)
+    //
+    //
+    //
+    //         }else{
+    //             def.reject('there is no data ')
+    //         }
+    //
+    //     },function(err){
+    //         // console.log(err);
+    //         def.reject(err);
+    //     })
+    //     return def.promise ;
+    //
+    // },
+
 		getCategoryPosts:function(index){
 
 			var def =$q.defer();
 			$http({
-				url:'http://172.16.2.239:8000/api/category/'+index ,
+				url:'http://localhost:8000/api/category/'+index ,
 				method:'GET'
 			}).then(function(res){
 				// console.log("response is " , res.data.posts);
@@ -111,7 +140,7 @@ return {
 			var def =$q.defer();
 			// console.log('the url ya esraa', 'http://172.16.2.239:8000/api/categories/'+postdata.category_id+'/posts');
 			$http({
-				url:'http://172.16.2.239:8000/api/categories/'+postdata.category_id+'/posts',
+				url:'http://localhost:8000/api/categories/'+postdata.category_id+'/posts',
                 // url:'http://172.16.2.239:8000/api/posts',
 				method:'POST',
 				data:postdata
@@ -130,6 +159,31 @@ return {
 			return def.promise ;
 
 		},
+
+    addpost:function(postdata){
+        console.log("Post Dataaaa",postdata);
+        var def =$q.defer();
+        // console.log('the url ya esraa', 'http://172.16.2.239:8000/api/categories/'+postdata.category_id+'/posts');
+        $http({
+            url:'http://localhost:8000/api/categories/'+postdata.category_id+'/posts',
+            // url:'http://172.16.2.239:8000/api/posts',
+            method:'POST',
+            data:postdata
+        }).then(function(res){
+            console.log("____________in res add post ",res)
+            if(res.data){
+                def.resolve(res.data)
+            }else{
+                def.reject('there is no data ')
+            }
+
+        },function(err){
+            // console.log(err);
+            def.reject(err);
+        })
+        return def.promise ;
+
+    },
 		addevent:function(eventdata){
 
 			var def =$q.defer();
@@ -181,13 +235,14 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'mentordata  url' ,
+				url:'http://127.0.0.1:8000/api/categorymentor/store' ,
 				method:'POST',
 				data:mentor_data
 
 			}).then(function(res){
 
-				if(res.data.length){
+				if(res.data){
+					console.log(res.data);
 					def.resolve(res.data)
 				}else{
 					def.reject('there is no data ')
@@ -200,7 +255,31 @@ return {
 			return def.promise ;
 
 		}
+		,
 
+		unmentor:function(mentor_data){
+            var def =$q.defer();
+
+            $http({
+                url:'http://127.0.0.1:8000/api/categorymentor/update' ,
+                method:'PUT',
+                data:mentor_data
+
+            }).then(function(res){
+                console.log("i am in unmentor",res.data);
+                if(res.data){
+                    console.log(res.data);
+                    def.resolve(res.data)
+                }else{
+                    def.reject('there is no data ')
+                }
+
+            },function(err){
+                // console.log(err);
+                def.reject(err);
+            })
+            return def.promise ;
+		}
 
 
 		}

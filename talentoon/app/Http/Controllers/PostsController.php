@@ -38,6 +38,9 @@ class PostsController extends Controller
     {
         //Mail::to('mina.zakaria.zakher@gmail.com')->send(new WelcomeMina());
         // dd($request->all());
+
+        // return response()->json(['cat_id'=>$cat_id,'status' => $request->all(),'message' => 'data saved successfully']);
+
         Post::create($request->all());
         return response()->json(['status' => '1','message' => 'data saved successfully']);
         // return redirect('/post');

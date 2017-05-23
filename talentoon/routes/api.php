@@ -27,7 +27,7 @@ Route::resource('categories.posts','PostsController');
 //]);
 
 
-Route::get('/categorytalent/{talent_id}','CategoryTalentController@update');
+Route::put('/categorytalent/{talent_id}','CategoryTalentController@update');
 
 Route::resource('category','CategoriesController');
 
@@ -48,9 +48,10 @@ Route::get('/get_media_for_initial_review/{category_talent_id}/{category_mentor_
 
 
 Route::post('/test', 'UploadController@test');
-Route::post('/test2', 'UploadController@test2');
-Route::get('/categorymentor','CategoryMentorController@update');
 
+Route::post('/test2', 'UploadController@test2');
+Route::put('/categorymentor/update','CategoryMentorController@update');
+Route::post('/categorymentor/store','CategoryMentorController@store');
 
 Route::post('/signup','JWTAuth\SignUpController@signup');
 Route::post('/login','JWTAuth\LoginController@login');
