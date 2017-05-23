@@ -19,11 +19,11 @@ class CategoryTalentController extends Controller
         // CategoryTalentService::betalent();
     }
 
-    public function update(Request $request,$talent_id,$category_id) {
+    public function update(Request $request) {
 
         $CTS_Obj=new CategoryTalentService();
 
-        $response=$CTS_Obj->updateTalent($request,$talent_id,$category_id);
+        $response=$CTS_Obj->mentorApprove($request);
         return $response;
     }
 }

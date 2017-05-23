@@ -27,7 +27,7 @@ Route::resource('categories.posts','PostsController');
 //]);
 
 
-Route::get('/categorytalent/{talent_id}','CategoryTalentController@update');
+Route::put('/categorytalent/{talent_id}','CategoryTalentController@update');
 
 Route::resource('category','CategoriesController');
 
