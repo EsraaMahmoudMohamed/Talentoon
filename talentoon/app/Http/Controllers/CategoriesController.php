@@ -17,6 +17,9 @@ class CategoriesController extends Controller
     public function index()
     {
         $categories= Category::all();
+        // $path=$categories[0]->getAttributes()['image'];
+        // $categories[5]->getAttributes()['image'] = '/uploads/files/'.$categories[5]->getAttributes()['image'];
+        // dd($categories[5]->getAttributes()['image']);
         return response()->json(['data' => $categories,'status' => '1','message' => 'data sent successfully']);
         // return view('categories.index',['categories'=>$categories]);
     }

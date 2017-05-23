@@ -1,4 +1,4 @@
-angular.module('myApp').controller("addpost",function($scope,$http,categories,$routeParams){
+angular.module('myApp').controller("addpost",function($scope,$http,categories,$routeParams,$location){
   $scope.newpost = function(vaild) {
      if (vaild) {
        var category= $routeParams['category_id'];
@@ -8,7 +8,8 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
         $scope.post.user_id=user_id
        console.log(postdata);
        categories.addpost(postdata).then(function(data){
-//when data retrive from server
+//when data retrived from server
+           $location.url('/category/'+$scope.post.category_id);
        } , function(err){
        	console.log(err);
 
