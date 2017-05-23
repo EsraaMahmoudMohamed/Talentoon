@@ -10,7 +10,7 @@ class CategorySubscribeController extends Controller
 {
     //
     public function store(Request $request){
-        return response()->json(['status' => $request,'message' => 'data saved successfully']);
+        // return response()->json(['status' => $request,'message' => 'data saved successfully']);
 
      $response=CategorySubscribeService::subscribe($request);
      return $response;
