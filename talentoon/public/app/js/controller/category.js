@@ -151,14 +151,44 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 
     }
 
+    $scope.unmentor = function(){
+
+        mentor.mentor_id = 1;
+        //$routeParams['category_id']
+        mentor.category_id = 1;
+        mentor.action="unmentor";
+
+
+        console.log("Mentor Object is ",mentor);
+
+        categories.unmentor(mentor).then(function(data){
+            console.log(data)
+
+        }, function (err) {
+            console.log(err)
+        });
 
 
 
 
+    }
+
+
+    //assuming we have user id and the role that define him as mentor
+    //here we will get the mentor status to make toggle button in views
+    // categories.getUser(1).then(function(data){
+    //
+    //     console.log(data);
+    //     $scope.currentUser=data;
+    //
+    // } , function(err){
+    //     console.log(err);
+    //
+    // });
 
 
 
-	$scope.categories=categories;
+	// $scope.categories=categories;
 	//get all category
 	categories.getAllCategory().then(function(data){
 		console.log(data);
