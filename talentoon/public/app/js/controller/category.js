@@ -232,7 +232,7 @@ $scope.comment={};
 
 
 	// subscribe in category
-		  var unsubscribe_status=0;
+		  // var unsubscribe_status=0;
 		// console.log("user id ",user_id);
 		// 	console.log("cat id",index);
 // var obj={index,user_id,subscribe_status};
