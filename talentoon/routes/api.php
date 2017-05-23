@@ -47,7 +47,7 @@ Route::post('/store','InitialReviewController@store');
 Route::get('/get_media_for_initial_review/{category_talent_id}/{category_mentor_id}','InitialReviewController@get_media_for_initial_review');
 
 
-Route::post('/test', 'UploadController@test');
+Route::post('/single_upload/{id}', 'UploadController@single_upload');
 
 Route::post('/test2', 'UploadController@test2');
 Route::put('/categorymentor/update','CategoryMentorController@update');

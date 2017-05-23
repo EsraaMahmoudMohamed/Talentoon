@@ -41,8 +41,11 @@ class PostsController extends Controller
 
         // return response()->json(['cat_id'=>$cat_id,'status' => $request->all(),'message' => 'data saved successfully']);
 
-        Post::create($request->all());
-        return response()->json(['status' => '1','message' => 'data saved successfully']);
+        //Post::create($request->all());
+
+        $id = Post::create($request->all())->id;
+
+        return response()->json(['post_id' => $id,'message' => 'data saved successfully']);
         // return redirect('/post');
     }
 

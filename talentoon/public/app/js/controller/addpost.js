@@ -14,9 +14,17 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
         $scope.post.user_id=user_id
        // console.log("for mina post daa",postdata);
 
-       // postdata.media_url = $rootScope.currentFile
 
-         // console.log("inside new post ",postdata.media_url)
+         //here upload
+
+
+
+
+
+
+
+
+         //end here upload
 
        categories.addpost(postdata).then(function(data){
 
@@ -64,7 +72,13 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
       $scope.uploadedFile = function(element) {
           console.log("element is ",element)
           $rootScope.currentFile = element.files[0];
-          filesuploaded.push(element.files[0]);
+          //filesuploaded.push(element.files[0]);
+
+
+
+
+
+
           console.log("current file is ",$rootScope.currentFile)
           var reader = new FileReader();
 

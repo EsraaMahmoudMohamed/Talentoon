@@ -1,7 +1,5 @@
-angular.module('myApp').factory("categories",function($q,$http){
-
+angular.module('myApp').factory("categories",function($q,$http,$rootScope){
 return {
-
 		getAllCategory:function(){
 
 			var def =$q.defer();
@@ -30,34 +28,6 @@ return {
 			return def.promise ;
 
 		},
-    // getUser:function(){
-    //
-    //     var def =$q.defer();
-    //     $http({
-    //         url:'http://172.16.2.239:8000/api/category' ,
-    //         // url:'json/categories.json',
-    //         method:'GET'
-    //
-    //     }).then(function(res){
-    //
-    //         if(res.data.data.length){
-    //
-    //             console.log(res.data);
-    //             def.resolve(res.data.data)
-    //
-    //
-    //
-    //         }else{
-    //             def.reject('there is no data ')
-    //         }
-    //
-    //     },function(err){
-    //         // console.log(err);
-    //         def.reject(err);
-    //     })
-    //     return def.promise ;
-    //
-    // },
 
 		getCategoryPosts:function(index){
 
@@ -113,7 +83,39 @@ return {
 				method:'POST',
 				data:postdata
 			}).then(function(res){
-                console.log("____________in res add post ",res)
+                console.log("____________in res add post ",res.data.post_id)
+                console.log("____________media type ",$rootScope.currentFile.type)
+				console.log('_________',$rootScope.currentFile.name)
+
+
+				/////////////////////////
+                $http({
+                    method  : 'POST',
+                    url     : 'http://localhost:8000/api/single_upload/'+res.data.post_id,
+                    processData: false,
+					data:{"media_url":"uploads/files"+$rootScope.currentFile.name,"media_type":$rootScope.currentFile.type},
+                    transformRequest: function (data) {
+                        var formData = new FormData();
+
+                        //for(var i =0;i< filesuploaded.length;i++){
+                        formData.append("file", $rootScope.currentFile);
+                        //  console.log("file in loop",filesuploaded[i])
+                        //}
+                        return formData;
+                    },
+                    headers: {
+                        'Content-Type': undefined,
+                        'Process-Data':false
+                    }
+                }).then(function(data){
+                    // alert(data);
+                    console.log("thennnnn in add post",data)
+                });
+
+                //////////////////////////////////////////////
+
+
+
 				if(res.data){
 					def.resolve(res.data)
 				}else{
@@ -126,32 +128,16 @@ return {
 			})
 			return def.promise ;
 
+
+
+
+
+
+
+
+
+
 		},
-
-    addpost:function(postdata){
-        console.log("Post Dataaaa",postdata);
-        var def =$q.defer();
-        // console.log('the url ya esraa', 'http://172.16.2.239:8000/api/categories/'+postdata.category_id+'/posts');
-        $http({
-            url:'http://localhost:8000/api/categories/'+postdata.category_id+'/posts',
-            // url:'http://172.16.2.239:8000/api/posts',
-            method:'POST',
-            data:postdata
-        }).then(function(res){
-            console.log("____________in res add post ",res)
-            if(res.data){
-                def.resolve(res.data)
-            }else{
-                def.reject('there is no data ')
-            }
-
-        },function(err){
-            // console.log(err);
-            def.reject(err);
-        })
-        return def.promise ;
-
-    },
 		addevent:function(eventdata){
 
 			var def =$q.defer();

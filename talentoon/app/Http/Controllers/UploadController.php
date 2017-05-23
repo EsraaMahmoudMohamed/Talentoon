@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
@@ -73,9 +74,17 @@ class UploadController extends Controller
 
     }
 
-    public function test (Request $request){
+    public function single_upload (Request $request,$id){
+//        return response()->json(['request'=> $_FILES['file'],'message' => 'data sent successfully']);
         if(!empty($_FILES)){
             $x = move_uploaded_file($_FILES['file']['tmp_name'],'uploads/files/'.$_FILES['file']['name']);
+
+            $post = Post::find($id);
+            $post->media_url = 'uploads/files/'.$_FILES['file']['name'];
+            $post->media_type = $_FILES['file']['type'];
+            $post->save();
+
+
             return response()->json(['request'=> $x,'message' => 'data sent successfully']);
         }else{
             echo "Image Is Empty";
@@ -83,41 +92,48 @@ class UploadController extends Controller
 
     }
 
-    public function single_upload(Request $request)
+    public function test(Request $request)
     {
-            $rules = array('file' => 'required|mimes:png,gif,jpeg,jpg,txt,pdf');//required|mimes:png,gif,jpeg,txt,pdf
-            $validator = Validator::make(array('file' => $file), $rules);
+        if(!empty($_FILES)){
+            $rules = array('file' => 'mimes:png,gif,jpeg,jpg,txt,pdf');//required|mimes:png,gif,jpeg,txt,pdf
+            $validator = Validator::make(array('file' => $_FILES['file']), $rules);
             if ($validator->passes()) {
-            $destinationPath = 'uploads';// uploads folder in public directory
-            $filename = $file->getClientOriginalName();
-            $upload_success = $file->move($destinationPath, $filename);
-            $uploadcount++;
+                $destinationPath = 'uploads/files/' . $_FILES['file']['name'];// uploads folder in public directory
+                $filename = $_FILES['file']['name'];
+                move_uploaded_file($_FILES['file']['tmp_name'], $destinationPath);
+                return response()->json(['request'=> '$','message' => 'data sent successfully']);
+            }
+
+
 
             //save into database
-            $extension = $file->getClientOriginalExtension();
-            $entry = new Upload();
-            // $entry->mime = $file->getClientMimeType();
-            // $entry->original_filename = $filename;
-            $entry->filename = $file->getFilename() . '.' . $extension;
-            $images_ext = array('png','jpeg','jpg','gif');
-            $videos_ext = array('mp4','flv');
-            $files_ext  = array('txt','pdf');
-            $voice_ext  = array('mp3','aac');
-            if(in_array($extension,$image_ext)){
-                $entry->media_type='image';
-            }elseif (in_array($extension,$files_ext)) {
-                $entry->media_type='file';
-            }elseif (in_array($extension,$videos_ext)) {
-                $entry->media_type='vedio';
-            }elseif (in_array($extension,$voice_ext)){
-                $entry->media_type='audio';
-            }
-            $entry->media_source=$ally_htb3ato_nada;
-            $entry->source_id=$ally_htb3ato_nada;
-            $entry->save();
-            Session::flash('success', 'Upload successfully');
-            return Redirect::to('upload');
+//            $extension = $file->getClientOriginalExtension();
+//            $entry = new Upload();
+//            // $entry->mime = $file->getClientMimeType();
+//            // $entry->original_filename = $filename;
+//            $entry->filename = $file->getFilename() . '.' . $extension;
+//            $images_ext = array('png','jpeg','jpg','gif');
+//            $videos_ext = array('mp4','flv');
+//            $files_ext  = array('txt','pdf');
+//            $voice_ext  = array('mp3','aac');
+//            if(in_array($extension,$image_ext)){
+//                $entry->media_type='image';
+//            }elseif (in_array($extension,$files_ext)) {
+//                $entry->media_type='file';
+//            }elseif (in_array($extension,$videos_ext)) {
+//                $entry->media_type='vedio';
+//            }elseif (in_array($extension,$voice_ext)){
+//                $entry->media_type='audio';
+//            }
+//            $entry->media_source=$ally_htb3ato_nada;
+//            $entry->source_id=$ally_htb3ato_nada;
+//            $entry->save();
+//            Session::flash('success', 'Upload successfully');
+//            return Redirect::to('upload');
                 }
+        else{
+            echo "Image Is Empty";
+        }
         // }
         // if ($uploadcount == $file_count) {
         //

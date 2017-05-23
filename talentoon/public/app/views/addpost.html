@@ -16,7 +16,7 @@
 	<!-- Form Start -->
 	<form ng-submit="submit_post_file()" name="form" role="form" enctype="multipart/form-data">
 		<input name="post_file" ng-model="post.file" type="file" class="form-control input-lg"  onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
-		<input type="submit" id="submit_file" value="Submit" />
+		<!--<input type="submit" id="submit_file" value="Submit" />-->
 		<br/>
 		<img ng-src="{{post.file}}" style="width:300px;">
 	</form>
