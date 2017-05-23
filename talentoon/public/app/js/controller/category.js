@@ -136,6 +136,9 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
             mentor.files_of_mentor_data = filesmentoruploaded;
 
             console.log("Mentor Object is ",mentor);
+
+
+
         }else{
             alert("sorry profile files is required")
         }
