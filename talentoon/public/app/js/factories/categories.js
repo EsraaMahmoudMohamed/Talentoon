@@ -149,13 +149,14 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'mentordata  url' ,
+				url:'http://127.0.0.1:8000/api/categorymentor/store' ,
 				method:'POST',
 				data:mentor_data
 
 			}).then(function(res){
 
-				if(res.data.length){
+				if(res.data){
+					console.log(res.data);
 					def.resolve(res.data)
 				}else{
 					def.reject('there is no data ')
@@ -168,6 +169,7 @@ return {
 			return def.promise ;
 
 		}
+		
 
 
 
