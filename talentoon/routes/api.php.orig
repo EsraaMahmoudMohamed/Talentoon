@@ -19,7 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('comment','CommentController');
 Route::post('/uploads/singleuploded','UploadController@single_upload');
 Route::post('/categorytalent','CategoryTalentController@store');
-Route::resource('categories.posts','PostsController');
 
 //Route::get('/categorytalent/{talent_id}',[
 //    'before' => 'jwt-auth',
@@ -58,6 +57,8 @@ Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
 
 Route::get('/categorysubscribe','CategorySubscribeController@store');
 Route::get('/categoryunsubscribe','CategorySubscribeController@update');
+<<<<<<< HEAD
 
 
-Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
+=======
+>>>>>>> 154c2f040ecbc711da6e4af7a46955f5a2859754

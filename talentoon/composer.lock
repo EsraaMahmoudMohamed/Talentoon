@@ -4,9 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-
     "content-hash": "c808ef0ec570dbe2241a4298b133366e",
-
     "packages": [
         {
             "name": "5dmatweb/streamlab",
