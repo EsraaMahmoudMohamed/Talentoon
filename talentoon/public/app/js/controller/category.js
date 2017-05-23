@@ -1,4 +1,4 @@
-angular.module('myApp').controller("categories",function($scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader){
+angular.module('myApp').controller("categories",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader){
 
 	var filesuploaded = []
     var filesmentoruploaded = []
@@ -161,7 +161,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 	$scope.categories=categories;
 	//get all category
 	categories.getAllCategory().then(function(data){
-		console.log(data);
+		// console.log(data);
 		$scope.categories=data;
         // console.log("la2aa sha3`alaa",$scope.categories);
 
@@ -174,8 +174,8 @@ $scope.comment={};
 	$scope.addcomment= function(valid) {
     if (valid) {
       var comment = $scope.comment
-      console.log(comment);
-			console.log("vaild in add comment");
+      // console.log(comment);
+			// console.log("vaild in add comment");
 
     }
 		else{
@@ -188,9 +188,9 @@ $scope.comment={};
     $scope.cat_id=index;
     var user_id=1;
     categories.getCategoryPosts(index).then(function(data){
-        console.log("inside controller" , data)
+        // console.log("inside controller" , data)
         $scope.category_posts=data;
-        console.log("la2aa",$scope.category_posts);
+        // console.log("la2aa",$scope.category_posts);
 
     console.log($scope.category_posts);
     } , function(err){
@@ -202,10 +202,69 @@ $scope.comment={};
 
 
 	// subscribe in category
-	// categories.subscribe(index,user_id).then(function(data){
+		  var unsubscribe_status=0;
+		// console.log("user id ",user_id);
+		// 	console.log("cat id",index);
+// var obj={index,user_id,subscribe_status};
+
+
+$scope.subscribe = function() {
+	$routeParams['user_id']=1;
+	 var subscriber_id= $routeParams['user_id'];
+	 var subscribed=1;
+	var category_id = $routeParams['category_id'];
+var obj={subscriber_id, category_id,subscribed }
+console.log(obj);
+		categories.subscribe(obj).then(function(data){
+			// $rootScope.status=data;
+			localStorage.setItem('status',data);
+			$rootScope.status = localStorage.getItem("status");
+			console.log("status in controller",$rootScope.status);
+			 $location.url('/category/'+category_id);
+			// console.log("hiii")
+		} , function(err){
+			console.log(err);
+
+		});
+
+
+
+
+
+}
+
+
+
+$scope.unsubscribe = function() {
+	$routeParams['user_id']=1;
+	 var subscriber_id= $routeParams['user_id'];
+	 var subscribed=0;
+	var category_id = $routeParams['category_id'];
+var obj={subscriber_id, category_id,subscribed }
+console.log(obj);
+		categories.unsubscribe(obj).then(function(data){
+			localStorage.setItem('status',data);
+			$rootScope.status = localStorage.getItem("status");
+			// $rootScope.status=data;
+			console.log("status in controller",$rootScope.status);
+			  $location.url('/category/'+category_id);
+			// console.log("hiii")
+		} , function(err){
+			console.log(err);
+
+		});
+
+
+
+
+
+}
+
+
+
+	// categories.unsubscribe(index,user_id,unsubscribe_status).then(function(data){
+	// 	$scope.status=data.status;
 	//
-	// 	$scope.status=data['status'];
-	// 	console.log("hiii")
 	// } , function(err){
 	// 	console.log(err);
 	//

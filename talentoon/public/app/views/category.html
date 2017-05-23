@@ -16,9 +16,12 @@
 
 <a href="#!/category/{{cat_id}}/addevent" class="btn btn-info" role="button">new event</a>
 
-
-<a href="#!/category/subscribe/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">subscribe</a>
-
+<div ng-if="status == 1">
+  <a href="#!/category/unsubscribe/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button" ng-click="unsubscribe()">unsubscribe</a>
+</div>
+<div ng-if="status != 1">
+  <a href="#!/category/subscribe/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button" ng-click="subscribe()">subscribe</a>
+</div>
   <a href="#!/category/betalent/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">Be Mawhoob</a>
 
   <a href="#!/category/bementor/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">Be Talent</a> </center>
