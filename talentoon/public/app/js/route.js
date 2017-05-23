@@ -42,7 +42,10 @@ $routeProvider.when('/',{
 	controller:'categories'
 })
 
-
+.when('/category/unsubscribe/:category_id/:user_id',{
+	// templateUrl:'views/category.html',
+	controller:'categories'
+})
 
 
 

@@ -17,9 +17,18 @@
 <a href="#!/category/{{cat_id}}/addevent" class="btn btn-info" role="button">new event</a>
 
 
-<a href="#!/category/subscribe/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">subscribe</a>
+<div ng-if="status == 1">
+  <a href="#!/category/unsubscribe/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button" ng-click="unsubscribe()">unsubscribe</a>
+</div>
+<div ng-if="status != 1">
+  <a href="#!/category/subscribe/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button" ng-click="subscribe()">subscribe</a>
+</div>
+  <a href="#!/category/betalent/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">Be Mawhoob</a>
+
 
 <a href="#!/category/betalent/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">Be Mawhoob</a>
+    <a ng-class="untalent()" class="btn btn-info" role="button">unTalentMe</a>
+
 
 <a href="#!/category/bementor/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">Be Mentor</a>
 
@@ -247,4 +256,3 @@
   <input type="text" name="years_of_experience" required ng-model="mentor.years_of_experience">
   <button type="submit" name="button">Send My Mentor Profile</button>
 </form>
-

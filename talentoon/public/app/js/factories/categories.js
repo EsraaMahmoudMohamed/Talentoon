@@ -12,7 +12,7 @@ return {
 				// console.log(res.data.data);
 				if(res.data.data.length){
 				// if(res.data.length){
-					console.log(res.data);
+					// console.log(res.data);
 					def.resolve(res.data.data)
 					// def.resolve(res.data)
 
@@ -36,10 +36,10 @@ return {
 				url:'http://localhost:8000/api/category/'+index ,
 				method:'GET'
 			}).then(function(res){
-				console.log("response is " , res.data.posts);
+				// console.log("response is " , res.data.posts);
 				if(res.data.posts.length){
 		     			def.resolve(res.data.posts);
-		     			console.log("res.data.posts is " , res.data.posts )
+							// 			console.log("res.data.posts is " , res.data.posts )
 						// def.resolve(res.data[index])
 				}else{
 					def.reject('there is no data ')
@@ -51,17 +51,24 @@ return {
 			return def.promise ;
 
 		},
-		subscribe:function(index,user_id){
+		subscribe:function(data){
+			// console.log("from factories CAT ID",category_id);
+			// console.log("from factories subscriber_id",subscriber_id);
+			// console.log("from factories STATUS =",subscribed);
 
 			var def =$q.defer();
+
 			$http({
-				url:'json/posts.json' ,
-				method:'GET'
+
+				url:'http://localhost:8000/api/categorysubscribe',
+				method:'POST',
+				data:data
 
 			}).then(function(res){
-				// console.log(res);
-				if(res.data.length){
-		     def.resolve(res.data);
+				console.log(res);
+				if(res.data.status){
+					console.log(res.data.status);
+		     def.resolve(res.data.status);
 
 				}else{
 					def.reject('there is no data ')
@@ -73,8 +80,33 @@ return {
 			return def.promise ;
 
 		},
+		unsubscribe:function(data){
+			// console.log("from factories",index,user_id,status);
+        console.log(data);
+			var def =$q.defer();
+
+			$http({
+				url:'http://localhost:8000/api/categoryunsubscribe' ,
+				method:'POST',
+				data:data
+
+			}).then(function(res){
+				console.log(res);
+				console.log(res.data.status);
+
+					console.log(res.data.status);
+		     def.resolve(res.data.status);
+
+
+			},function(err){
+				def.reject(err);
+			})
+			return def.promise ;
+
+		}
+		,
 		addpost:function(postdata){
-			console.log("Post Dataaaa",postdata);
+			// console.log("Post Dataaaa",postdata);
 			var def =$q.defer();
 			// console.log('the url ya esraa', 'http://172.16.2.239:8000/api/categories/'+postdata.category_id+'/posts');
 			$http({
@@ -83,6 +115,7 @@ return {
 				method:'POST',
 				data:postdata
 			}).then(function(res){
+
                 console.log("____________in res add post ",res.data.post_id)
                 console.log("____________media type ",$rootScope.currentFile.type)
 				console.log('_________',$rootScope.currentFile.name)
