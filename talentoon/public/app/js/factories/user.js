@@ -1,68 +1,67 @@
-angular.module('myApp').factory("user",function($http,$q){
+angular.module('myApp').factory("user", function ($http, $q) {
 
-return {
-		register:function(userdata){
-			$http({
-				// url:'http://localhost:8000/api/signup' ,
-				method:'POST',
-				data:userdata
+    return {
+        register: function (userdata) {
+            $http({
+                // url:'http://localhost:8000/api/signup' ,
+                method: 'POST',
+                data: userdata
 
-			}).then(function(res){
+            }).then(function (res) {
 
-				console.log(res);
+                console.log(res);
 
-			},function(err){
-				// console.log(err);
+            }, function (err) {
+                // console.log(err);
 
-			})
-
-
-		},
+            })
 
 
-    login:function(userdata){
-      $http({
-        // url:'http://localhost:8000/api/login' ,
-        method:'POST',
-				data:userdata
+        },
 
-      }).then(function(res){
+        login: function (userdata) {
+            $http({
+                // url:'http://localhost:8000/api/login' ,
+                method: 'POST',
+                data: userdata
 
-        console.log(res);
+            }).then(function (res) {
 
-      },function(err){
-        // console.log(err);
+                console.log(res);
 
-      })
+            }, function (err) {
+                // console.log(err);
 
-
-    },
-		getAllCountry:function(){
-			var def =$q.defer();
-			$http({
-				url:'json/country.json' ,
-				method:'GET'
+            })
 
 
-			}).then(function(res){
-				if(res.data.length){
-					def.resolve(res.data)
-				}else{
-					def.reject('there is no data ')
-				}
+        },
+        getAllCountry: function () {
+            console.log('nahla  ')
+            var def = $q.defer();
+            $http({
+                url:'http://localhost:8000/api/countries',
+                method: 'GET'
 
-				console.log(res);
+            }).then(function (res) {
+                console.log('in factory', res)
+                if (res.data.length) {
+                    def.resolve(res.data)
+                } else {
+                    def.reject('there is no data ')
+                }
 
-			},function(err){
-				// console.log(err);
+                console.log(res);
+            }, function (err) {
+                // console.log(err);
 
-			})
-return def.promise ;
+            })
+            return def.promise;
 
-		}
+        }
 
 
-		}
+    }
 
 
 })
