@@ -74,14 +74,15 @@ class UploadController extends Controller
     }
 
     public function test (Request $request){
-        if(!empty($_FILES['image'])){
+        return response()->json(['yes'=>'yes','request'=>$_FILES]);
+        if(!empty($_FILES['file_one'])){
 
         // $ext = $f->getClientOriginalExtension();
 
 		// $ext = pathinfo($_FILES['image']['name'],PATHINFO_EXTENSION);
                 // $image = time().'.'.$ext;
-            $x= move_uploaded_file($_FILES["image"]['tmp_name'], 'uploads/'.$_FILES["image"]["name"]);
-		echo "Image uploaded successfully as ".$_FILES['image']['name'];
+            $x= move_uploaded_file($_FILES["file_one"]['tmp_name'], 'uploads/'.$_FILES["file_one"]["name"]);
+		echo "Image uploaded successfully as ".$_FILES['file_one']['name'];
         return response()->json(['request'=> $x,'message' => 'data sent successfully']);
 
 	}else{
@@ -90,22 +91,65 @@ class UploadController extends Controller
 
     }
 
-    public function test2 (Request $request){
-        if ( !empty( $_FILES ) ) {
-            $tempPath = $_FILES[ 'file' ][ 'tmp_name' ];
+    public function test2(Request $request){
+
+        return response()->json(['request'=>$request,'message' => 'data sent successfully before']);
+
+        if(!empty($_FILES['file_one'])) {
             return response()->json(['request'=>$_FILES,'message' => 'data sent successfully']);
-
-            $x= move_uploaded_file($_FILES["image"]['tmp_name'], 'uploads/'.$_FILES["image"]["name"]);
-            return response()->json(['request'=>$x,'message' => 'data sent successfully']);
-
-            $uploadPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $_FILES[ 'file' ][ 'name' ];
-            move_uploaded_file( $tempPath, $uploadPath );
-            $answer = array( 'answer' => 'File transfer completed' );
-            $json = json_encode( $answer );
-            echo $json;
-        } else {
-            echo 'No files';
+        }else{
+            return response()->json(['request'=>$_FILES,'message' => 'no data successfully']);
         }
+        // Category::create($request->all());
+        // return redirect()->route('category.index');
+//        return response()->json(["request isss" => $request->all()]);
+        $data=$request->all();
+        $fileName = 'null';
+
+
+        return response()->json(['request'=>$request->all(),'message' => 'data sent successfully']);
+//        return $request->all();
+
+
+        if ($request->hasFile('file_one')) {
+            if($request->file('file_one')->isValid()) {
+                $destinationPath = public_path('uploads/files');
+                $extension =$request->file('file_one')->getClientOriginalExtension();
+                $fileName = uniqid().'.'.$extension;
+                $request->file('file_one')->move($destinationPath, $fileName);
+            }
+        }
+//        Category::create([
+//            'title' => $data['title'],
+//            'image' => $fileName,
+//        ]);
+        return response()->json(['request'=>'done','message' => 'data sent successfully']);
+//        return redirect()->route('category.index');
+
+
+
+
+
+
+
+////        return response()->json(['request'=>'hh','message' => 'data sent successfully']);
+//        if ( !empty( $_FILES ) ) {
+//
+////            $tempPath = $_FILES[ 'file' ][ 'tmp_name' ];
+//            return response()->json(['request'=>$_FILES,'message' => 'data sent successfully']);
+//
+//            $x= move_uploaded_file($_FILES["image"]['tmp_name'], 'uploads/'.$_FILES["image"]["name"]);
+//            return response()->json(['request'=>$x,'message' => 'data sent successfully']);
+//
+//            $uploadPath = dirname( __FILE__ ) . DIRECTORY_SEPARATOR . 'uploads' . DIRECTORY_SEPARATOR . $_FILES[ 'file' ][ 'name' ];
+//            move_uploaded_file( $tempPath, $uploadPath );
+//            $answer = array( 'answer' => 'File transfer completed' );
+//            $json = json_encode( $answer );
+//            echo $json;
+//        } else {
+//            return response()->json(['request'=>$request,'message' => 'no files']);
+////            echo 'No files';
+//        }
 
 
     }

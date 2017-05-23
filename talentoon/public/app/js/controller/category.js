@@ -26,36 +26,40 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 	$scope.completeTalentProfile = function(){
 
 		if (filesuploaded.length > 0){
-			// alert("sorry files is required")
-			$description = $scope.talent.description;
-			$from_when = $scope.talent.from_when;
 
 			talent.talent_id = $rootScope.user_id;
 			talent.category_id = $routeParams['category_id'];
-			talent.from_when = $from_when;
-			talent.description = $description;
+			talent.from_when =$scope.talent.from_when;
+			talent.description = $scope.talent.description;
 			talent.files_of_initial_review = filesuploaded;
 
 			console.log("Talent Object is ",talent);
 
+            categories.complete_talent_profile(talent).then(function(data){
+                console.log(data)
+
+            }, function (err) {
+                console.log(err)
+            });
 
 
 
-            var fd = new FormData()
-            console.log("file descriptionnnnn",fd)
-            for (var i in filesuploaded) {
-                fd.append("fileToUpload",filesuploaded[i]);
-            }
-            var config = {headers: {'Content-Type': undefined}};
-            var url = "upload.php"
-            // var url =  "http://172.16.2.239:8000/api/test"
 
-            console.log("________________In Form Data______________________")
-
-            var httpPromise = $http.post(url, fd, config);
-            console.log(httpPromise)
-            console.log("________________After HTTP Promise Form Data______________________")
-
+            // var fd = new FormData()
+            // console.log("file descriptionnnnn",fd)
+            // for (var i in filesuploaded) {
+            //     fd.append("fileToUpload",filesuploaded[i]);
+            // }
+            // var config = {headers: {'Content-Type': undefined}};
+            // var url = "upload.php"
+            // // var url =  "http://172.16.2.239:8000/api/test"
+            //
+            // console.log("________________In Form Data______________________")
+            //
+            // var httpPromise = $http.post(url, fd, config);
+            // console.log(httpPromise)
+            // console.log("________________After HTTP Promise Form Data______________________")
+            //
 
 
 
@@ -73,17 +77,17 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 
             $http({
               method  : 'POST',
-              url     : 'http://localhost:8000/api/uploads/singleuploded',
+              url     : 'http://localhost:8000/api/test',
               processData: false,
               transformRequest: function (data) {
                   var formData = new FormData();
                   for(var i =0;i< filesuploaded.length;i++){
-                        formData.append("file", filesuploaded[i]); 
-                        console.log("file in loop",filesuploaded[i]) 
+                        formData.append("file", filesuploaded[i]);
+                        console.log("file in loop",filesuploaded[i])
                   }
-                  
-                  return formData;  
-              },  
+
+                  return formData;
+              },
               data : filesuploaded,
               headers: {
                      'Content-Type': undefined,
@@ -100,6 +104,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 
 
     $scope.uploadedFile = function(element) {
+            console.log("element is ",element)
             $scope.currentFile = element.files[0];
             var reader = new FileReader();
 
@@ -125,17 +130,21 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 
     $scope.completeMentorProfile = function(){
         if (filesmentoruploaded.length > 0){
-            // alert("sorry files is required")
-            $experience = $scope.mentor.experience;
-            $years_of_experience = $scope.mentor.years_of_experience;
-
             mentor.mentor_id = $rootScope.user_id;
             mentor.category_id = $routeParams['category_id'];
-            mentor.years_of_experience = $years_of_experience;
-            mentor.experience = $experience;
+            mentor.years_of_experience = $scope.mentor.years_of_experience;
+            mentor.experience =$scope.mentor.experience;
             mentor.files_of_mentor_data = filesmentoruploaded;
 
             console.log("Mentor Object is ",mentor);
+
+            categories.complete_mentor_profile(mentor).then(function(data){
+                console.log(data)
+
+            }, function (err) {
+                console.log(err)
+            });
+
         }else{
             alert("sorry profile files is required")
         }
