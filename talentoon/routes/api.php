@@ -49,7 +49,9 @@ Route::get('/get_media_for_initial_review/{category_talent_id}/{category_mentor_
 
 Route::post('/test', 'UploadController@test');
 Route::post('/test2', 'UploadController@test2');
-Route::get('/categorymentor','CategoryMentorController@update');
+Route::put('/categorymentor/update','CategoryMentorController@update');
+Route::post('/categorymentor/store','CategoryMentorController@store');
+
 
 
 Route::post('/signup','JWTAuth\SignUpController@signup');
@@ -58,3 +60,6 @@ Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
 
 Route::get('/categorysubscribe','CategorySubscribeController@store');
 Route::get('/categoryunsubscribe','CategorySubscribeController@update');
+
+
+Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);

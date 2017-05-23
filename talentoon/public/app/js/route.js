@@ -59,6 +59,8 @@ $routeProvider.when('/',{
 })
 
 
+
+
 //add post
 .when('/category/:category_id/addpost',{
 	templateUrl:'views/addpost.html',
