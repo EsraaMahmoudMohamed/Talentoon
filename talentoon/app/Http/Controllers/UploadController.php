@@ -76,12 +76,10 @@ class UploadController extends Controller
     public function test (Request $request){
         if(!empty($_FILES)){
             $x = move_uploaded_file($_FILES['file']['tmp_name'],'uploads/files/'.$_FILES['file']['name']);
-
-        return response()->json(['request'=> $x,'message' => 'data sent successfully']);
-
-	}else{
-		echo "Image Is Empty";
-	}
+            return response()->json(['request'=> $x,'message' => 'data sent successfully']);
+        }else{
+            echo "Image Is Empty";
+        }
 
     }
 
