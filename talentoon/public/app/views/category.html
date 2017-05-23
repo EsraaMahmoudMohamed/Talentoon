@@ -1,12 +1,23 @@
 <center>
-  <h1>post in category</h1></center>
+  <style>
+    .thumbnail{
+      background-color: black;
+      color: white;
+      font-size: 60px;
+    }
+    input{
+      width: 200px;
+      font-size: large;
+    }
+  </style>
+  <h1>posts in category</h1></center>
 
-<center><a href="#!/category/{{cat_id}}/addpost" class="btn btn-info" role="button">new post</a> </center>
-<br>
-<center><a href="#!/category/{{cat_id}}/addevent" class="btn btn-info" role="button">new event</a> </center>
-<br>
+<center><a href="#!/category/{{cat_id}}/addpost" class="btn btn-info" role="button">new post</a>
 
-<center><a href="#!/category/subscribe/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">subscribe</a>
+<a href="#!/category/{{cat_id}}/addevent" class="btn btn-info" role="button">new event</a>
+
+
+<a href="#!/category/subscribe/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">subscribe</a>
 
   <a href="#!/category/betalent/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">Be Mawhoob</a>
 
@@ -23,23 +34,23 @@
 <div class="container">
   <div ng-repeat="post in category_posts track by $index">
 
-    <!-- <form name="comment_form" ng-submit="submitted=true ; addcomment(comment_form.$valid)" novalidate> -->
-      <!-- <input type="hidden" name="user_id"  ng-model="post.user_id" value="{{post.title}}">
+     <!-- <form name="comment_form" ng-submit="submitted=true ; addcomment(comment_form.$valid)" novalidate> -->
+       <!-- <input type="hidden" name="user_id"  ng-model="post.user_id" value="{{post.title}}">
               <input type="hidden" name="category_id"  ng-model="post.category_id" value="{{post.title}}">
               <input type="hidden" name="commentable_type"  ng-model="post.commentable_type" value="{{post.title}}"> -->
 
-
-      <!-- <input type="hidden" name="category_id" ng-model="comment.category_id" class="form-control" value="{{post.category_id}}">
+<!--
+       <input type="hidden" name="category_id" ng-model="comment.category_id" class="form-control" value="{{post.category_id}}">
       <input type="hidden" name="user_id" ng-model="comment.user_id" class="form-control" value="{{user_id}}">
-      <textarea rows="4" cols="50" name="text" ng-model="comment.text">.</textarea>
+      <textarea rows="4" cols="50" name="text" ng-model="comment.text">.</textarea> -->
 
-      <button type="submit" name="button">add comment</button>
-    </form> -->
+      <!-- <button type="submit" name="button">add comment</button> -->
+    <!-- </form> -->
     <div class="thumbnail">
       <img src="{{post.media.media_url}}" class="img-circle" style="height:80px;" />
-      <p>{{post.title}}</p>
-      <p>{{post.description}}</p>
-      <p>{{post.created_at}}</p>
+      <h4 style="color:Purple ">{{post.title}}</h4>
+      <h4 style="color:Purple ">{{post.description}}</h4>
+      <h4 style="color:Purple ">{{post.created_at}}</h4>
     </div>
   </div>
 
@@ -54,31 +65,80 @@
 
 
 
-<h1>Please Complete Your Profile to be MaWhooB.. ()</h1>
+<h1>Please Complete Your Profile to be MaWhooB....</h1>
 
-<h1>Hello mina</h1>
+<h1>Should be popup on clicking on Be Talent</h1>
 
     <!-- Form Start -->
     <form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">
-
-      <input ng-model="form.image" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
-      <input type="submit" id="submit" value="Submit" />
+      <input name="file_one" ng-model="talent.file_one" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
+      <input type="submit" id="submit_file_one" value="Submit" />
       <br/>
-      <img ng-src="{{image_source}}" style="width:300px;">
-
+      <img ng-src="{{first_image_source}}" style="width:300px;">
     </form>
     <!-- Form End -->
-<h1>end Hello mina</h1>
 
 
 
-<form ng-submit="completeTalentProfile()" name="complete_profile">
-  <label>Talent Description</label>
-  <input type="text" name="description" required ng-model="talent.description">
-  <label>Talented From When?</label>
-  <input type="text" name="from_when" required ng-model="talent.from_when">
-  <button type="submit" name="button">Send My Talent Profile</button>
-</form>
+    <!-- Form Start -->
+    <form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">
+      <input name="file_two" ng-model="talent.file_two" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
+      <input type="submit" id="submit_file_two" value="Submit" />
+      <br/>
+      <img ng-src="{{second_image_source}}" style="width:300px;">
+    </form>
+    <!-- Form End -->
+
+
+
+
+    <!-- Form Start -->
+    <form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">
+      <input name="file_three" ng-model="talent.file_three" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
+      <input type="submit" id="submit_file_three" value="Submit" />
+      <br/>
+      <img ng-src="{{third_image_source}}" style="width:300px;">
+    </form>
+    <!-- Form End -->
+
+
+
+
+
+
+
+
+    <form ng-submit="completeTalentProfile()" name="complete_profile">
+      <label>Talent Description</label>
+      <input type="text" name="description" required ng-model="talent.description" placeholder="description">
+      <label>Talented From When?</label>
+      <input type="text" name="from_when" required ng-model="talent.from_when" placeholder="12 years">
+      <input type="submit" name="button" value="Send My Talent Profile"/>
+    </form>
+
+
+
+
+
+<h1>End of Should be popup on clicking on Be Talent</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div uploader="uploader" filters="queueLimit, customFilter">
   <div class="container">
