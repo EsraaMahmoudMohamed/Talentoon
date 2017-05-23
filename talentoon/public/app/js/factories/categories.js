@@ -65,7 +65,7 @@ return {
 				data:data
 
 			}).then(function(res){
-				console.log(res);
+				console.log("res from subscribe",res);
 				if(res.data.status){
 					console.log(res.data.status);
 		     def.resolve(res.data.status);

@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="508a07bf-cf4d-45bb-a8ff-83d8ff927fa6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentsController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591caa46beda1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6c6ba75e6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6e5c7724e.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6ed70e444.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d6fa6b089f.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/talentoon/public/uploads/files/591d7043bfda8.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategorySubscribeController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategorySubscribeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CommentController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/CommentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Http/Controllers/UploadController.php" afterPath="$PROJECT_DIR$/talentoon/app/Http/Controllers/UploadController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Models/User.php" afterPath="$PROJECT_DIR$/talentoon/app/Models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Services/CategoryMentorService.php" afterPath="$PROJECT_DIR$/talentoon/app/Services/CategoryMentorService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/app/Services/CategoryTalentService.php" afterPath="$PROJECT_DIR$/talentoon/app/Services/CategoryTalentService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_16_154429_create_posts_table.php" afterPath="$PROJECT_DIR$/talentoon/database/migrations/2017_05_16_154429_create_posts_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/index.html" afterPath="$PROJECT_DIR$/talentoon/public/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/controller/category.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/controller/category.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/js/route.js" afterPath="$PROJECT_DIR$/talentoon/public/app/js/route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/addpost.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/addpost.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/categories.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/categories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/category.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/login.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/public/app/views/showreview.html" afterPath="$PROJECT_DIR$/talentoon/public/app/views/showreview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talentoon/routes/api.php" afterPath="$PROJECT_DIR$/talentoon/routes/api.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,31 +18,53 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="UploadController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/UploadController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding>
+                <element signature="e#40#68#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="category.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/controller/category.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="296" column="6" lean-forward="false" selection-start-line="296" selection-start-column="6" selection-end-line="296" selection-end-column="6" />
+            <state relative-caret-position="84">
+              <caret line="348" column="6" lean-forward="true" selection-start-line="348" selection-start-column="6" selection-end-line="348" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addpost.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/controller/addpost.js">
+      <file leaf-file-name="PostsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="75">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/talentoon/app/Models/User.php">
+      <file leaf-file-name="categories.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategorySubscribeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/CategorySubscribeController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -76,55 +73,9 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talentoon/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="310">
+              <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/UploadController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1185">
-              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostsController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addpost.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/talentoon/public/app/views/addpost.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#form#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#1;n#form#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="categories.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2025">
-              <caret line="135" column="40" lean-forward="false" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
-              <folding>
-                <marker date="1495552384139" expanded="true" signature="73:5561" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -143,6 +94,8 @@
       <find>submi</find>
       <find>filesuploaded</find>
       <find>uploadedFile</find>
+      <find>tes</find>
+      <find>head</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -174,19 +127,21 @@
         <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoryTalentController.php" />
         <option value="$PROJECT_DIR$/talentoon/bootstrap/autoload.php" />
         <option value="$PROJECT_DIR$/talentoon/public/app/js/controller/app.js" />
-        <option value="$PROJECT_DIR$/talentoon/public/app/index.html" />
         <option value="$PROJECT_DIR$/talentoon/public/app/views/categories.html" />
         <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategoriesController.php" />
         <option value="$PROJECT_DIR$/talentoon/public/app/views/category.html" />
-        <option value="$PROJECT_DIR$/talentoon/public/app/js/controller/category.js" />
-        <option value="$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js" />
-        <option value="$PROJECT_DIR$/talentoon/public/app/views/addpost.html" />
+        <option value="$PROJECT_DIR$/talentoon/app/Models/User.php" />
+        <option value="$PROJECT_DIR$/talentoon/public/app/index.html" />
+        <option value="$PROJECT_DIR$/talentoon/.env" />
         <option value="$PROJECT_DIR$/talentoon/storage/logs/laravel.log" />
         <option value="$PROJECT_DIR$/talentoon/public/app/js/controller/addpost.js" />
-        <option value="$PROJECT_DIR$/talentoon/app/Models/User.php" />
+        <option value="$PROJECT_DIR$/talentoon/public/app/views/addpost.html" />
+        <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php" />
         <option value="$PROJECT_DIR$/talentoon/routes/api.php" />
         <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/UploadController.php" />
-        <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php" />
+        <option value="$PROJECT_DIR$/talentoon/public/app/js/controller/category.js" />
+        <option value="$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js" />
+        <option value="$PROJECT_DIR$/talentoon/app/Http/Controllers/CategorySubscribeController.php" />
       </list>
     </option>
   </component>
@@ -263,7 +218,85 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talentoon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talentoon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Talentoon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="talentoon" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factories" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -422,12 +455,12 @@
       <workItem from="1495211779519" duration="2817000" />
       <workItem from="1495214803174" duration="627000" />
       <workItem from="1495217652263" duration="350000" />
-      <workItem from="1495378297302" duration="56201000" />
+      <workItem from="1495378297302" duration="66025000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59995000" />
+    <option name="totallyTimeSpent" value="69819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
@@ -466,38 +499,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Subscriber.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Models/Like.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/talentoon/app/Models/CategoryTalent.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -678,14 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/public/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -793,48 +786,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/storage/logs/laravel.log">
+    <entry file="file://$PROJECT_DIR$/talentoon/public/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="6615" column="45" lean-forward="true" selection-start-line="6615" selection-start-column="45" selection-end-line="6615" selection-end-column="45" />
+        <state relative-caret-position="214">
+          <caret line="28" column="76" lean-forward="false" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/controller/category.js">
+    <entry file="file://$PROJECT_DIR$/talentoon/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="296" column="6" lean-forward="false" selection-start-line="296" selection-start-column="6" selection-end-line="296" selection-end-column="6" />
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js">
+    <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/factories/showreview.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="135" column="40" lean-forward="false" selection-start-line="135" selection-start-column="40" selection-end-line="135" selection-end-column="40" />
-          <folding>
-            <marker date="1495552384139" expanded="true" signature="73:5561" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/public/app/views/addpost.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#0;n#form#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#0;n#div#1;n#form#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/controller/addpost.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -842,31 +813,94 @@
     <entry file="file://$PROJECT_DIR$/talentoon/app/Models/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/controller/addpost.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/public/app/views/addpost.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#0;n#form#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#form#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/talentoon/routes/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/UploadController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state relative-caret-position="310">
+          <caret line="49" column="31" lean-forward="false" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/PostsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/CategorySubscribeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/controller/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="348" column="6" lean-forward="true" selection-start-line="348" selection-start-column="6" selection-end-line="348" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/app/Http/Controllers/UploadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/talentoon/public/app/js/factories/categories.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
