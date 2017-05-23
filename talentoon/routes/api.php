@@ -58,3 +58,6 @@ Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
 
 Route::get('/categorysubscribe','CategorySubscribeController@store');
 Route::get('/categoryunsubscribe','CategorySubscribeController@update');
+
+
+Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
