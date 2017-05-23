@@ -82,8 +82,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
               transformRequest: function (data) {
                   var formData = new FormData();
                   for(var i =0;i< filesuploaded.length;i++){
-                        formData.append("file[]", filesuploaded[i]); 
-
+                        formData.append("file", filesuploaded[i]);
                         console.log("file in loop",filesuploaded[i])
                   }
 

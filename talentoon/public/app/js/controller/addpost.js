@@ -14,9 +14,9 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
         $scope.post.user_id=user_id
        // console.log("for mina post daa",postdata);
 
-       postdata.media_url = $rootScope.currentFile
+       // postdata.media_url = $rootScope.currentFile
 
-         console.log("inside new post ",postdata.media_url)
+         // console.log("inside new post ",postdata.media_url)
 
        categories.addpost(postdata).then(function(data){
 
