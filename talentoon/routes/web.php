@@ -20,11 +20,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('categories.posts','PostsController');
 Route::resource('category','CategoriesController');
-Route::resource('/posts','PostsController');
+//Route::resource('/posts/{id}','PostsController');
 
 
-Route::get('/posts/create', 'PostsController@create');
-Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
+//Route::get('/posts/create', 'PostsController@create');
+//Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
 
 
 

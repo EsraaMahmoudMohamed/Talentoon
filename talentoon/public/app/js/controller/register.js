@@ -2,7 +2,7 @@ angular.module('myApp').controller("register", function($scope, $http, user, $ro
 
 user.getAllCountry().then(function(data){
 
-		// console.log(data);
+		 console.log("test from factory",data);
 		$scope.countries=data;
 console.log("countries",$scope.countries);
 	} , function(err){

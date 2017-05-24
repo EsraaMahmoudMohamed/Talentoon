@@ -53,7 +53,8 @@ Route::post('/test2', 'UploadController@test2');
 Route::put('/categorymentor/update','CategoryMentorController@update');
 Route::post('/categorymentor/store','CategoryMentorController@store');
 
-Route::post('/signup','JWTAuth\SignUpController@signup');
+//Route::post('/signup','JWTAuth\SignUpController@signup');
+Route::post('/signup','JWTAuth\SignUpController@register');
 Route::post('/login','JWTAuth\LoginController@login');
 Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
 
@@ -61,4 +62,6 @@ Route::post('/categorysubscribe','CategorySubscribeController@store');
 Route::post('/categoryunsubscribe','CategorySubscribeController@update');
 
 
-Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
+
+//Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
+Route::get('/countries','CountriesController@getAllCountries');
