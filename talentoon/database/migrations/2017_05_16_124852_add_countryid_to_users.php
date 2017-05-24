@@ -15,7 +15,7 @@ class AddCountryidToUsers extends Migration
     {
         //
         Schema::table('users', function($table) {
-          $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
+          $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
