@@ -213,7 +213,8 @@ $scope.comment={};
 		}
   }
 
-	//get all posts under category
+	//get 3  posts under category
+	// $scope.allposts = function() {
 	var index= $routeParams['category_id'];
     $scope.cat_id=index;
     var user_id=1;
@@ -227,17 +228,52 @@ $scope.comment={};
         console.log(err);
 
     });
+// }
+
+
+$scope.allposts = function() {
+var index= $routeParams['category_id'];
+	$scope.cat_id=index;
+	var user_id=1;
+	categories.getCategoryPosts(index).then(function(data){
+			// console.log("inside controller" , data)
+			$rootScope.categoryPosts=data;
+			$location.url('/category/'+index+'/posts');
+			console.log('/category/'+index+'/posts')
+			console.log("all posts under category",$scope.categoryposts);
+
+
+	} , function(err){
+			console.log(err);
+
+	});
+}
 
 
 
-
+//get all post under category
+// $scope.allposts = function() {
+//     $rootScope.cat_id=index;
+//     var user_id=1;
+// 		categories.getAllCategoryPosts(index).then(function(data){
+// 				// console.log("inside controller" , data)
+// 				$scope.categoryposts=data;
+// 				// console.log("la2aa",$scope.category_posts);
+//
+// 		console.log($scope.categoryposts);
+// 		} , function(err){
+// 				console.log(err);
+//
+// 		});
+//
+// }
 	// subscribe in category
 		  // var unsubscribe_status=0;
 		// console.log("user id ",user_id);
 		// 	console.log("cat id",index);
 // var obj={index,user_id,subscribe_status};
 
-
+// subscribe in category
 $scope.subscribe = function() {
 	$routeParams['user_id']=1;
 	 var subscriber_id= $routeParams['user_id'];
@@ -257,14 +293,10 @@ console.log(obj);
 
 		});
 
-
-
-
-
 }
 
 
-
+// unsubscribe in category
 $scope.unsubscribe = function() {
 	$routeParams['user_id']=1;
 	 var subscriber_id= $routeParams['user_id'];

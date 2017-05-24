@@ -93,4 +93,10 @@ $routeProvider.when('/',{
 	controller:'showreview'
 
 })
+
+.when('/category/:category_id/posts',{
+	templateUrl:'views/categoryposts.html',
+	controller:'categories'
+})
+
 })
