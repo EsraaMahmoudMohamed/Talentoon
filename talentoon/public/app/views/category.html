@@ -25,7 +25,7 @@
 </div>
 
   <a href="#!/category/betalent/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">Be Mawhoob</a>
-    
+
     <a ng-class="untalent()" class="btn btn-info" role="button">unTalentMe</a>
 
 
@@ -42,7 +42,7 @@
 <br>
 
 <div class="container">
-  <div ng-repeat="post in category_posts track by $index">
+  <div ng-repeat="post in category_posts | limitTo:2 track by $index">
 
      <!-- <form name="comment_form" ng-submit="submitted=true ; addcomment(comment_form.$valid)" novalidate> -->
        <!-- <input type="hidden" name="user_id"  ng-model="post.user_id" value="{{post.title}}">
@@ -62,7 +62,11 @@
       <h4 style="color:Purple ">{{post.description}}</h4>
       <h4 style="color:Purple ">{{post.created_at}}</h4>
     </div>
+    <!-- <p  class="btnAction"><a href="#!/category/{{post.category_id}}/posts" class="btn btn-primary btnAction" role="button">Show posts</a></p> -->
+
   </div>
+  <!-- <p  class="btnAction"><a href="#!/category/{{post.category_id}}/posts" class="btn btn-primary btnAction" role="button" ng-click="allposts()">show all posts</a></p> -->
+<button class="btn btn-primary btnAction" role="button" ng-click="allposts()">show all posts</button>
 
 </div>
 

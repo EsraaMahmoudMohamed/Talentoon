@@ -25,14 +25,23 @@ class CommentService
 
         return Response::json(array('success' => true));
     }
-    public function DeleteComment($id){
-        $user = Comment::find($id);
+    public function DeleteComment($data){
 
-        $user->delete();
-        dd($user);
-        Comment::where('id', '=', $id)->delete();
+        //let id will be comment_id which will be deleted
+        $id=1;
+        $affectedRows = Comment::where('id', '=', $id)
+            ->where('user_id', '=', $data['user_id'])
+            ->where('commentable_id','=',$data['commentable_id'])
+            ->where('commentable_type','=',$data['commentable_type'])
+            ->delete();
 
-        return Response::json(array('success' => true));
+        if ($affectedRows){
+            return Response::json(array('success' => true));
+        }else{
+            return Response::json(array('success' => false));
+        }
+
+
     }
 
 

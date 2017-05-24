@@ -51,6 +51,34 @@ return {
 			return def.promise ;
 
 		},
+		getCategoryPost:function(id){
+    //  var category_id= index;
+      var id =id;
+			// console.log("category_id",category_id)
+			console.log("post id",id)
+			var def =$q.defer();
+			$http({
+				url:'http://localhost:8000/api/post/'+id,
+				method:'GET',
+				data:id
+			}).then(function(res){
+				// console.log("single post from factory",res.data.post)
+				console.log("single post from factory",res.data.post)
+
+				if(res){
+					var data = localStorage.setItem("data",JSON.stringify(res.data.post));
+		     			def.resolve(res.data.post);
+
+				}else{
+					def.reject('there is no data ')
+				}
+
+			},function(err){
+				def.reject(err);
+			})
+			return def.promise ;
+
+		},
 		subscribe:function(data){
 			// console.log("from factories CAT ID",category_id);
 			// console.log("from factories subscriber_id",subscriber_id);
