@@ -1,7 +1,6 @@
 angular.module('myApp').controller("register", function ($scope, $http, user, $routeParams, dateFilter) {
 
     user.getAllCountry().then(function (data) {
-
         //console.log("countries:", data);
         $scope.countries = data;
         console.log("countries", $scope.countries);

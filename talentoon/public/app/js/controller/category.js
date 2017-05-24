@@ -1,4 +1,4 @@
-angular.module('myApp').controller("categories",function($scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader){
+angular.module('myApp').controller("categories",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader){
 
 	var filesuploaded = []
     var filesmentoruploaded = []
@@ -114,7 +114,7 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
                 $scope.files = element.files;
               });
             }
-                    reader.readAsDataURL(element.files[0]);
+        reader.readAsDataURL(element.files[0]);
     }
 
 
@@ -129,39 +129,69 @@ angular.module('myApp').controller("categories",function($scope,$http,categories
 
 
     $scope.completeMentorProfile = function(){
-        if (filesmentoruploaded.length > 0){
-            mentor.mentor_id = $rootScope.user_id;
-            mentor.category_id = $routeParams['category_id'];
-            mentor.years_of_experience = $scope.mentor.years_of_experience;
-            mentor.experience =$scope.mentor.experience;
-            mentor.files_of_mentor_data = filesmentoruploaded;
 
-            console.log("Mentor Object is ",mentor);
+        mentor.mentor_id = 1;
+        mentor.category_id = $routeParams['category_id'];
+        mentor.years_of_experience = $scope.mentor.years_of_experience;
+        mentor.experience =$scope.mentor.experience;
+        mentor.status=1;
 
-            categories.complete_mentor_profile(mentor).then(function(data){
-                console.log(data)
 
-            }, function (err) {
+        console.log("Mentor Object is ",mentor);
+
+    categories.complete_mentor_profile(mentor).then(function(data){
+        console.log(data)
+
+        }, function (err) {
                 console.log(err)
             });
 
-        }else{
-            alert("sorry profile files is required")
-        }
+
+
+
+    }
+
+    $scope.unmentor = function(){
+
+        mentor.mentor_id = 1;
+        //$routeParams['category_id']
+        mentor.category_id = 1;
+        mentor.action="unmentor";
+
+
+        console.log("Mentor Object is ",mentor);
+
+        categories.unmentor(mentor).then(function(data){
+            console.log(data)
+
+        }, function (err) {
+            console.log(err)
+        });
+
+
+
 
     }
 
 
+    //assuming we have user id and the role that define him as mentor
+    //here we will get the mentor status to make toggle button in views
+    // categories.getUser(1).then(function(data){
+    //
+    //     console.log(data);
+    //     $scope.currentUser=data;
+    //
+    // } , function(err){
+    //     console.log(err);
+    //
+    // });
 
 
 
-
-
-
-	$scope.categories=categories;
+	// $scope.categories=categories;
 	//get all category
 	categories.getAllCategory().then(function(data){
-		console.log(data);
+		// console.log(data);
 		$scope.categories=data;
         // console.log("la2aa sha3`alaa",$scope.categories);
 
@@ -174,8 +204,8 @@ $scope.comment={};
 	$scope.addcomment= function(valid) {
     if (valid) {
       var comment = $scope.comment
-      console.log(comment);
-			console.log("vaild in add comment");
+      // console.log(comment);
+			// console.log("vaild in add comment");
 
     }
 		else{
@@ -188,9 +218,9 @@ $scope.comment={};
     $scope.cat_id=index;
     var user_id=1;
     categories.getCategoryPosts(index).then(function(data){
-        console.log("inside controller" , data)
+        // console.log("inside controller" , data)
         $scope.category_posts=data;
-        console.log("la2aa",$scope.category_posts);
+        // console.log("la2aa",$scope.category_posts);
 
     console.log($scope.category_posts);
     } , function(err){
@@ -202,10 +232,69 @@ $scope.comment={};
 
 
 	// subscribe in category
-	// categories.subscribe(index,user_id).then(function(data){
+		  // var unsubscribe_status=0;
+		// console.log("user id ",user_id);
+		// 	console.log("cat id",index);
+// var obj={index,user_id,subscribe_status};
+
+
+$scope.subscribe = function() {
+	$routeParams['user_id']=1;
+	 var subscriber_id= $routeParams['user_id'];
+	 var subscribed=1;
+	var category_id = $routeParams['category_id'];
+var obj={subscriber_id, category_id,subscribed }
+console.log(obj);
+		categories.subscribe(obj).then(function(data){
+			// $rootScope.status=data;
+			localStorage.setItem('status',data);
+			$rootScope.status = localStorage.getItem("status");
+			console.log("status in controller",$rootScope.status);
+			 $location.url('/category/'+category_id);
+			// console.log("hiii")
+		} , function(err){
+			console.log(err);
+
+		});
+
+
+
+
+
+}
+
+
+
+$scope.unsubscribe = function() {
+	$routeParams['user_id']=1;
+	 var subscriber_id= $routeParams['user_id'];
+	 var subscribed=0;
+	var category_id = $routeParams['category_id'];
+var obj={subscriber_id, category_id,subscribed }
+console.log(obj);
+		categories.unsubscribe(obj).then(function(data){
+			localStorage.setItem('status',data);
+			$rootScope.status = localStorage.getItem("status");
+			// $rootScope.status=data;
+			console.log("status in controller",$rootScope.status);
+			  $location.url('/category/'+category_id);
+			// console.log("hiii")
+		} , function(err){
+			console.log(err);
+
+		});
+
+
+
+
+
+}
+
+
+
+	// categories.unsubscribe(index,user_id,unsubscribe_status).then(function(data){
+	// 	$scope.status=data.status;
 	//
-	// 	$scope.status=data['status'];
-	// 	console.log("hiii")
 	// } , function(err){
 	// 	console.log(err);
 	//
@@ -284,86 +373,4 @@ $scope.comment={};
 
 
     //End Talent Uploader
-
-
-
-
-
-
-
-
-
-
-    console.log("Scope_Mentor_Uploader",$scope.ment_uploader)
-
-    //Mentor Uploader
-
-
-    //files with ng file upload
-    var ment_uploader = $scope.ment_uploader = new FileUploader({
-        // url: 'http://172.16.2.239:8000/api/test'
-        // url:'upload.php'
-
-    });
-
-    // FILTERS
-    // a sync filter
-    ment_uploader.filters.push({
-        name: 'syncFilter',
-        fn: function(item /*{File|FileLikeObject}*/, options) {
-            console.log('syncFilter');
-            return this.queue.length < 10;
-        }
-    });
-
-    // an async filter
-    ment_uploader.filters.push({
-        name: 'asyncFilter',
-        fn: function(item /*{File|FileLikeObject}*/, options, deferred) {
-            console.log('asyncFilter');
-            setTimeout(deferred.resolve, 1e3);
-        }
-    });
-
-    // CALLBACKS
-    ment_uploader.onWhenAddingFileFailed = function(item /*{File|FileLikeObject}*/, filter, options) {
-        console.info('onWhenAddingFileFailed', item, filter, options);
-    };
-    ment_uploader.onAfterAddingFile = function(fileItem) {
-        console.info('onAfterAddingFile', fileItem);
-    };
-    ment_uploader.onAfterAddingAll = function(addedFileItems) {
-        console.info('onAfterAddingAll', addedFileItems);
-    };
-    ment_uploader.onBeforeUploadItem = function(item) {
-        console.info('onBeforeUploadItem', item);
-    };
-    ment_uploader.onProgressItem = function(fileItem, progress) {
-        console.info('onProgressItem', fileItem, progress);
-    };
-    ment_uploader.onProgressAll = function(progress) {
-        console.info('onProgressAll', progress);
-    };
-    ment_uploader.onSuccessItem = function(fileItem, response, status, headers) {
-        console.info('onSuccessItem', fileItem, response, status, headers);
-        filesmentoruploaded.push(fileItem._file);
-        console.log("file item is ",filesmentoruploaded)
-    };
-    ment_uploader.onErrorItem = function(fileItem, response, status, headers) {
-        console.info('onErrorItem', fileItem, response, status, headers);
-    };
-    ment_uploader.onCancelItem = function(fileItem, response, status, headers) {
-        console.info('onCancelItem', fileItem, response, status, headers);
-    };
-    ment_uploader.onCompleteItem = function(fileItem, response, status, headers) {
-        console.info('onCompleteItem', fileItem, response, status, headers);
-        console.log("File uploaded",fileItem);
-    };
-    ment_uploader.onCompleteAll = function() {
-        console.info('onCompleteAll');
-    };
-
-    console.info('ment_uploader',ment_uploader);
-
-
 })
