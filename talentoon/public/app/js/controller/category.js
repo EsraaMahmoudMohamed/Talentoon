@@ -273,6 +273,43 @@ var index= $routeParams['category_id'];
 		// 	console.log("cat id",index);
 // var obj={index,user_id,subscribe_status};
 
+
+
+
+$scope.singlepost=function(id){
+var index= $routeParams['category_id'];
+var id=id
+	$scope.cat_id=index;
+	var user_id=1;
+
+
+	categories.getCategoryPost(id).then(function(data){
+			// console.log("inside controller" , data)
+			$rootScope.category_post=data;
+			// $rootScope.category_post = localStorage.getItem("data");
+
+
+   ;
+			console.log("single post from controller",$rootScope.category_post);
+
+     $location.url('/category/'+index+'/posts/'+id);
+
+	} , function(err){
+			console.log(err);
+
+	});
+
+
+}
+
+
+
+
+
+
+
+
+
 // subscribe in category
 $scope.subscribe = function() {
 	$routeParams['user_id']=1;

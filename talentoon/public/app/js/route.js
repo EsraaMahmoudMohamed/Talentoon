@@ -99,4 +99,12 @@ $routeProvider.when('/',{
 	controller:'categories'
 })
 
+.when('/category/:category_id/posts/:post_id',{
+	templateUrl:'views/categorypost.html',
+	controller:'categories'
+})
+
+
+
+
 })

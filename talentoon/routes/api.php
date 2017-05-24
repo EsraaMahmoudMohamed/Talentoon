@@ -65,3 +65,4 @@ Route::post('/categoryunsubscribe','CategorySubscribeController@update');
 
 //Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
 Route::get('/countries','CountriesController@getAllCountries');
+Route::get('/post/{post_id}','PostsController@showSinglePost');
