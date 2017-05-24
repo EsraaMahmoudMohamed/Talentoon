@@ -198,13 +198,13 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'talentdata  url' ,
+				url:'http://127.0.0.1:8000/api/categorytalent/store' ,
 				method:'POST',
 				data:talent_data
 
 			}).then(function(res){
-
-				if(res.data.length){
+				console.log("res is ",res)
+				if(res){
 					def.resolve(res.data)
 				}else{
 					def.reject('there is no data ')

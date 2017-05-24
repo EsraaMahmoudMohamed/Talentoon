@@ -77,6 +77,24 @@
 
 <h1>Please Complete Your Profile to be MaWhooB....</h1>
 
+<hr/>
+
+
+
+<!-- Form Start -->
+<form ng-submit="submit_talent_file()" name="form" role="form" enctype="multipart/form-data">
+    <input name="talent_file" ng-model="talent.file" type="file" class="form-control input-lg"  onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
+    <!--<input type="submit" id="submit_file" value="Submit" />-->
+    <br/>
+    <img ng-src="{{talent.file}}" style="width:300px;">
+</form>
+<!-- Form End -->
+
+
+
+<hr/>
+
+
 <h1>Should be popup on clicking on Be Talent</h1>
 
     <!-- Form Start -->

@@ -62,3 +62,6 @@ Route::post('/categoryunsubscribe','CategorySubscribeController@update');
 
 
 Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
+
+
+Route::post('/categorytalent/store','CategoryTalentController@store');

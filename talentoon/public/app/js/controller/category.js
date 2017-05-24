@@ -25,9 +25,10 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
 
 	$scope.completeTalentProfile = function(){
 
-		if (filesuploaded.length > 0){
+		if (filesuploaded.length > 0)
+		{
 
-			talent.talent_id = $rootScope.user_id;
+			talent.talent_id = 1;
 			talent.category_id = $routeParams['category_id'];
 			talent.from_when =$scope.talent.from_when;
 			talent.description = $scope.talent.description;
@@ -37,6 +38,8 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
 
             categories.complete_talent_profile(talent).then(function(data){
                 console.log(data)
+
+
 
             }, function (err) {
                 console.log(err)
@@ -106,6 +109,9 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
     $scope.uploadedFile = function(element) {
             console.log("element is ",element)
             $scope.currentFile = element.files[0];
+
+            filesuploaded.push(element.files[0])
+
             var reader = new FileReader();
 
             reader.onload = function(event) {
