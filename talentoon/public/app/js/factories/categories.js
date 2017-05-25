@@ -176,7 +176,6 @@ return {
                 //////////////////////////////////////////////
 
 
-
 				if(res.data){
 					def.resolve(res.data)
 				}else{
@@ -190,15 +189,76 @@ return {
 			return def.promise ;
 
 
+		},
+
+		insert_media_reviews_uploads:function (reviewfilesuploaded,category_talent_id) {
+            var def =$q.defer();
+            $http({
+                method  : 'POST',
+                url     : 'http://localhost:8000/api/review_files_upload/'+category_talent_id,
+                processData: false,
+                data:reviewfilesuploaded,
+                transformRequest: function (data) {
+                    var formData = new FormData();
+                    for(var i =0;i< reviewfilesuploaded.length;i++){
+                        formData.append("file[]", reviewfilesuploaded[i]);
+                        //console.log("file in loop",reviewfilesuploaded[i])
+                    }
+                    console.log("form data",formData);
+                    return formData;
+                },
+                headers: {
+                    'Content-Type': undefined,
+                    'Process-Data':false
+                }
+            }).then(function(res){
+                def.resolve(res.data)
+                // if(res.data){
+                //     def.resolve(res.data)
+                // }else{
+                //     def.reject('there is no data ')
+                // }
+
+            },function(err){
+                // console.log(err);
+                def.reject(err);
+            })
+            return def.promise ;
 
 
 
 
+            // /////////////////////////
+			// $http({
+			// 	method  : 'POST',
+			// 	url     : 'http://localhost:8000/api/review_files_upload/'+category_talent_id,
+			// 	processData: false,
+			// 	data:reviewfilesuploaded,
+			// 	transformRequest: function (data) {
+			// 		var formData = new FormData();
+			// 		for(var i =0;i< reviewfilesuploaded.length;i++){
+			// 			formData.append("file[]", reviewfilesuploaded[i]);
+			// 			//console.log("file in loop",reviewfilesuploaded[i])
+			// 		}
+			// 		// console.log("form data",formData)
+			// 		return formData;
+			// 	},
+			// 	headers: {
+			// 		'Content-Type': undefined,
+			// 		'Process-Data':false
+			// 	}
+			// }).then(function(data){
+			// 	alert(data);
+			// 	console.log("then NNN in add review",data)
+			// });
 
+			//////////////////////////////////////////////
 
 
 
 		},
+
+
 		addevent:function(eventdata){
 
 			var def =$q.defer();
@@ -231,8 +291,11 @@ return {
 				data:talent_data
 
 			}).then(function(res){
-				console.log("res is ",res)
+				console.log("res is find the id now please ",res.data.category_talent_id)
+
 				if(res){
+					$rootScope.category_talent_id = res.data.category_talent_id;
+					console.log("7777777777777",$rootScope.category_talent_id);
 					def.resolve(res.data)
 				}else{
 					def.reject('there is no data ')
@@ -294,7 +357,9 @@ return {
                 def.reject(err);
             })
             return def.promise ;
-		}
+		},
+
+
 
 
 		}

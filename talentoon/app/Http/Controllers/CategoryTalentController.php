@@ -14,7 +14,7 @@ class CategoryTalentController extends Controller
 
         $response=$CTS_Obj->beTalent($request);
 //        return $response;
-        return response()->json(['message' => 'data saved successfully']);
+        return response()->json(['category_talent_id'=>$response,'message' => 'data saved successfully']);
         // CategoryTalentService::betalent();
     }
 

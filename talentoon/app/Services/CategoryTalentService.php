@@ -12,9 +12,9 @@ class CategoryTalentService
     public function beTalent($request){
 
         //dd($request->all());
-        CategoryTalent::create($request->all());
-
-        $media_type='image';
+        $id = CategoryTalent::create($request->all())->id;
+        return response()->json(['category_talent_id' => $id,'message' => 'data saved successfully']);
+//        $media_type='image';
         
     }
 

@@ -70,3 +70,7 @@ Route::post('/categorytalent/store','CategoryTalentController@store');
 
 Route::get('/countries','CountriesController@getAllCountries');
 Route::get('/post/{post_id}','PostsController@showSinglePost');
+
+
+
+Route::post('/review_files_upload/{category_talent_id}', 'UploadController@review_files_upload');

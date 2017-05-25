@@ -1,11 +1,11 @@
-angular.module('myApp').controller("categories",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader){
+angular.module('myApp').controller("categories",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,$q){
 
 	var filesuploaded = []
     var filesmentoruploaded = []
+    var reviewfilesuploaded=[]
 	var talent = {}
     var mentor = {}
 
-    console.log('iam here')
 	//
     // $scope.show = function() {
     //     ModalService.showModal({
@@ -25,45 +25,33 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
 
 	$scope.completeTalentProfile = function(){
 
-		if (filesuploaded.length > 0)
+		if (reviewfilesuploaded.length > 0)
 		{
-
 			talent.talent_id = 1;
 			talent.category_id = $routeParams['category_id'];
 			talent.from_when =$scope.talent.from_when;
 			talent.description = $scope.talent.description;
-			talent.files_of_initial_review = filesuploaded;
+			talent.files_of_initial_review = reviewfilesuploaded;
 
 			console.log("Talent Object is ",talent);
 
             categories.complete_talent_profile(talent).then(function(data){
-                console.log(data)
 
+                category_talent_id = data.category_talent_id.original.category_talent_id;
+                console.log("get the id from here",category_talent_id)
+
+
+                categories.insert_media_reviews_uploads(reviewfilesuploaded,category_talent_id).then(function(){
+
+                    console.log("in then ")
+                }, function (error) {
+                    console.log(error)
+                });
 
 
             }, function (err) {
                 console.log(err)
             });
-
-
-
-
-            // var fd = new FormData()
-            // console.log("file descriptionnnnn",fd)
-            // for (var i in filesuploaded) {
-            //     fd.append("fileToUpload",filesuploaded[i]);
-            // }
-            // var config = {headers: {'Content-Type': undefined}};
-            // var url = "upload.php"
-            // // var url =  "http://172.16.2.239:8000/api/test"
-            //
-            // console.log("________________In Form Data______________________")
-            //
-            // var httpPromise = $http.post(url, fd, config);
-            // console.log(httpPromise)
-            // console.log("________________After HTTP Promise Form Data______________________")
-            //
-
 
 
 		}else{
@@ -122,6 +110,14 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
             }
         reader.readAsDataURL(element.files[0]);
     }
+
+
+
+    $scope.uploadedReviewFile = function(element) {
+        reviewfilesuploaded.push(element.files[0])
+    }
+
+
 
 
 
@@ -287,25 +283,15 @@ var index= $routeParams['category_id'];
 var id=id
 	$scope.cat_id=index;
 	var user_id=1;
-
-
 	categories.getCategoryPost(id).then(function(data){
 			// console.log("inside controller" , data)
 			$rootScope.category_post=data;
 			// $rootScope.category_post = localStorage.getItem("data");
-
-
-   ;
 			console.log("single post from controller",$rootScope.category_post);
-
      $location.url('/category/'+index+'/posts/'+id);
-
 	} , function(err){
 			console.log(err);
-
 	});
-
-
 }
 
 
@@ -358,14 +344,7 @@ console.log(obj);
 			console.log(err);
 
 		});
-
-
-
-
-
 }
-
-
 
 	// categories.unsubscribe(index,user_id,unsubscribe_status).then(function(data){
 	// 	$scope.status=data.status;
@@ -374,78 +353,4 @@ console.log(obj);
 	// 	console.log(err);
 	//
 	// });
-
-
-
-
-    // Talent Uploader
-
-	//files with ng file upload
-	var uploader = $scope.uploader = new FileUploader({
-        // url: 'http://172.16.2.239:8000/api/test'
-        // url: 'upload.php'
-        url: 'http://localhost:8000/api/uploads/singleuploded'
-    });
-
-    // FILTERS
-    // a sync filter
-    uploader.filters.push({
-        name: 'syncFilter',
-        fn: function(item /*{File|FileLikeObject}*/, options) {
-            console.log('syncFilter');
-            return this.queue.length < 10;
-        }
-    });
-
-    // an async filter
-    uploader.filters.push({
-        name: 'asyncFilter',
-        fn: function(item /*{File|FileLikeObject}*/, options, deferred) {
-            console.log('asyncFilter');
-            setTimeout(deferred.resolve, 1e3);
-        }
-    });
-
-    // CALLBACKS
-    uploader.onWhenAddingFileFailed = function(item /*{File|FileLikeObject}*/, filter, options) {
-        console.info('onWhenAddingFileFailed', item, filter, options);
-    };
-    uploader.onAfterAddingFile = function(fileItem) {
-        console.info('onAfterAddingFile', fileItem);
-    };
-    uploader.onAfterAddingAll = function(addedFileItems) {
-        console.info('onAfterAddingAll', addedFileItems);
-    };
-    uploader.onBeforeUploadItem = function(item) {
-        console.info('onBeforeUploadItem', item);
-    };
-    uploader.onProgressItem = function(fileItem, progress) {
-        console.info('onProgressItem', fileItem, progress);
-    };
-    uploader.onProgressAll = function(progress) {
-        console.info('onProgressAll', progress);
-    };
-    uploader.onSuccessItem = function(fileItem, response, status, headers) {
-        console.info('onSuccessItem', fileItem, response, status, headers);
-        filesuploaded.push(fileItem._file);
-        console.log("file item is ",filesuploaded)
-    };
-    uploader.onErrorItem = function(fileItem, response, status, headers) {
-        console.info('onErrorItem', fileItem, response, status, headers);
-    };
-    uploader.onCancelItem = function(fileItem, response, status, headers) {
-        console.info('onCancelItem', fileItem, response, status, headers);
-    };
-    uploader.onCompleteItem = function(fileItem, response, status, headers) {
-        console.info('onCompleteItem', fileItem, response, status, headers);
-        console.log("File uploaded",fileItem);
-    };
-    uploader.onCompleteAll = function() {
-        console.info('onCompleteAll');
-    };
-
-    console.info('uploader', uploader);
-
-
-    //End Talent Uploader
 })
