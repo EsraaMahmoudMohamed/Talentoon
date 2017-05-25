@@ -29,7 +29,7 @@ angular.module('myApp').factory("user", function ($http, $q) {
                 url: 'http://localhost:8000/api/login',
                 method: 'POST',
                 data: userdata
-    
+
             }).then(function (res) {
                 //console.log("userfactory:",res);
                 if (res.data) {
@@ -52,8 +52,10 @@ angular.module('myApp').factory("user", function ($http, $q) {
 
             }).then(function (res) {
                 console.log('in factory', res)
-                if (res.data.length) {
-                    def.resolve(res.data)
+                console.log("resuullltt",res.data.data.length);
+                if (res.data.data.length) {
+                    console.log("datalength",res.data.data.length);
+                    def.resolve(res.data.data)
                 } else {
                     def.reject('there is no data ')
                 }
@@ -66,5 +68,3 @@ angular.module('myApp').factory("user", function ($http, $q) {
         }
     };
 });
-
-

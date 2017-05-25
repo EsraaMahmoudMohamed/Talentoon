@@ -171,6 +171,31 @@ return {
 
 
 		},
+		addworkshop:function(workshopdata){
+			console.log(workshopdata);
+			console.log(workshopdata.category_id);
+			var def =$q.defer();
+			$http({
+
+				url:'http://localhost:8000/api/categories/'+workshopdata.category_id+'/workshops' ,
+				method:'POST',
+				data:workshopdata
+
+			}).then(function(res){
+				console.log(res);
+				if(res.data.length){
+					def.resolve(res.data)
+				}else{
+					def.reject('there is no data ')
+				}
+
+			},function(err){
+				// console.log(err);
+				def.reject(err);
+			})
+			return def.promise ;
+
+		},
 		addevent:function(eventdata){
 
 			var def =$q.defer();

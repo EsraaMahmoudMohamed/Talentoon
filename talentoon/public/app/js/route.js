@@ -69,6 +69,11 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                     templateUrl: 'views/addpost.html',
                     controller: 'addpost'
                 })
+// add workshop
+                .when('/category/:category_id/addworkshop', {
+                    templateUrl: 'views/addworkshop.html',
+                    controller: 'addworkshop'
+                })
 //add event
                 .when('/category/:category_id/addevent', {
                     templateUrl: 'views/addevent.html',

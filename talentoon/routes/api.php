@@ -20,6 +20,7 @@ Route::resource('comment','CommentController');
 Route::post('/uploads/singleuploded','UploadController@single_upload');
 Route::post('/categorytalent','CategoryTalentController@store');
 Route::resource('categories.posts','PostsController');
+Route::resource('categories.workshops', 'WorkShopsController');
 
 //Route::get('/categorytalent/{talent_id}',[
 //    'before' => 'jwt-auth',
@@ -66,4 +67,3 @@ Route::post('/categoryunsubscribe','CategorySubscribeController@update');
 //Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
 
 Route::get('/countries','CountriesController@getAllCountries');
-
