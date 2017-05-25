@@ -30,7 +30,7 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
 
            console.log("the post request from server is ",data);
 //when data retrived from server
-//            $location.url('/category/'+$scope.post.category_id);
+           $location.url('/category/'+$scope.post.category_id);
        } , function(err){
        	console.log(err);
 

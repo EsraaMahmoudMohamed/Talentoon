@@ -14,12 +14,12 @@ class CategoryTalentController extends Controller
     public function __construct(CategoryTalentService $service) {
         $this->service = $service;
     }
-    public function store(Request $request){        
+    public function store(Request $request){
         $user= JWTAuth::parseToken()->toUser();
         //return $user;
-        $talent = $this->service->beTalent($user, 
+        $talent = $this->service->beTalent($user,
                 $request->category_id, $request->from_when, $request->description);
-        
+
         return response()->json($talent, 201);
     }
 
