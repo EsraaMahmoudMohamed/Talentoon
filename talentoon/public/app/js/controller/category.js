@@ -188,20 +188,15 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
     //
     // });
 
-
-
-	// $scope.categories=categories;
+//------------------------------------------------------------------
 	//get all category
 	categories.getAllCategory().then(function(data){
-		// console.log(data);
 		$scope.categories=data;
-        // console.log("la2aa sha3`alaa",$scope.categories);
-
 	} , function(err){
 		console.log(err);
 
 	});
-
+//----------------------------------------------------------------------
 $scope.comment={};
 	$scope.addcomment= function(valid) {
     if (valid) {
@@ -214,7 +209,7 @@ $scope.comment={};
 			console.log("error in add comment");
 		}
   }
-
+//---------------------------------------------------------------
 	//get 3  posts under category
 	// $scope.allposts = function() {
 	var index= $routeParams['category_id'];
@@ -231,7 +226,7 @@ $scope.comment={};
 
     });
 // }
-
+//------------------------------------------------------------------
 
 $scope.allposts = function() {
 var index= $routeParams['category_id'];
@@ -250,7 +245,43 @@ var index= $routeParams['category_id'];
 
 	});
 }
+//--------------------------------------------------------------
 
+
+
+var index= $routeParams['category_id'];
+	$scope.cat_id=index;
+	var user_id=1;
+	categories.getCategoryposts(index).then(function(data){
+			// console.log("inside controller" , data)
+			$rootScope.categoryPosts=data;
+			// $location.url('/category/'+index+'/posts');
+			console.log('/category/'+index+'/posts')
+			console.log("all posts under category",$scope.categoryposts);
+
+
+	} , function(err){
+			console.log(err);
+
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------
 
 
 //get all post under category
@@ -277,10 +308,11 @@ var index= $routeParams['category_id'];
 
 
 
-
-$scope.singlepost=function(id){
+//----------------------------single----post---------------------------------------
+// $scope.singlepost=function(id){
 var index= $routeParams['category_id'];
-var id=id
+var id= $routeParams['post_id'];
+// var id=id
 	$scope.cat_id=index;
 	var user_id=1;
 	categories.getCategoryPost(id).then(function(data){
@@ -288,12 +320,18 @@ var id=id
 			$rootScope.category_post=data;
 			// $rootScope.category_post = localStorage.getItem("data");
 			console.log("single post from controller",$rootScope.category_post);
-     $location.url('/category/'+index+'/posts/'+id);
+
 	} , function(err){
 			console.log(err);
 	});
+
 }
 
+
+
+// }
+//---------------------------------------------------------
+// >>>>>>> 6b9a56b8a2d667fc39371a433616b4b7b3086b93
 
 
 
