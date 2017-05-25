@@ -18,8 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::resource('comment','CommentController');
 Route::post('/uploads/singleuploded','UploadController@single_upload');
-Route::post('/categorytalent','CategoryTalentController@store');
+Route::post('/categorytalent',[
+    'uses'=>'CategoryTalentController@store',
+    'middleware'=> 'jwt.auth']);
 Route::resource('categories.posts','PostsController');
+Route::resource('categories.workshops', 'WorkShopsController');
 
 //Route::get('/categorytalent/{talent_id}',[
 //    'before' => 'jwt-auth',
@@ -73,3 +76,7 @@ Route::post('/categorytalent/store','CategoryTalentController@store');
 
 Route::get('/countries','CountriesController@getAllCountries');
 Route::get('/post/{post_id}','PostsController@showSinglePost');
+
+
+
+Route::post('/review_files_upload/{category_talent_id}', 'UploadController@review_files_upload');
