@@ -33,6 +33,7 @@ angular.module('myApp').factory("user", function ($http, $q) {
             }).then(function (res) {
                 //console.log("userfactory:",res);
                 if (res.data) {
+                    console.log("from factory",res.data);
                     def.resolve(res.data)
                 } else {
                     def.reject('User Couldnot Login');
@@ -52,9 +53,9 @@ angular.module('myApp').factory("user", function ($http, $q) {
 
             }).then(function (res) {
                 console.log('in factory', res)
-                console.log("resuullltt",res.data.data.length);
                 if (res.data.data.length) {
                     console.log("datalength",res.data.data.length);
+
                     def.resolve(res.data.data)
                 } else {
                     def.reject('there is no data ')

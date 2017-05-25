@@ -64,6 +64,8 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                 })
 
 
+
+
 //add post
                 .when('/category/:category_id/addpost', {
                     templateUrl: 'views/addpost.html',
@@ -96,6 +98,38 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                 .when('/showreview', {
                     templateUrl: 'views/showreview.html',
                     controller: 'showreview'
+                })
 
-                });
+                .when('/category/:category_id/posts', {
+                    templateUrl: 'views/categoryposts.html',
+                    controller: 'categories'
+                })
+
+                .when('/category/:category_id/posts/:post_id', {
+                    templateUrl: 'views/categorypost.html',
+                    controller: 'categories'
+                })
+
+
+        $httpProvider.interceptors.push(['$q', '$location', function ($q, $location) {
+                return {
+                    'request': function (config) {
+                        config.headers = config.headers || {};
+                        var token = JSON.parse(localStorage.getItem("token"));
+                        if (token) {
+                            console.log("inside http provider");
+                            console.log("token is:", token);
+                            config.headers.Authorization = 'Bearer ' + token;
+                        }
+                        return config;
+                    },
+                    'responseError': function (response) {
+                        if (response.status === 401 || response.status === 403) {
+                            $location.path('/signin');
+                        }
+                        return $q.reject(response);
+                    }
+                };
+            }]);
+
     }]);

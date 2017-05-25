@@ -1,0 +1,49 @@
+<!-- <div class="container">
+<div class="thumbnail">
+      <img src="{{category_post.media.media_url}}" class="img-circle" style="height:80px;" />
+      <h4 style="color:Purple ">{{category_post.title}}</h4>
+      <h4 style="color:Purple ">{{category_post.description}}</h4>
+      <h4 style="color:Purple ">{{category_post.id}}</h4>
+    </div>
+    <a href="#!/category/{{category_post.category_id}}" class="btn btn-default" role="button">GO To My Category </a> -->
+
+<!-- </div> -->
+
+
+<div class="container">
+    <h1 style="color:#6A0C38;font-family:Times New Roman">TOP POSTS</h1>
+    <div class="row">
+
+            <div class="thumbnail">
+
+                <img src="{{post.media.media_url}}" style=" height:200px">
+                <div class="caption">
+                  <h4 style="color:Purple ">Title: {{category_post.title}}</h4>
+                  <h4 style="color:Purple ">Description: {{category_post.description}}</h4>
+                  <!-- <h4 style="color:Purple ">{{category_post.id}}</h4> -->
+
+                    <a class="userPic"><img src="Imgs/Persons/face1.jpg" alt=""> Ahmed Zaki </a>
+
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8 ">
+                            <a href="#" class="interactions"><i class="fa fa-heart" aria-hidden="true"></i>  <span class="badge">12</span></a>
+
+                            <a href="#" class="interactions">  <i class="fa fa-commenting" aria-hidden="true"></i>       <span class="badge">35</span></a>
+
+                        </div>
+
+                        <div class="col-lg-4 col-md-8 col-sm-2 ">
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+
+                            <i class="fa fa-bookmark" aria-hidden="true"></i>
+                        </div>
+                        <!-- <a href="#!/post/{{post.id}}" class="btn btn-default" role="button">details</a> -->
+                    </div>
+                </div>
+            </div>
+            <a href="#!/category/{{category_post.category_id}}" class="btn btn-default" role="button">GO To My Category </a>
+
+
+
+  </div>
+</div>

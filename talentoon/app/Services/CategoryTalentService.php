@@ -5,17 +5,19 @@ namespace App\Services;
 use App\Models\CategoryTalent;
 use App\Http\Requests;
 use DB;
+use Tymon\JWTAuth\JWTAuth;
+use Tymon\JWTAuth\Exceptions\JWTException;
 
 class CategoryTalentService
 {
 
-    public function beTalent($request){
-
-        //dd($request->all());
-        CategoryTalent::create($request->all());
-
-        $media_type='image';
-        
+    public function beTalent(\App\Models\User $user, $categoryId, $fromWhen, $desc){
+        return CategoryTalent::create([
+                'talent_id'=>$user->id,
+                'category_id'=> $categoryId,
+                'from_when'=>$fromWhen,
+                'description'=>$desc
+                ]); 
     }
 
     public function mentorApprove($request){
