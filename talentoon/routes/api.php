@@ -66,8 +66,10 @@ Route::post('/categoryunsubscribe','CategorySubscribeController@update');
 
 Route::post('/like','LikeController@store');
 Route::post('/dislike','LikeController@update');
-
-
+// Route::post('/userprofile','UserProfile@index');
+Route::get('/userprofile',[
+    'uses'=>'UserProfile@index',
+    'middleware'=> 'jwt.auth']);
 
 Route::post('/categorytalent/store','CategoryTalentController@store');
 

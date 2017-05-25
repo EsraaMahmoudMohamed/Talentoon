@@ -361,28 +361,11 @@ console.log(obj);
 
 		});
 
-<<<<<<< HEAD
+
 }
 
 //--------------------------------------------------------------------
-=======
->>>>>>> a81bed43ab8676f818fba634da82d16765fd8da2
 
-	// categories.unsubscribe(index,user_id,unsubscribe_status).then(function(data){
-	// 	$scope.status=data.status;
-	//
-	// } , function(err){
-	// 	console.log(err);
-	//
-	// });
-<<<<<<< HEAD
-
-//--------------------------------------------------------
-
-
-
-
-//----------------------------------
 
 
     // Talent Uploader
@@ -392,7 +375,7 @@ console.log(obj);
         // url: 'http://172.16.2.239:8000/api/test'
         // url: 'upload.php'
         url: 'http://localhost:8000/api/uploads/singleuploded'
-=======
-        };
->>>>>>> a81bed43ab8676f818fba634da82d16765fd8da2
+
+			});
+
     });

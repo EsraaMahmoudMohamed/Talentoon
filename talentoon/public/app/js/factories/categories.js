@@ -27,6 +27,28 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
             return def.promise;
 
         },
+        getCategoryPosts:function(index){
+
+			var def =$q.defer();
+			$http({
+				url:'http://localhost:8000/api/category/'+index ,
+				method:'GET'
+			}).then(function(res){
+				// console.log("response is " , res.data.posts);
+				if(res.data.posts.length){
+		     			def.resolve(res.data.posts);
+							// 			console.log("res.data.posts is " , res.data.posts )
+						// def.resolve(res.data[index])
+				}else{
+					def.reject('there is no data ')
+				}
+
+			},function(err){
+				def.reject(err);
+			})
+			return def.promise ;
+
+		},
 
         getCategoryposts: function (index) {
 
@@ -247,13 +269,7 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
             // });
 
             //////////////////////////////////////////////
-
-
-
         },
-
-<<<<<<< HEAD
-		},
 		addworkshop:function(workshopdata){
 			console.log(workshopdata);
 			console.log(workshopdata.category_id);
@@ -279,10 +295,9 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 			return def.promise ;
 
 		},
-		addevent:function(eventdata){
-=======
+
         addevent: function (eventdata) {
->>>>>>> c3be22f8f4f365a0e4fca3228c673fce5ac6e800
+
 
             var def = $q.defer();
             $http({

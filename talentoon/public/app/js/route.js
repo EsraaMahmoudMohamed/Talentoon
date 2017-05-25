@@ -113,7 +113,7 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
 
                 .when('/myprofile', {
                   templateUrl: 'views/myprofile.html',
-                  // controller: 'user'
+                  controller: 'userprofile'
                 })
 
 
