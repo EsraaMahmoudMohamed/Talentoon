@@ -1,7 +1,7 @@
 <center>
   <style>
     .thumbnail{
-      background-color: black;
+      background-color: white;
       color: white;
       font-size: 60px;
     }
@@ -16,6 +16,7 @@
   <h1>posts in category</h1></center>
 
 <center><a href="#!/category/{{cat_id}}/addpost" class="btn btn-info" role="button">new post</a>
+<center><a href="#!/category/{{cat_id}}/addworkshop" class="btn btn-danger" role="button">new WorkShop</a>
 
 <a href="#!/category/{{cat_id}}/addevent" class="btn btn-info" role="button">new event</a>
 
@@ -45,7 +46,7 @@
 <br>
 
 <div class="container">
-  <div ng-repeat="post in category_posts track by $index">
+  <div ng-repeat="post in category_posts | limitTo:2 track by $index">
 
      <!-- <form name="comment_form" ng-submit="submitted=true ; addcomment(comment_form.$valid)" novalidate> -->
        <!-- <input type="hidden" name="user_id"  ng-model="post.user_id" value="{{post.title}}">
@@ -65,7 +66,11 @@
       <h4 style="color:Purple ">{{post.description}}</h4>
       <h4 style="color:Purple ">{{post.created_at}}</h4>
     </div>
+    <!-- <p  class="btnAction"><a href="#!/category/{{post.category_id}}/posts" class="btn btn-primary btnAction" role="button">Show posts</a></p> -->
+
   </div>
+  <p  class="btnAction"><a href="#!/category/{{post.category_id}}/posts" class="btn btn-primary btnAction" role="button" ng-click="allposts()">show all posts</a></p>
+<!-- <button class="btn btn-primary btnAction" role="button" ng-click="allposts()">show all posts</button> -->
 
 </div>
 
@@ -78,167 +83,108 @@
 
 
 
-<h1>Please Complete Your Profile to be MaWhooB....</h1>
+<!--<h1>Please Complete Your Profile to be MaWhooB....</h1>-->
 
-<h1>Should be popup on clicking on Be Talent</h1>
+<!--<hr/>-->
 
+
+
+<!--&lt;!&ndash; Form Start &ndash;&gt;-->
+<!--<form ng-submit="submit_talent_file()" name="form" role="form" enctype="multipart/form-data">-->
+    <!--<input name="talent_file" ng-model="talent.file" type="file" class="form-control input-lg"  onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >-->
+    <!--&lt;!&ndash;<input type="submit" id="submit_file" value="Submit" />&ndash;&gt;-->
+    <!--<br/>-->
+    <!--<img ng-src="{{talent.file}}" style="width:300px;">-->
+<!--</form>-->
+<!--&lt;!&ndash; Form End &ndash;&gt;-->
+
+
+
+<!--<hr/>-->
+
+
+<!--<h1>Should be popup on clicking on Be Talent</h1>-->
+
+    <!--&lt;!&ndash; Form Start &ndash;&gt;-->
+    <!--<form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">-->
+      <!--<input name="file_one" ng-model="talent.file_one" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >-->
+      <!--<input type="submit" id="submit_file_one" value="Submit" />-->
+      <!--<br/>-->
+      <!--<img ng-src="{{first_image_source}}" style="width:300px;">-->
+    <!--</form>-->
+    <!--&lt;!&ndash; Form End &ndash;&gt;-->
+
+
+
+    <!--&lt;!&ndash; Form Start &ndash;&gt;-->
+    <!--<form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">-->
+      <!--<input name="file_two" ng-model="talent.file_two" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >-->
+      <!--<input type="submit" id="submit_file_two" value="Submit" />-->
+      <!--<br/>-->
+      <!--<img ng-src="{{second_image_source}}" style="width:300px;">-->
+    <!--</form>-->
+    <!--&lt;!&ndash; Form End &ndash;&gt;-->
+
+
+
+
+    <!--&lt;!&ndash; Form Start &ndash;&gt;-->
+    <!--<form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">-->
+      <!--<input name="file_three" ng-model="talent.file_three" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >-->
+      <!--<input type="submit" id="submit_file_three" value="Submit" />-->
+      <!--<br/>-->
+      <!--<img ng-src="{{third_image_source}}" style="width:300px;">-->
+    <!--</form>-->
+    <!--&lt;!&ndash; Form End &ndash;&gt;-->
+
+
+
+
+
+
+
+
+    <!--<form ng-submit="completeTalentProfile()" name="complete_profile">-->
+      <!--<label>Talent Description</label>-->
+      <!--<input type="text" name="description" required ng-model="talent.description" placeholder="description">-->
+      <!--<label>Talented From When?</label>-->
+      <!--<input type="text" name="from_when" required ng-model="talent.from_when" placeholder="12 years">-->
+      <!--<input type="submit" name="button" value="Send My Talent Profile"/>-->
+    <!--</form>-->
+
+
+
+
+
+<!--<h1>End of Should be popup on clicking on Be Talent</h1>-->
+
+
+
+
+
+
+
+
+
+<h1> ________________________________________________________________________________________ </h1>
+<div class="container" >
     <!-- Form Start -->
-    <form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">
-      <input name="file_one" ng-model="talent.file_one" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
-      <input type="submit" id="submit_file_one" value="Submit" />
-      <br/>
-      <img ng-src="{{first_image_source}}" style="width:300px;">
+    <form ng-submit="submit_talent_file()" name="form" role="form" enctype="multipart/form-data">
+        <input name="talent_files[]" ng-model="talent.file" type="file" class="form-control input-lg"  onchange="angular.element(this).scope().uploadedReviewFile(this)" style="width:400px" >
+        <br/>
+        <img ng-src="{{talent.file}}" style="width:300px;">
     </form>
     <!-- Form End -->
 
-
-
-    <!-- Form Start -->
-    <form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">
-      <input name="file_two" ng-model="talent.file_two" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
-      <input type="submit" id="submit_file_two" value="Submit" />
-      <br/>
-      <img ng-src="{{second_image_source}}" style="width:300px;">
+    <form ng-submit="submitted=true ; completeTalentProfile(addtalentprofile.$valid)" name="addtalentprofile"  novalidate >
+        <label>Talent Description</label>
+        <input type="text" name="description" required ng-model="talent.description" placeholder="description">
+        <label>Talented From When?</label>
+        <input type="text" name="from_when" required ng-model="talent.from_when" placeholder="12 years">
+        <input type="submit" name="button" value="Send My Talent Profile"/>
     </form>
-    <!-- Form End -->
-
-
-
-
-    <!-- Form Start -->
-    <form ng-submit="submit()" name="form" role="form" enctype="multipart/form-data">
-      <input name="file_three" ng-model="talent.file_three" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
-      <input type="submit" id="submit_file_three" value="Submit" />
-      <br/>
-      <img ng-src="{{third_image_source}}" style="width:300px;">
-    </form>
-    <!-- Form End -->
-
-
-
-
-
-
-
-
-    <form ng-submit="completeTalentProfile()" name="complete_profile">
-      <label>Talent Description</label>
-      <input type="text" name="description" required ng-model="talent.description" placeholder="description">
-      <label>Talented From When?</label>
-      <input type="text" name="from_when" required ng-model="talent.from_when" placeholder="12 years">
-      <input type="submit" name="button" value="Send My Talent Profile"/>
-    </form>
-
-
-
-
-
-<h1>End of Should be popup on clicking on Be Talent</h1>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div uploader="uploader" filters="queueLimit, customFilter">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <h3>Select files</h3>
-        <div ng-show="uploader.isHTML5">
-          <!-- 3. nv-file-over uploader="link" over-class="className" -->
-          <div class="well my-drop-zone" nv-file-over="" uploader="uploader">
-            Base drop zone
-          </div>
-          <!-- Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" -->
-          <div nv-file-drop="" uploader="uploader" options="{ url: '/foo' }">
-            <div nv-file-over="" uploader="uploader" over-class="another-file-over-class" class="well my-drop-zone">
-              Another drop zone with its own settings
-            </div>
-          </div>
-        </div>
-        <!-- Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" -->
-        Multiple
-        <input type="file" nv-file-select="" uploader="uploader" multiple /><br/> Single
-        <input type="file" nv-file-select="" uploader="uploader" />
-      </div>
-
-      <div class="col-md-9" style="margin-bottom: 40px">
-        <h3>Upload queue</h3>
-        <p>Queue length: {{ uploader.queue.length }}</p>
-        <table class="table">
-          <thead>
-            <tr>
-              <th width="50%">Name</th>
-              <th ng-show="uploader.isHTML5">Size</th>
-              <th ng-show="uploader.isHTML5">Progress</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr ng-repeat="item in uploader.queue">
-              <td><strong>{{ item.file.name }}</strong></td>
-              <td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
-              <td ng-show="uploader.isHTML5">
-                <div class="progress" style="margin-bottom: 0;">
-                  <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
-                </div>
-              </td>
-              <td class="text-center">
-                <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
-                <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
-                <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
-              </td>
-              <td nowrap>
-                <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
-                                        <span class="glyphicon glyphicon-upload"></span> Upload
-                                    </button>
-                <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
-                                        <span class="glyphicon glyphicon-ban-circle"></span> Cancel
-                                    </button>
-                <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
-                                        <span class="glyphicon glyphicon-trash"></span> Remove
-                                    </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div>
-          <div>
-            Queue progress:
-            <div class="progress" style="">
-              <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>
-            </div>
-          </div>
-          <button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">
-                            <span class="glyphicon glyphicon-upload"></span> Upload all
-                        </button>
-          <button type="button" class="btn btn-warning btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">
-                            <span class="glyphicon glyphicon-ban-circle"></span> Cancel all
-                        </button>
-          <button type="button" class="btn btn-danger btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">
-                            <span class="glyphicon glyphicon-trash"></span> Remove all
-                        </button>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+<h1>___________________________________________________________________________________________</h1>
 
 
 
@@ -247,6 +193,108 @@
 
 
 
+
+
+
+
+
+
+
+
+<!--<div uploader="uploader" filters="queueLimit, customFilter">-->
+  <!--<div class="container">-->
+    <!--<div class="row">-->
+      <!--<div class="col-md-3">-->
+        <!--<h3>Select files</h3>-->
+        <!--<div ng-show="uploader.isHTML5">-->
+          <!--&lt;!&ndash; 3. nv-file-over uploader="link" over-class="className" &ndash;&gt;-->
+          <!--<div class="well my-drop-zone" nv-file-over="" uploader="uploader">-->
+            <!--Base drop zone-->
+          <!--</div>-->
+          <!--&lt;!&ndash; Example: nv-file-drop="" uploader="{Object}" options="{Object}" filters="{String}" &ndash;&gt;-->
+          <!--<div nv-file-drop="" uploader="uploader" options="{ url: '/foo' }">-->
+            <!--<div nv-file-over="" uploader="uploader" over-class="another-file-over-class" class="well my-drop-zone">-->
+              <!--Another drop zone with its own settings-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; Example: nv-file-select="" uploader="{Object}" options="{Object}" filters="{String}" &ndash;&gt;-->
+        <!--Multiple-->
+        <!--<input type="file" nv-file-select="" uploader="uploader" multiple /><br/> Single-->
+        <!--<input type="file" nv-file-select="" uploader="uploader" />-->
+      <!--</div>-->
+
+      <!--<div class="col-md-9" style="margin-bottom: 40px">-->
+        <!--<h3>Upload queue</h3>-->
+        <!--<p>Queue length: {{ uploader.queue.length }}</p>-->
+        <!--<table class="table">-->
+          <!--<thead>-->
+            <!--<tr>-->
+              <!--<th width="50%">Name</th>-->
+              <!--<th ng-show="uploader.isHTML5">Size</th>-->
+              <!--<th ng-show="uploader.isHTML5">Progress</th>-->
+              <!--<th>Status</th>-->
+              <!--<th>Actions</th>-->
+            <!--</tr>-->
+          <!--</thead>-->
+          <!--<tbody>-->
+            <!--<tr ng-repeat="item in uploader.queue">-->
+              <!--<td><strong>{{ item.file.name }}</strong></td>-->
+              <!--<td ng-show="uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>-->
+              <!--<td ng-show="uploader.isHTML5">-->
+                <!--<div class="progress" style="margin-bottom: 0;">-->
+                  <!--<div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>-->
+                <!--</div>-->
+              <!--</td>-->
+              <!--<td class="text-center">-->
+                <!--<span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>-->
+                <!--<span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>-->
+                <!--<span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>-->
+              <!--</td>-->
+              <!--<td nowrap>-->
+                <!--<button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">-->
+                                        <!--<span class="glyphicon glyphicon-upload"></span> Upload-->
+                                    <!--</button>-->
+                <!--<button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">-->
+                                        <!--<span class="glyphicon glyphicon-ban-circle"></span> Cancel-->
+                                    <!--</button>-->
+                <!--<button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">-->
+                                        <!--<span class="glyphicon glyphicon-trash"></span> Remove-->
+                                    <!--</button>-->
+              <!--</td>-->
+            <!--</tr>-->
+          <!--</tbody>-->
+        <!--</table>-->
+
+        <!--<div>-->
+          <!--<div>-->
+            <!--Queue progress:-->
+            <!--<div class="progress" style="">-->
+              <!--<div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }"></div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<button type="button" class="btn btn-success btn-s" ng-click="uploader.uploadAll()" ng-disabled="!uploader.getNotUploadedItems().length">-->
+                            <!--<span class="glyphicon glyphicon-upload"></span> Upload all-->
+                        <!--</button>-->
+          <!--<button type="button" class="btn btn-warning btn-s" ng-click="uploader.cancelAll()" ng-disabled="!uploader.isUploading">-->
+                            <!--<span class="glyphicon glyphicon-ban-circle"></span> Cancel all-->
+                        <!--</button>-->
+          <!--<button type="button" class="btn btn-danger btn-s" ng-click="uploader.clearQueue()" ng-disabled="!uploader.queue.length">-->
+                            <!--<span class="glyphicon glyphicon-trash"></span> Remove all-->
+                        <!--</button>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+<hr/>
 
 
 <h1>Please Complete Your Profile to be Mentor.. ()</h1>
@@ -260,3 +308,4 @@
   <button type="submit" name="button">Send My Mentor Profile</button>
 </form>
 </div>
+<hr/>
