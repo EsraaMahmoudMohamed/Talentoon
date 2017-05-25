@@ -12,7 +12,7 @@ class CategoryTalentController extends Controller
 
         $CTS_Obj=new CategoryTalentService();
 
-        
+
 
         $response=$CTS_Obj->beTalent($request);
         return $response;

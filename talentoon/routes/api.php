@@ -65,3 +65,7 @@ Route::post('/categoryunsubscribe','CategorySubscribeController@update');
 
 //Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
 Route::get('/countries','CountriesController@getAllCountries');
+
+//Route for all initial posts
+Route::get('/initial_posts/{mentor_id}','InitialReviewController@show_not_reviewed_initial_posts');
+Route::post('/single_review','InitialReviewController@store_single_review');

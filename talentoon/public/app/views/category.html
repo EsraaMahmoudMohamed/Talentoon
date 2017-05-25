@@ -9,6 +9,9 @@
       width: 200px;
       font-size: large;
     }
+    .completementor{
+        font-size: 20px;
+    }
   </style>
   <h1>posts in category</h1></center>
 
@@ -25,7 +28,7 @@
 </div>
 
   <a href="#!/category/betalent/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">Be Mawhoob</a>
-    
+
     <a ng-class="untalent()" class="btn btn-info" role="button">unTalentMe</a>
 
 
@@ -34,7 +37,7 @@
 <a ng-click="unmentor()" class="btn btn-info" role="button">un Mentor</a> </center>
 
 
-<a class="btn btn-default" href ng-click="show()">Show a Modal</a>
+<!-- <a class="btn btn-default" href ng-click="show()">Show a Modal</a> -->
 
 
 
@@ -247,6 +250,7 @@
 
 
 <h1>Please Complete Your Profile to be Mentor.. ()</h1>
+<div class="completementor">
 
 <form ng-submit="completeMentorProfile()" name="complete_mentor_profile">
   <label>Mentor Experience Text</label>
@@ -255,3 +259,4 @@
   <input type="text" name="years_of_experience" required ng-model="mentor.years_of_experience">
   <button type="submit" name="button">Send My Mentor Profile</button>
 </form>
+</div>

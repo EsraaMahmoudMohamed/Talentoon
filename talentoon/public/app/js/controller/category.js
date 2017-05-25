@@ -134,7 +134,7 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
         mentor.category_id = $routeParams['category_id'];
         mentor.years_of_experience = $scope.mentor.years_of_experience;
         mentor.experience =$scope.mentor.experience;
-        mentor.status=1;
+        mentor.status=0;
 
 
         console.log("Mentor Object is ",mentor);
@@ -247,6 +247,7 @@ var obj={subscriber_id, category_id,subscribed }
 console.log(obj);
 		categories.subscribe(obj).then(function(data){
 			// $rootScope.status=data;
+			console.log('the data basant is' , data)
 			localStorage.setItem('status',data);
 			$rootScope.status = localStorage.getItem("status");
 			console.log("status in controller",$rootScope.status);

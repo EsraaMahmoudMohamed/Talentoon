@@ -1,9 +1,9 @@
-@extends('layouts.admin')
+@extends('../../layouts/app')
 @section('title')
     category show
 @endsection
 
-@section('body')
+@section('content')
 
     welcome from show category
     <ul>
