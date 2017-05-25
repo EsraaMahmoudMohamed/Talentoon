@@ -9,7 +9,7 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
                 method: 'GET'
 
             }).then(function (res) {
-               console.log(res.data);
+                console.log(res.data);
                 if (res.data) {
                     // if(res.data.length){
                     def.resolve(res.data)
@@ -28,7 +28,7 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 
         },
 
-        getCategoryPosts: function (index) {
+        getCategoryposts: function (index) {
 
             var def = $q.defer();
             $http({
@@ -40,6 +40,34 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
                     def.resolve(res.data.posts);
                     // 			console.log("res.data.posts is " , res.data.posts )
                     // def.resolve(res.data[index])
+                } else {
+                    def.reject('there is no data ')
+                }
+
+            }, function (err) {
+                def.reject(err);
+            })
+            return def.promise;
+
+        },
+        getCategoryPost: function (id) {
+            //  var category_id= index;
+            var id = id;
+            // console.log("category_id",category_id)
+            console.log("post id", id)
+            var def = $q.defer();
+            $http({
+                url: 'http://localhost:8000/api/post/' + id,
+                method: 'GET',
+                data: id
+            }).then(function (res) {
+                // console.log("single post from factory",res.data.post)
+                console.log("single post from factory", res.data.post)
+
+                if (res) {
+                    var data = localStorage.setItem("data", JSON.stringify(res.data.post));
+                    def.resolve(res.data.post);
+
                 } else {
                     def.reject('there is no data ')
                 }
@@ -128,11 +156,7 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
                     data: {"media_url": "uploads/files" + $rootScope.currentFile.name, "media_type": $rootScope.currentFile.type},
                     transformRequest: function (data) {
                         var formData = new FormData();
-
-                        //for(var i =0;i< filesuploaded.length;i++){
                         formData.append("file", $rootScope.currentFile);
-                        //  console.log("file in loop",filesuploaded[i])
-                        //}
                         return formData;
                     },
                     headers: {
@@ -145,8 +169,6 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
                 });
 
                 //////////////////////////////////////////////
-
-
 
                 if (res.data) {
                     def.resolve(res.data)
@@ -161,15 +183,75 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
             return def.promise;
 
 
+        },
+
+        insert_media_reviews_uploads: function (reviewfilesuploaded, category_talent_id) {
+            var def = $q.defer();
+            $http({
+                method: 'POST',
+                url: 'http://localhost:8000/api/review_files_upload/' + category_talent_id,
+                processData: false,
+                data: reviewfilesuploaded,
+                transformRequest: function (data) {
+                    var formData = new FormData();
+                    for (var i = 0; i < reviewfilesuploaded.length; i++) {
+                        formData.append("file[]", reviewfilesuploaded[i]);
+                        //console.log("file in loop",reviewfilesuploaded[i])
+                    }
+                    console.log("form data", formData);
+                    return formData;
+                },
+                headers: {
+                    'Content-Type': undefined,
+                    'Process-Data': false
+                }
+            }).then(function (res) {
+                def.resolve(res.data)
+                // if(res.data){
+                //     def.resolve(res.data)
+                // }else{
+                //     def.reject('there is no data ')
+                // }
+
+            }, function (err) {
+                // console.log(err);
+                def.reject(err);
+            })
+            return def.promise;
 
 
 
 
+            // /////////////////////////
+            // $http({
+            // 	method  : 'POST',
+            // 	url     : 'http://localhost:8000/api/review_files_upload/'+category_talent_id,
+            // 	processData: false,
+            // 	data:reviewfilesuploaded,
+            // 	transformRequest: function (data) {
+            // 		var formData = new FormData();
+            // 		for(var i =0;i< reviewfilesuploaded.length;i++){
+            // 			formData.append("file[]", reviewfilesuploaded[i]);
+            // 			//console.log("file in loop",reviewfilesuploaded[i])
+            // 		}
+            // 		// console.log("form data",formData)
+            // 		return formData;
+            // 	},
+            // 	headers: {
+            // 		'Content-Type': undefined,
+            // 		'Process-Data':false
+            // 	}
+            // }).then(function(data){
+            // 	alert(data);
+            // 	console.log("then NNN in add review",data)
+            // });
 
+            //////////////////////////////////////////////
 
 
 
         },
+
         addevent: function (eventdata) {
 
             var def = $q.defer();
@@ -197,13 +279,16 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 
             var def = $q.defer();
             $http({
-                url: 'talentdata  url',
+                url: 'http://127.0.0.1:8000/api/categorytalent/store',
                 method: 'POST',
                 data: talent_data
 
             }).then(function (res) {
+                console.log("res is find the id now please ", res.data.category_talent_id)
 
-                if (res.data.length) {
+                if (res) {
+                    $rootScope.category_talent_id = res.data.category_talent_id;
+                    console.log("7777777777777", $rootScope.category_talent_id);
                     def.resolve(res.data)
                 } else {
                     def.reject('there is no data ')
@@ -264,9 +349,9 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
                 // console.log(err);
                 def.reject(err);
             })
-            return def.promise;
-        }
 
+            return def.promise;
+        },
 
     }
 

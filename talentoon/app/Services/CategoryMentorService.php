@@ -37,10 +37,18 @@ class CategoryMentorService
     if ($validator->passes())
     {
 
+        $mentor = DB::table('subscribers')
+            ->where('mentor_id', '=', $mentor_data->mentor_id)
+            ->where('category_id', '=', $mentor_data->category_id)
+            ->first();
+        if (is_null($mentor)) {
 
-        CategoryMentor::create($mentor_data);
-        return response()->json(['mesg'=>'zai al follll']);
 
+            CategoryMentor::create($mentor_data);
+            return response()->json(['mesg' => 'zai al follll']);
+        }else{
+            return response()->json(['msg'=>'this mentor is already here']);
+        }
 
     }else{
         //al validation sa7 bass na2s an ab3t al message al json de ll client

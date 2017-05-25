@@ -93,16 +93,27 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                 .when('/showreview', {
                     templateUrl: 'views/showreview.html',
                     controller: 'showreview'
+                })
 
-                });
-        $httpProvider.interceptors.push(['$q', '$location',function ($q, $location) {
+                .when('/category/:category_id/posts', {
+                    templateUrl: 'views/categoryposts.html',
+                    controller: 'categories'
+                })
+
+                .when('/category/:category_id/posts/:post_id', {
+                    templateUrl: 'views/categorypost.html',
+                    controller: 'categories'
+                })
+
+
+        $httpProvider.interceptors.push(['$q', '$location', function ($q, $location) {
                 return {
                     'request': function (config) {
                         config.headers = config.headers || {};
-                            var token = JSON.parse(localStorage.getItem("token"));   
+                        var token = JSON.parse(localStorage.getItem("token"));
                         if (token) {
                             console.log("inside http provider");
-                            console.log("token is:",token);
+                            console.log("token is:", token);
                             config.headers.Authorization = 'Bearer ' + token;
                         }
                         return config;

@@ -12,7 +12,6 @@ class CategoryTalentService
 {
 
     public function beTalent(\App\Models\User $user, $categoryId, $fromWhen, $desc){
-        
         return CategoryTalent::create([
                 'talent_id'=>$user->id,
                 'category_id'=> $categoryId,
