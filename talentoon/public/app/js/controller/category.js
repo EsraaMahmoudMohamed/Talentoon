@@ -190,9 +190,11 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
 
 	// $scope.categories=categories;
 	//get all category
+        //esraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	categories.getAllCategory().then(function(data){
-		// console.log(data);
-		$scope.categories=data;
+		 console.log(data);
+		$scope.categories=data.data;
+                console.log("categories array",$scope.categories);
         // console.log("la2aa sha3`alaa",$scope.categories);
 
 	} , function(err){
