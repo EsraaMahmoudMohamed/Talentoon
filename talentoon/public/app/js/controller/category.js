@@ -269,25 +269,7 @@ var index= $routeParams['category_id'];
 
 	});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //---------------------------------------------------------------
-
-
 //get all post under category
 // $scope.allposts = function() {
 //     $rootScope.cat_id=index;
@@ -336,13 +318,6 @@ var id= $routeParams['post_id'];
 // }
 //---------------------------------------------------------
 
-
-
-
-
-
-
-
 // subscribe in category
 $scope.subscribe = function() {
 	$routeParams['user_id']=1;
@@ -364,7 +339,7 @@ console.log(obj);
 		});
 
 }
-
+//----------------------------------------------------
 
 // unsubscribe in category
 $scope.unsubscribe = function() {
@@ -386,13 +361,9 @@ console.log(obj);
 
 		});
 
-
-
-
-
 }
 
-
+//--------------------------------------------------------------------
 
 	// categories.unsubscribe(index,user_id,unsubscribe_status).then(function(data){
 	// 	$scope.status=data.status;
@@ -402,7 +373,12 @@ console.log(obj);
 	//
 	// });
 
+//--------------------------------------------------------
 
+
+
+
+//----------------------------------
 
 
     // Talent Uploader

@@ -105,6 +105,10 @@ $routeProvider.when('/', {
   controller: 'categories'
 })
 
+.when('/myprofile', {
+  templateUrl: 'views/myprofile.html',
+  // controller: 'user'
+})
 
 
 

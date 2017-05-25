@@ -61,6 +61,9 @@ Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
 Route::post('/categorysubscribe','CategorySubscribeController@store');
 Route::post('/categoryunsubscribe','CategorySubscribeController@update');
 
+Route::post('/like','LikeController@store');
+Route::post('/dislike','LikeController@update');
+
 
 
 Route::post('/categorytalent/store','CategoryTalentController@store');
