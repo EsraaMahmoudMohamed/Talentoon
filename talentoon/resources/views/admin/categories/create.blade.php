@@ -1,9 +1,9 @@
-@extends('layouts/admin')
+@extends('../../layouts/app')
 @section('title')
     categories create
 @endsection
 
-@section('body')
+@section('content')
 
     welcome from create categories
     @if(count($errors) > 0)

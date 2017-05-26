@@ -27,6 +27,28 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
             return def.promise;
 
         },
+        getCategoryPosts:function(index){
+
+			var def =$q.defer();
+			$http({
+				url:'http://localhost:8000/api/category/'+index ,
+				method:'GET'
+			}).then(function(res){
+				// console.log("response is " , res.data.posts);
+				if(res.data.posts.length){
+		     			def.resolve(res.data.posts);
+							// 			console.log("res.data.posts is " , res.data.posts )
+						// def.resolve(res.data[index])
+				}else{
+					def.reject('there is no data ')
+				}
+
+			},function(err){
+				def.reject(err);
+			})
+			return def.promise ;
+
+		},
 
         getCategoryposts: function (index) {
 
@@ -247,10 +269,8 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
             // });
 
             //////////////////////////////////////////////
-
-
-
         },
+
 
 		addworkshop:function(workshopdata){
 			console.log(workshopdata);
@@ -284,21 +304,20 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
                 });
 
                 //////////////////////////////////////////////
+				console.log(res);
+				if(res.data.length){
+					def.resolve(res.data)
+				}else{
+					def.reject('there is no data ')
+				}
 
-                if (res.data) {
-                    def.resolve(res.data)
-                } else {
-                    def.reject('there is no data ')
-                }
+			},function(err){
+				// console.log(err);
+				def.reject(err);
+			})
+			return def.promise ;
 
-            }, function (err) {
-                // console.log(err);
-                def.reject(err);
-            })
-            return def.promise;
-
-
-        },
+		},
 
         addevent: function (eventdata) {
             var def = $q.defer();

@@ -83,6 +83,7 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                 })
 
 //user routes
+
                 .when('/register', {
                     templateUrl: 'views/register.html',
                     controller: 'register'
@@ -108,6 +109,11 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                 .when('/category/:category_id/posts/:post_id', {
                     templateUrl: 'views/categorypost.html',
                     controller: 'categories'
+                })
+
+                .when('/myprofile', {
+                  templateUrl: 'views/myprofile.html',
+                  controller: 'userprofile'
                 })
 
 

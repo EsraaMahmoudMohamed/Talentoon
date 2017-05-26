@@ -66,6 +66,32 @@ angular.module('myApp').factory("user", function ($http, $q) {
                 // console.log(err);
             });
             return def.promise;
+        },
+        userprofile: function () {
+
+            var def = $q.defer();
+            $http({
+                url: 'http://localhost:8000/api/userprofile',
+                method: 'GET'
+
+            }).then(function (res) {
+                console.log(res);
+                if (res) {
+                    // if(res.data.length){
+                    def.resolve(res)
+                    // def.resolve(res.data)
+
+
+                } else {
+                    def.reject('there is no data ')
+                }
+
+            }, function (err) {
+                // console.log(err);
+                def.reject(err);
+            })
+            return def.promise;
+
         }
     };
 });

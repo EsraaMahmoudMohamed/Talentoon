@@ -136,7 +136,7 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
         mentor.category_id = $routeParams['category_id'];
         mentor.years_of_experience = $scope.mentor.years_of_experience;
         mentor.experience =$scope.mentor.experience;
-        mentor.status=1;
+        mentor.status=0;
 
 
         console.log("Mentor Object is ",mentor);
@@ -269,25 +269,7 @@ var index= $routeParams['category_id'];
 
 	});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //---------------------------------------------------------------
-
-
 //get all post under category
 // $scope.allposts = function() {
 //     $rootScope.cat_id=index;
@@ -336,14 +318,6 @@ var id= $routeParams['post_id'];
 // }
 //---------------------------------------------------------
 
-
-
-
-
-
-
-
-
 // subscribe in category
 $scope.subscribe = function() {
 	$routeParams['user_id']=1;
@@ -354,6 +328,7 @@ var obj={subscriber_id, category_id,subscribed }
 console.log(obj);
 		categories.subscribe(obj).then(function(data){
 			// $rootScope.status=data;
+			console.log('the data basant is' , data)
 			localStorage.setItem('status',data);
 			$rootScope.status = localStorage.getItem("status");
 			console.log("status in controller",$rootScope.status);
@@ -365,7 +340,7 @@ console.log(obj);
 		});
 
 }
-
+//----------------------------------------------------
 
 // unsubscribe in category
 $scope.unsubscribe = function() {
@@ -388,12 +363,20 @@ console.log(obj);
 		});
 
 
-	// categories.unsubscribe(index,user_id,unsubscribe_status).then(function(data){
-	// 	$scope.status=data.status;
-	//
-	// } , function(err){
-	// 	console.log(err);
-	//
-	// });
-        };
+}
+
+//--------------------------------------------------------------------
+
+
+
+    // Talent Uploader
+
+	//files with ng file upload
+	var uploader = $scope.uploader = new FileUploader({
+        // url: 'http://172.16.2.239:8000/api/test'
+        // url: 'upload.php'
+        url: 'http://localhost:8000/api/uploads/singleuploded'
+
+			});
+
     });
