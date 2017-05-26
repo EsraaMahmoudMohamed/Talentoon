@@ -6,6 +6,7 @@ use App\Models\InitialReview;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\ReviewMedia;
+use App\Models\WorkShop;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
@@ -181,5 +182,22 @@ class UploadController extends Controller
         // } else {
         //     return Redirect::to('upload')->withInput()->withErrors($validator);
         // }
+    }
+    public function workshop_upload (Request $request,$id){
+//        return response()->json(['request'=> $_FILES['file'],'message' => 'data sent successfully']);
+        if(!empty($_FILES)){
+            $x = move_uploaded_file($_FILES['file']['tmp_name'],'uploads/files/'.$_FILES['file']['name']);
+
+            $workshop = WorkShop::find($id);
+            $workshop->media_url = 'uploads/files/'.$_FILES['file']['name'];
+            $workshop->media_type = $_FILES['file']['type'];
+            $workshop->save();
+
+
+            return response()->json(['request'=> $x,'message' => 'data sent successfully']);
+        }else{
+            echo "Image Is Empty";
+        }
+
     }
 }

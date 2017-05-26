@@ -270,6 +270,8 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 
             //////////////////////////////////////////////
         },
+
+
 		addworkshop:function(workshopdata){
 			console.log(workshopdata);
 			console.log(workshopdata.category_id);
@@ -281,6 +283,27 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 				data:workshopdata
 
 			}).then(function(res){
+                console.log("workshop",res.data);
+                $http({
+                    method: 'POST',
+                    url: 'http://localhost:8000/api/workshop_upload/' + res.data.workshop_id,
+                    processData: false,
+                    data: {"media_url": "uploads/files" + $rootScope.workshopFile.name, "media_type": $rootScope.workshopFile.type},
+                    transformRequest: function (data) {
+                        var formData = new FormData();
+                        formData.append("file", $rootScope.workshopFile);
+                        return formData;
+                    },
+                    headers: {
+                        'Content-Type': undefined,
+                        'Process-Data': false
+                    }
+                }).then(function (data) {
+                    // alert(data);
+                    console.log("thennnnn in add post", data)
+                });
+
+                //////////////////////////////////////////////
 				console.log(res);
 				if(res.data.length){
 					def.resolve(res.data)
@@ -297,8 +320,6 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 		},
 
         addevent: function (eventdata) {
-
-
             var def = $q.defer();
             $http({
                 url: 'addevent url',
