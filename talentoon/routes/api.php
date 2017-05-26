@@ -89,3 +89,4 @@ Route::post('/single_review','InitialReviewController@store_single_review');
 Route::get('/post/{post_id}','PostsController@showSinglePost');
 
 Route::post('/review_files_upload/{category_talent_id}', 'UploadController@review_files_upload');
+Route::post('/workshop_upload/{id}', 'UploadController@workshop_upload');

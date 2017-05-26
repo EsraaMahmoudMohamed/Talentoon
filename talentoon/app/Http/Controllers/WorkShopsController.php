@@ -37,9 +37,9 @@ class WorkShopsController extends Controller
     public function store(Request $request)
     {
         //
-        WorkShop::create($request->all());
+        $id=WorkShop::create($request->all())->id;
 
-        return response()->json(['message' => 'data saved successfully']);
+        return response()->json(['workshop_id'=>$id,'message' => 'data saved successfully']);
     }
 
     /**

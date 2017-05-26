@@ -8,8 +8,8 @@ angular.module('myApp').controller("addworkshop",function($scope,$http,categorie
        $scope.workshop.category_id=category
        $scope.workshop.mentor_id=mentor_id
        $scope.workshop.is_approved=0
-       $scope.workshop.media_url="image"
-       $scope.workshop.media_type="image"
+    //    $scope.workshop.media_url="image"
+    //    $scope.workshop.media_type="image"
 
         var workshopdata = $scope.workshop;
 
@@ -25,7 +25,28 @@ angular.module('myApp').controller("addworkshop",function($scope,$http,categorie
 
      }
 
-   }
+ },
+ $scope.uploadedFile = function(element) {
+     console.log("element is ",element)
+     $rootScope.workshopFile = element.files[0];
+     //filesuploaded.push(element.files[0]);
+
+
+
+
+
+
+     console.log("current file is ",$rootScope.workshopFile)
+     var reader = new FileReader();
+
+     reader.onload = function(event) {
+         $scope.image_source = event.target.result
+         $scope.$apply(function($scope) {
+             $scope.files = element.files;
+         });
+     }
+     reader.readAsDataURL(element.files[0]);
+ }
 
 
 });
