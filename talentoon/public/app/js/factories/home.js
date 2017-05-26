@@ -28,13 +28,14 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'json/events.json' ,
+				url:'http://127.0.0.1:8000/api/event' ,
 				method:'GET'
 
 			}).then(function(res){
-				// console.log(res);
-				if(res.data.length){
-					def.resolve(res.data)
+				console.log('gggfff',res);
+				if(res.data){
+					console.log(res.data);
+					def.resolve(res.data.event)
 				}else{
 					def.reject('there is no data ')
 				}

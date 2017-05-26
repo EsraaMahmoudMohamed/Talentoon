@@ -10,15 +10,21 @@ console.log("top posts",data);
 
 	});
 
-	Home.getEvents().then(function(data){
+    Home.getEvents().then(function(data){
 
-		console.log(data);
-		$scope.events=data;
+        $scope.events=data;
+		console.log("simona is here",data);
 
-	} , function(err){
-		console.log(err);
+    } , function(err){
+        console.log(err);
 
-	});
+    });
+
+
+
+
+
+
 
 
 	var post_id= $routeParams['post_id'];

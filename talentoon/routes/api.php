@@ -20,6 +20,10 @@ Route::resource('comment','CommentController');
 Route::post('/uploads/singleuploded','UploadController@single_upload');
 Route::post('/categorytalent','CategoryTalentController@store');
 Route::resource('categories.posts','PostsController');
+Route::resource('categories.events','EventController');
+//Route::post('/categories/1/events','EventController@store');
+
+Route::get('/mostLikeabe','PostsController@mostLikablePosts');
 
 //Route::get('/categorytalent/{talent_id}',[
 //    'before' => 'jwt-auth',
@@ -30,6 +34,7 @@ Route::resource('categories.posts','PostsController');
 Route::put('/categorytalent/{talent_id}','CategoryTalentController@update');
 
 Route::resource('category','CategoriesController');
+//Route::resource('event','EventController');
 
 
 Route::resource('initial_reviews','InitialReviewController');
@@ -48,6 +53,7 @@ Route::get('/get_media_for_initial_review/{category_talent_id}/{category_mentor_
 
 
 Route::post('/single_upload/{id}', 'UploadController@single_upload');
+Route::post('/event_upload/{id}', 'UploadController@event_upload');
 
 Route::post('/test2', 'UploadController@test2');
 Route::put('/categorymentor/update','CategoryMentorController@update');

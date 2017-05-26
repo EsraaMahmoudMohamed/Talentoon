@@ -10,6 +10,7 @@ use Validator;
 use Response;
 use Session;
 use App\Models\Upload;
+use App\Models\Event;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class UploadController extends Controller
@@ -75,6 +76,7 @@ class UploadController extends Controller
     }
 
     public function single_upload (Request $request,$id){
+//        return response()->json(['id'=>";hhhhhhhhhhhhh"]);
 //        return response()->json(['request'=> $_FILES['file'],'message' => 'data sent successfully']);
         if(!empty($_FILES)){
             $x = move_uploaded_file($_FILES['file']['tmp_name'],'uploads/files/'.$_FILES['file']['name']);
@@ -83,6 +85,25 @@ class UploadController extends Controller
             $post->media_url = 'uploads/files/'.$_FILES['file']['name'];
             $post->media_type = $_FILES['file']['type'];
             $post->save();
+
+
+            return response()->json(['request'=> $x,'message' => 'data sent successfully']);
+        }else{
+            echo "Image Is Empty";
+        }
+
+    }
+    public function event_upload (Request $request,$id){
+//        return response()->json(['id'=>"hhhhhhhhhhhhh"]);
+//        return response()->json(['request'=> $_FILES['file'],'message' => 'data sent successfully']);
+        if(!empty($_FILES)){
+
+            $x = move_uploaded_file($_FILES['file']['tmp_name'],'uploads/files/'.$_FILES['file']['name']);
+//            return response()->json(['id'=>$id]);
+            $event =Event::find($id);
+            $event->media_url = 'uploads/files/'.$_FILES['file']['name'];
+            $event->media_type = $_FILES['file']['type'];
+            $event->save();
 
 
             return response()->json(['request'=> $x,'message' => 'data sent successfully']);
