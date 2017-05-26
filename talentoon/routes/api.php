@@ -70,6 +70,9 @@ Route::post('/dislike','LikeController@update');
 Route::get('/userprofile',[
     'uses'=>'UserProfile@index',
     'middleware'=> 'jwt.auth']);
+    Route::get('/userprofile/userposts',[
+        'uses'=>'UserProfile@userposts',
+        'middleware'=> 'jwt.auth']);
 
 Route::post('/categorytalent/store','CategoryTalentController@store');
 
