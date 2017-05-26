@@ -127,8 +127,10 @@ class PostsController extends Controller
                 ->where("posts.id",$value->likeable_id)
                 ->get();
             array_push($data, array('post' => $post));
+//            dd($post);
         }
-        return response()->json(['posts'=>$data]);
+//        dd($data);
+        return response()->json(['msg'=>'success','posts'=>$data]);
     }
     public function destroy($id)
     {

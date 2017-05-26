@@ -6,13 +6,13 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'json/posts.json' ,
+				url:' http://127.0.0.1:8000/api/mostLikeabe' ,
 				method:'GET'
 
 			}).then(function(res){
-				// console.log(res);
-				if(res.data.length){
-					def.resolve(res.data)
+				console.log('y bashrrrrr',res.data.posts);
+				if(res.data.posts){
+					def.resolve(res.data.posts)
 				}else{
 					def.reject('there is no data ')
 				}
@@ -28,7 +28,7 @@ return {
 
 			var def =$q.defer();
 			$http({
-				url:'http://127.0.0.1:8000/api/event' ,
+				url:'http://127.0.0.1:8000/api/event/showall' ,
 				method:'GET'
 
 			}).then(function(res){

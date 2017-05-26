@@ -22,14 +22,14 @@ Route::post('/categorytalent',[
     'uses'=>'CategoryTalentController@store',
     'middleware'=> 'jwt.auth']);
 Route::resource('categories.posts','PostsController');
-<<<<<<< HEAD
+
 Route::resource('categories.events','EventController');
 //Route::post('/categories/1/events','EventController@store');
 
 Route::get('/mostLikeabe','PostsController@mostLikablePosts');
-=======
+
 Route::resource('categories.workshops', 'WorkShopsController');
->>>>>>> aecb7604129629efdd3543ea7fc08e22cf44ca33
+
 
 //Route::get('/categorytalent/{talent_id}',[
 //    'before' => 'jwt-auth',
@@ -40,7 +40,7 @@ Route::resource('categories.workshops', 'WorkShopsController');
 Route::put('/categorytalent/{talent_id}','CategoryTalentController@update');
 
 Route::resource('category','CategoriesController');
-//Route::resource('event','EventController');
+Route::get('/event/showall','EventController@index');
 
 
 Route::resource('initial_reviews','InitialReviewController');
