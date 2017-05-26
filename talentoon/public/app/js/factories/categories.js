@@ -252,8 +252,6 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 
         },
 
-<<<<<<< HEAD
-		},
 		addworkshop:function(workshopdata){
 			console.log(workshopdata);
 			console.log(workshopdata.category_id);
@@ -265,25 +263,44 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 				data:workshopdata
 
 			}).then(function(res){
-				console.log(res);
-				if(res.data.length){
-					def.resolve(res.data)
-				}else{
-					def.reject('there is no data ')
-				}
+                console.log("workshop",res.data);
+                $http({
+                    method: 'POST',
+                    url: 'http://localhost:8000/api/workshop_upload/' + res.data.workshop_id,
+                    processData: false,
+                    data: {"media_url": "uploads/files" + $rootScope.workshopFile.name, "media_type": $rootScope.workshopFile.type},
+                    transformRequest: function (data) {
+                        var formData = new FormData();
+                        formData.append("file", $rootScope.workshopFile);
+                        return formData;
+                    },
+                    headers: {
+                        'Content-Type': undefined,
+                        'Process-Data': false
+                    }
+                }).then(function (data) {
+                    // alert(data);
+                    console.log("thennnnn in add post", data)
+                });
 
-			},function(err){
-				// console.log(err);
-				def.reject(err);
-			})
-			return def.promise ;
+                //////////////////////////////////////////////
 
-		},
-		addevent:function(eventdata){
-=======
+                if (res.data) {
+                    def.resolve(res.data)
+                } else {
+                    def.reject('there is no data ')
+                }
+
+            }, function (err) {
+                // console.log(err);
+                def.reject(err);
+            })
+            return def.promise;
+
+
+        },
+
         addevent: function (eventdata) {
->>>>>>> c3be22f8f4f365a0e4fca3228c673fce5ac6e800
-
             var def = $q.defer();
             $http({
                 url: 'addevent url',

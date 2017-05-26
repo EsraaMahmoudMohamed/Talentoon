@@ -219,7 +219,7 @@ $scope.comment={};
 	var index= $routeParams['category_id'];
     $scope.cat_id=index;
     var user_id=1;
-    categories.getCategoryPosts(index).then(function(data){
+    categories.getCategoryPost(index).then(function(data){
         // console.log("inside controller" , data)
         $scope.category_posts=data;
         // console.log("la2aa",$scope.category_posts);
