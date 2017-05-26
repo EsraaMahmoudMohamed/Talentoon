@@ -20,11 +20,17 @@ console.log(obj);
 			// console.log("status in controller",$rootScope.status);
 			var likedata = localStorage.getItem('testObject');
 			console.log("parse",JSON.parse(likedata))
-     $rootScope.status=JSON.parse(likedata).status;
+     $rootScope.userstatus=JSON.parse(likedata).status;
      $rootScope.user_id=JSON.parse(likedata).user_id;
 
+
+		 //
+		 localStorage.setItem('userstatus', $rootScope.userstatus );
+		 $rootScope.userstatu = localStorage.getItem('userstatus');
+
+
 			// console.log("data in controller",$rootScope.data);
-			// console.log("status in controller",$rootScope.status);
+			console.log("status in controller",$rootScope.userstatus);
 			// console.log("user_id in controller",$rootScope.user_id);
 
 
@@ -58,9 +64,14 @@ console.log(obj);
 			// console.log("status in controller",$rootScope.status);
 			var likedata = localStorage.getItem('testObject');
 			console.log("parse",JSON.parse(likedata))
-			$rootScope.status=JSON.parse(likedata).status;
+			$rootScope.userstatus=JSON.parse(likedata).status;
 			$rootScope.user_id=JSON.parse(likedata).user_id;
 
+
+
+					 localStorage.setItem('userstatus', $rootScope.userstatus );
+					 $rootScope.userstatu = localStorage.getItem('userstatus');
+			console.log("status in controller",$rootScope.userstatus);
 
 
 		} , function(err){

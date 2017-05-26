@@ -11,25 +11,25 @@
 
 
 <div class="container">
-    <h1 style="color:#6A0C38;font-family:Times New Roman">TOP POSTS</h1>
+    <!-- <h1 style="color:#6A0C38;font-family:Times New Roman">TOP POSTS</h1> -->
     <div class="row">
 
             <div class="thumbnail">
 
-                <img src="{{post.media.media_url}}" style=" height:200px">
+                <img src="http://localhost:8000/{{category_post.media_url}}" style=" height:200px">
                 <div class="caption">
                   <h4 style="color:Purple ">Title: {{category_post.title}}</h4>
                   <h4 style="color:Purple ">Description: {{category_post.description}}</h4>
-                  <!-- <h4 style="color:Purple ">{{category_post.id}}</h4> -->
+                  <h4 style="color:Purple "> category :{{category_post.category_title}}</h4>
 
-                    <a class="userPic"><img src="Imgs/Persons/face1.jpg" alt=""> Ahmed Zaki </a>
+                    <a class="userPic"><img src="http://localhost:8000/{{category_post.user_image}}" alt=""> BY : {{category_post.first_name}} {{category_post.last_name}}</a>
 
                     <div class="row">
                         <div class="col-lg-8 col-md-8 col-sm-8 ">
-                          <div ng-if="status != 1 ">
+                          <div ng-if="userstatu != 1">
                             <a href="" class="interactions" ng-click="likepost(category_post.id,category_post.user_id)" ng-controller="post">like<i class="fa fa-heart" aria-hidden="true"></i>  <span class="badge">12</span></a>
                            </div>
-                           <div ng-if="status == 1 ">
+                           <div ng-if="userstatu == 1">
                              <a href="" class="interactions" ng-click="dislikepost(category_post.id,category_post.user_id)" ng-controller="post">dislike<i class="fa fa-heart" aria-hidden="true"></i>  <span class="badge">12</span></a>
                            </div>
                             <a href="#" class="interactions">  <i class="fa fa-commenting" aria-hidden="true"></i><span class="badge">35</span></a>

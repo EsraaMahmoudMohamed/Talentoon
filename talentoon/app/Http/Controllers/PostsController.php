@@ -145,10 +145,10 @@ public function showSinglePost($post_id){
 
   $post = DB::table('posts')
       ->join('categories', 'posts.category_id', '=', 'categories.id')
-      // ->join('users', 'posts.user_id', '=', 'users.id')
+      ->join('users', 'posts.user_id', '=', 'users.id')
       ->select('posts.*', 'categories.title as category_title')
 
-      // ->select('posts.*', 'categories.title as category_title', 'users.first_name', 'users.last_name', 'users.image')
+      ->select('posts.*', 'categories.title as category_title', 'users.first_name', 'users.last_name', 'users.image as user_image')
 
           ->where("posts.id",$post_id)
       ->get()->first();

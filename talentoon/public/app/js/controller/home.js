@@ -1,5 +1,7 @@
-angular.module('myApp').controller("homec",function(Home,$scope,$http,$routeParams){
+angular.module('myApp').controller("homec",function(Home,$scope,$http,$routeParams,$rootScope){
 
+	$rootScope.token = JSON.parse(localStorage.getItem("token"));
+	console.log($rootScope.token);
 	Home.getTopPosts().then(function(data){
 
 		// console.log(data);

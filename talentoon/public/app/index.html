@@ -4,13 +4,12 @@
 	<title>Angular js</title>
 	<!-- scripts -->
 	<meta charset="UTF-8">
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
 	<!-- <script type="text/javascript" src="node_modules/angular-modal-service/dst/angular-modal-service.js"></script> -->
 	<script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
-	<!-- <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script> -->
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
 
 
@@ -21,11 +20,11 @@
 
 	<!-- controller -->
 	<script type="text/javascript" src="js/controller/app.js"></script>
-	<script type="text/javascript" src="js/route.js"></script>
+    <script type="text/javascript" src="js/route.js"></script>
 	<script type="text/javascript" src="js/controller/category.js"></script>
 	<script type="text/javascript" src="js/controller/talent.js"></script>
-  <script type="text/javascript" src="js/controller/home.js"></script>
-  <script type="text/javascript" src="js/controller/addpost.js"></script>
+    <script type="text/javascript" src="js/controller/home.js"></script>
+    <script type="text/javascript" src="js/controller/addpost.js"></script>
 	<script type="text/javascript" src="js/controller/register.js"></script>
 	<script type="text/javascript" src="js/controller/login.js"></script>
 	<script type="text/javascript" src="js/controller/addevent.js"></script>
@@ -44,83 +43,176 @@
 	<!-- factory -->
 	<script type="text/javascript" src="js/factories/categories.js"></script>
 	<script type="text/javascript" src="js/factories/home.js"></script>
-		<script type="text/javascript" src="js/factories/user.js"></script>
-		<script type="text/javascript" src="js/factories/showreview.js"></script>
-
+	<script type="text/javascript" src="js/factories/user.js"></script>
+	<script type="text/javascript" src="js/factories/showreview.js"></script>
 	<script type="text/javascript" src="js/factories/event.js"></script>
-
-
-		<script type="text/javascript" src="js/factories/posts.js"></script>
+	<script type="text/javascript" src="js/factories/posts.js"></script>
 
 
 
 
+    <!-- scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
 
 
 
 <!-- style -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
-	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
-
-		<link rel="stylesheet" href="libs/bootstrap/bootstrap.css">
-		<!-- <link rel="stylesheet" href="css/Style/Sass/CategoriesSass.scss"> -->
-		<link rel="stylesheet" href="css/Style/Css/CategoriesCss.css">
-		<link rel="stylesheet" href="css/Style/Css/CategorySelected.css">
-		<link rel="stylesheet" href="css/Style/Css/font-awesome.css">
-		<!-- <link rel="stylesheet" href="css/Style/Css/animate.css"> -->
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css">
+	<link rel="stylesheet" href="css/categories.css">
+    <link rel="stylesheet" href="css/categorySelected.css">
+	<link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/fonts.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
 
 </head>
 <body>
-	<nav class="navbar navbar-default">
-			<div class="container">
-					<!-- mobile display -->
-					<div class="navbar-header">
-							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="#"><img src="Imgs/logo.png"></a>
-					</div>
+
+	<div id="Navbar">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+
+                        <!--                   burger menu on xs-->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <!--                    end burger menu-->
 
 
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
-									<li><a href="#!/">Home</a></li>
-									<li><a href="#!/categories">Categories</a></li>
-									<li><a href="#">Workshops</a></li>
-									<li><a href="#">Posts</a></li>
-									<!--mn esraa-->
-									<li ><a href="#!/register">register </a></li>
-								<li ><a href="#!/login">login</a></li>
-								<li ><a href="#!/showreview">Show Review</a></li>
-								<li ><a href="#!/myprofile">my profile</a></li>
+                        <!--logo-->
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <a class="navbar-brand" href="#">
+                                    <img alt="Brand" src="imgs/logo.png">
+                                </a>
+                            </div>
+                        </div>
 
-								<!--mn esraa-->
-									<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore <span class="caret"></span></a>
-											<ul class="dropdown-menu">
-													<li><a href="#">Online store</a></li>
-													<li><a href="#">Blog</a></li>
-													<li><a href="#">Competition</a></li>
-													<li><a href="#">Questionnaire</a></li>
-											</ul>
-									</li>
+                        <!--                    end logo-->
 
-									<li><a href="#" class="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
-									<li class="loginbtn"><button class="btn btn-default" href="#!/login" type="submit">Log In</button></li>
-									<li class="languagebtn"><a href="#">AR</a></li>
-							</ul>
-					</div>
-			</div>
-			</div>
 
-	</nav>
+                    </div>
+                    <!--                end header nav-->
 
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <!--            main links-->
+                        <ul class="nav navbar-nav">
+                            <li ><a href="#">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories<span class="caret"></span></a>
+
+                                <!--                                drop menu for categories-->
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Harmony</a></li>
+                                    <li><a href="#">Origami</a></li>
+                                    <li><a href="#">Poetry</a></li>
+                                    <li><a href="#">Landscape Painting </a></li>
+                                    <li><a href="#">Photography </a></li>
+                                    <li><a href="#">Short Story Writing </a></li>
+
+                                    <li role="separator" class="divider"></li>
+
+                                    <li><a href="#" class="all">All Categories</a></li>
+                                </ul>
+
+                                <!--                                end drop menu for categories-->
+                            </li>
+
+                            <!--                            end dropmenu-->
+
+                            <li><a href="#">Workshops</a></li>
+                            <li><a href="#">Posts</a></li>
+
+
+                        </ul>
+                        <!--end of main links-->
+
+                        <!--                    main 4 link on lg right-->
+                        <ul class="navbar-left list-unstyled list-inline">
+                            <li><a href="#"> Store</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Competition</a></li>
+                            <li><a href="#">Questionnaire</a></li>
+                        </ul>
+                        <!--                  end  main 4 link on lg right-->
+
+                        <!--                        nav right-->
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--                           span-->
+                            <span>
+                                <!--                               search bar-->
+                                <div class="search-bar">
+                                    <input type="text" placeholder="Search for category/friend" />
+                                </div>
+                                <!--                                end search bar-->
+                                <!--                                search-->
+                                <div class="search">
+                                    <div class="search-icon"></div>
+                                </div>
+                                <!--                                end search-->
+                            </span>
+                            <!--                         end  span-->
+
+
+							<!-- if logged in : -->
+							<ay7aga ng-if="token != 5">
+								<li class="dropdown">
+	                                <a href="#" id="userpic" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="Persons/face3.jpg" alt=""><span class="caret"></span></a>
+	                                <ul class="dropdown-menu">
+	                                    <li><a href="#">Profile</a></li>
+	                                    <li><a href="#">Settings</a></li>
+	                                    <li role="separator" class="divider"></li>
+	                                    <li><a href="#">Log Out</a></li>
+	                                </ul>
+	                            </li>
+	                            <!--                            end user-->
+	                            <!--                           notification-->
+	                            <li class="dropdown">
+	                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+
+	                                    <i class="fa fa-bell" aria-hidden="true"></i>
+	                                </a>
+	                                <ul class="dropdown-menu notemenu">
+	                                    <a><img src="Persons/face2.jpg">Ahmed Fouad<span>comment on</span><p>your post</p></a>
+	                                    <ul role="separator" class="divider">
+	                                    </ul>
+	                                    <a><img src="Persons/face4.jpg">Ahmed Fouad<span>likes your</span><p>video</p></a>
+
+	                                </ul>
+	                            </li>
+							</ay7aga>
+
+							<notlogged ng-if="token == 5">
+								<!-- else if not logged in -->
+	                            <!--                            btn register-->
+	                            <button type="button" class="btn btn-default">Log In </button>
+
+	                            <button type="button" class="btn btn-primary ">Sign Up</button>
+
+							</notlogged>
+
+                        </ul>
+                        <!--                 end  nav right-->
+
+
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav> <!-- nav default-->
+        </div>
 
 
 <div ng-view></div>
+
 <footer>
 		<div class="container">
 				<div class="row">
