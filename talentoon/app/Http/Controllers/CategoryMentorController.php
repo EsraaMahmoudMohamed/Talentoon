@@ -10,6 +10,7 @@ class CategoryMentorController extends Controller
     //
     public function store(Request $request)
     {
+        return $request;
         $category_mentor= new CategoryMentorService();
         $mentor_data=$request->all();
         $data = $category_mentor->beMentor($mentor_data);

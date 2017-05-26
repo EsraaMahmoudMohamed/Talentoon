@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\InitialReview;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\ReviewMedia;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
@@ -23,19 +25,13 @@ class UploadController extends Controller
 
     public function store(Request $request)
     {
-
-
         $name = $request->input('image');
         return $name;
-
         //
     }
 
     public function multiple_upload(Request $request)
     {
-
-
-
         //getting all of the post data
         //            $files = $request->file('images');
         $files = Input::file('images');
@@ -112,6 +108,30 @@ class UploadController extends Controller
         }
 
     }
+
+
+
+
+    public function review_files_upload (Request $request,$category_talent_id){
+        if(!empty($_FILES)){
+            $count_of_files = count($_FILES['file']['tmp_name']);
+            for($i=0;$i<$count_of_files;$i++){
+                $x = move_uploaded_file($_FILES['file']['tmp_name'][$i],'uploads/reviews/'.$_FILES['file']['name'][$i]);
+
+                $review_media = new ReviewMedia;
+                $review_media->review_media_url = 'uploads/reviews/'.$_FILES['file']['name'][$i];
+                $review_media->review_media_type = $_FILES['file']['type'][$i];
+                $review_media->category_talent_id = $category_talent_id;
+                $review_media->save();
+            }
+
+            return response()->json(['message' => 'files saved successfully',"Cattttttttttttttt" => $category_talent_id]);
+        }else{
+            echo "Image Is Empty";
+        }
+
+    }
+
 
     public function test(Request $request)
     {

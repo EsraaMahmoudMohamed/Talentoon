@@ -1,12 +1,12 @@
-@extends('layouts.admin')
+@extends('../../layouts/app')
 @section('title')
     categories create
 @endsection
 
-@section('body')
+@section('content')
 
     welcome from create category
-    <form method="POST" action="{{route('news.update',['id'=>$news->id])}}">
+    <form method="POST" action="{{route('news.update',$news->id)}}">
         {{csrf_field()}}
         {{method_field('PUT')}}
         <label> Enter title</label>

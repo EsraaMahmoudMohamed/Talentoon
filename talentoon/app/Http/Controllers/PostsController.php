@@ -65,10 +65,13 @@ class PostsController extends Controller
             ->select('posts.*', 'categories.title as category_title', 'users.first_name', 'users.last_name', 'users.image')
             ->where("posts.id",$id)
             ->get();
+
         return response()->json(['post' => $post,'status' => '1','message' => 'data sent successfully']);
 
         // return view('posts.show',['post'=>$post]);
     }
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -134,4 +137,26 @@ class PostsController extends Controller
         $post->delete();
         return response()->json(['status' => '1','message' => 'post deleted successfully']);
     }
+
+public function showSinglePost($post_id){
+
+
+  $post = DB::table('posts')
+      ->join('categories', 'posts.category_id', '=', 'categories.id')
+      // ->join('users', 'posts.user_id', '=', 'users.id')
+      ->select('posts.*', 'categories.title as category_title')
+
+      // ->select('posts.*', 'categories.title as category_title', 'users.first_name', 'users.last_name', 'users.image')
+
+          ->where("posts.id",$post_id)
+      ->get()->first();
+
+  return response()->json(['post' => $post,'status' => '1','message' => 'data sent successfully']);
+
+
+
+}
+
+
+
 }

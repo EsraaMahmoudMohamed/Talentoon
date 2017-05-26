@@ -18,12 +18,18 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::resource('comment','CommentController');
 Route::post('/uploads/singleuploded','UploadController@single_upload');
-Route::post('/categorytalent','CategoryTalentController@store');
+Route::post('/categorytalent',[
+    'uses'=>'CategoryTalentController@store',
+    'middleware'=> 'jwt.auth']);
 Route::resource('categories.posts','PostsController');
+<<<<<<< HEAD
 Route::resource('categories.events','EventController');
 //Route::post('/categories/1/events','EventController@store');
 
 Route::get('/mostLikeabe','PostsController@mostLikablePosts');
+=======
+Route::resource('categories.workshops', 'WorkShopsController');
+>>>>>>> aecb7604129629efdd3543ea7fc08e22cf44ca33
 
 //Route::get('/categorytalent/{talent_id}',[
 //    'before' => 'jwt-auth',
@@ -67,9 +73,25 @@ Route::get('/authenticate','JWTAuth\LoginController@getAuthenticatedUser');
 Route::post('/categorysubscribe','CategorySubscribeController@store');
 Route::post('/categoryunsubscribe','CategorySubscribeController@update');
 
+Route::post('/like','LikeController@store');
+Route::post('/dislike','LikeController@update');
+// Route::post('/userprofile','UserProfile@index');
+Route::get('/userprofile',[
+    'uses'=>'UserProfile@index',
+    'middleware'=> 'jwt.auth']);
+
+Route::post('/categorytalent/store','CategoryTalentController@store');
 
 
 //Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
 
 Route::get('/countries','CountriesController@getAllCountries');
 
+//Route for all initial posts and review
+Route::get('/initial_posts/{mentor_id}','InitialReviewController@show_not_reviewed_initial_posts');
+Route::post('/single_review','InitialReviewController@store_single_review');
+
+
+Route::get('/post/{post_id}','PostsController@showSinglePost');
+
+Route::post('/review_files_upload/{category_talent_id}', 'UploadController@review_files_upload');
