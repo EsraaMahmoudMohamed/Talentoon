@@ -1,4 +1,4 @@
-angular.module('myApp').controller("register", function ($scope, $http, user, $routeParams, dateFilter) {
+angular.module('myApp').controller("register", function ($scope, $http, user, $routeParams, dateFilter,$location) {
 
     user.getAllCountry().then(function (data) {
         //console.log("countries:", data);
@@ -10,7 +10,7 @@ angular.module('myApp').controller("register", function ($scope, $http, user, $r
     });
 
     $scope.registerFn = function (valid) {
-        
+
 //      $scope.user={};
         console.log($scope.user);
         console.log(valid);
@@ -22,12 +22,13 @@ angular.module('myApp').controller("register", function ($scope, $http, user, $r
             // console.log($scope.user.date_of_birthday);
             user.register(userdata).then(function(data){
                 console.log("inside controller:",data);
+                $location.url('/login');
             },function(err){
-               console.log(err); 
+               console.log(err);
             });
-      
+
         }
-       
+
     }
 
 

@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Models\Post;
 use Response;
 use Illuminate\Http\Request;
-use Tymon\JWTAuth\JWTAuth;
+use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 
 
@@ -17,11 +17,11 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(JWTAuth $JWTAuth)
+    public function index()
     {
         try {
             //dd($request->all());
-            if (!$user = $JWTAuth->parseToken()->authenticate()) {
+            if (!$user = JWTAuth::parseToken()->authenticate()) {
                 return response()->json(['user_not_found'], 404);
             }
         } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
@@ -36,13 +36,13 @@ class CategoriesController extends Controller
         }
         // the token is valid and we have found the user via the sub claim
         //return response()->json(['user' => $user]);
-    
-        
+
+
         $categories= Category::all();
         // $path=$categories[0]->getAttributes()['image'];
         // $categories[5]->getAttributes()['image'] = '/uploads/files/'.$categories[5]->getAttributes()['image'];
         // dd($categories[5]->getAttributes()['image']);
-        return response()->json(['data' => $categories,'status' => '1','message' => 'data sent successfully','user'=>$user
+        return response()->json(['user' => $user,'data' => $categories,'status' => '1','message' => 'data sent successfully'
                 ]);
         // return view('categories.index',['categories'=>$categories]);
     }

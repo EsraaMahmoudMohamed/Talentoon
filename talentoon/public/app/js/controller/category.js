@@ -219,7 +219,7 @@ $scope.comment={};
 	var index= $routeParams['category_id'];
     $scope.cat_id=index;
     var user_id=1;
-    categories.getCategoryPosts(index).then(function(data){
+    categories.getCategoryPost(index).then(function(data){
         // console.log("inside controller" , data)
         $scope.category_posts=data;
         // console.log("la2aa",$scope.category_posts);
@@ -362,28 +362,11 @@ console.log(obj);
 
 		});
 
-<<<<<<< HEAD
+
 }
 
 //--------------------------------------------------------------------
-=======
->>>>>>> a81bed43ab8676f818fba634da82d16765fd8da2
 
-	// categories.unsubscribe(index,user_id,unsubscribe_status).then(function(data){
-	// 	$scope.status=data.status;
-	//
-	// } , function(err){
-	// 	console.log(err);
-	//
-	// });
-<<<<<<< HEAD
-
-//--------------------------------------------------------
-
-
-
-
-//----------------------------------
 
 
     // Talent Uploader
@@ -393,7 +376,7 @@ console.log(obj);
         // url: 'http://172.16.2.239:8000/api/test'
         // url: 'upload.php'
         url: 'http://localhost:8000/api/uploads/singleuploded'
-=======
-        };
->>>>>>> a81bed43ab8676f818fba634da82d16765fd8da2
+
+			});
+
     });
