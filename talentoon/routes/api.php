@@ -29,6 +29,7 @@ Route::resource('categories.events','EventController');
 Route::get('/mostLikeabe','PostsController@mostLikablePosts');
 
 Route::resource('categories.workshops', 'WorkShopsController');
+Route::get('/allworkshops', 'WorkShopsController@index');
 
 
 //Route::get('/categorytalent/{talent_id}',[

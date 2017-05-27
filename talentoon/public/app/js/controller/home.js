@@ -6,7 +6,7 @@ angular.module('myApp').controller("homec",function(Home,$scope,$http,$routePara
 
 		// console.log(data);
 		$scope.topposts=data;
-console.log("top posts",data);
+console.log("top posts",data[0].post);
 	} , function(err){
 		console.log(err);
 
@@ -15,7 +15,16 @@ console.log("top posts",data);
     Home.getEvents().then(function(data){
 
         $scope.events=data;
-		console.log("simona is here",data);
+		console.log("Eventsssssssssssss here",data);
+
+    } , function(err){
+        console.log(err);
+
+    });
+    Home.getWorkshops().then(function(data){
+
+        $scope.workshops=data;
+		console.log("workshopsssssssssssss is here",data);
 
     } , function(err){
         console.log(err);
