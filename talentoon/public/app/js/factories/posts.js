@@ -49,11 +49,30 @@ dislikepost:function(data){
   })
   return def.promise ;
 
+},
+sharepost:function(data){
+  console.log("from factory",data);
+  var def =$q.defer();
+  $http({
+    url:'http://localhost:8000/api/share',
+    method:'POST',
+    data:data
+
+  }).then(function(res){
+    console.log("res from share",res);
+    if(res.data){
+      console.log(res.data);
+     def.resolve(res.data);
+
+    }else{
+      def.reject('there is no data ')
+    }
+
+  },function(err){
+    def.reject(err);
+  })
+  return def.promise ;
+
 }
-
-
-
-
-
 
 }})

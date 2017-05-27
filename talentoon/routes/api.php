@@ -100,3 +100,7 @@ Route::get('/post/{post_id}','PostsController@showSinglePost');
 
 Route::post('/review_files_upload/{category_talent_id}', 'UploadController@review_files_upload');
 Route::post('/workshop_upload/{id}', 'UploadController@workshop_upload');
+Route::post('/share','ShareController@store');
+Route::get('/workshop/{workshop_id}','WorkShopsController@showSingleWorkshop');
+
+Route::post('/workshop_enroll','WorkShopsController@enroll');
