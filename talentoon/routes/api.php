@@ -22,7 +22,15 @@ Route::post('/categorytalent',[
     'uses'=>'CategoryTalentController@store',
     'middleware'=> 'jwt.auth']);
 Route::resource('categories.posts','PostsController');
+
+Route::resource('categories.events','EventController');
+//Route::post('/categories/1/events','EventController@store');
+
+Route::get('/mostLikeabe','PostsController@mostLikablePosts');
+
 Route::resource('categories.workshops', 'WorkShopsController');
+Route::get('/allworkshops', 'WorkShopsController@index');
+
 
 //Route::get('/categorytalent/{talent_id}',[
 //    'before' => 'jwt-auth',
@@ -33,6 +41,7 @@ Route::resource('categories.workshops', 'WorkShopsController');
 Route::put('/categorytalent/{talent_id}','CategoryTalentController@update');
 
 Route::resource('category','CategoriesController');
+Route::get('/event/showall','EventController@index');
 
 
 Route::resource('initial_reviews','InitialReviewController');
@@ -51,6 +60,7 @@ Route::get('/get_media_for_initial_review/{category_talent_id}/{category_mentor_
 
 
 Route::post('/single_upload/{id}', 'UploadController@single_upload');
+Route::post('/event_upload/{id}', 'UploadController@event_upload');
 
 Route::post('/test2', 'UploadController@test2');
 Route::put('/categorymentor/update','CategoryMentorController@update');
@@ -90,3 +100,7 @@ Route::get('/post/{post_id}','PostsController@showSinglePost');
 
 Route::post('/review_files_upload/{category_talent_id}', 'UploadController@review_files_upload');
 Route::post('/workshop_upload/{id}', 'UploadController@workshop_upload');
+Route::post('/share','ShareController@store');
+Route::get('/workshop/{workshop_id}','WorkShopsController@showSingleWorkshop');
+
+Route::post('/workshop_enroll','WorkShopsController@enroll');

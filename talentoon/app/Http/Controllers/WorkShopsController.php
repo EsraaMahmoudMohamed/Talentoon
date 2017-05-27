@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\WorkShop;
+use App\Models\WorkshopEnroll;
 use DB;
-
+use JWTAuth;
+use Tymon\JWTAuth\Exceptions\JWTException;
 class WorkShopsController extends Controller
 {
     /**
@@ -16,6 +18,13 @@ class WorkShopsController extends Controller
     public function index()
     {
         //
+        $data = DB::table('workshops')
+            ->join('users', 'users.id', '=', 'workshops.mentor_id')
+            ->select('workshops.*','users.first_name as first_name', 'users.last_name as last_name', 'users.image as user_image')
+            ->get();
+//
+        return response()->json(['msg1'=>$data]);
+
     }
 
     /**
@@ -51,6 +60,14 @@ class WorkShopsController extends Controller
     public function show($id)
     {
         //
+        $workshop = DB::table('workshops')
+            ->join('categories', 'workshops.category_id', '=', 'categories.id')
+            ->join('users', 'workshops.mentor_id', '=', 'users.id')
+            ->select('workshops.*', 'categories.title as category_title', 'users.first_name', 'users.last_name')
+            ->where("workshops.id",$id)
+            ->get();
+
+        return response()->json(['post' => $workshop,'status' => '1','message' => 'data sent successfully']);
     }
 
     /**
@@ -86,4 +103,48 @@ class WorkShopsController extends Controller
     {
         //
     }
+    public function showSingleWorkshop($workshop_id){
+        try {
+            //dd($request->all());
+            if (!$user = JWTAuth::parseToken()->authenticate()) {
+                return response()->json(['user_not_found'], 404);
+            }
+        } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
+
+            return response()->json(['token_expired'], $e->getStatusCode());
+        } catch (Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
+
+            return response()->json(['token_invalid'], $e->getStatusCode());
+        } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
+
+            return response()->json(['token_absent'], $e->getStatusCode());
+        }
+
+      $workshop = DB::table('workshops')
+          ->join('categories', 'workshops.category_id', '=', 'categories.id')
+          ->select('workshops.*', 'categories.title as category_title')
+          ->where("workshops.id",$workshop_id)
+          ->get()->first();
+
+      return response()->json(['user'=>$user,'workshop' => $workshop,'status' => '1','message' => 'workshop sent successfully']);
+
+
+
+    }
+    public function enroll(Request $request){
+
+            $enroll = DB::table('workshop_enrollment')
+            ->where('user_id', '=', $request->user_id)
+            ->where('workshop_id', '=', $request->workshop_id)
+            ->first();
+
+        if (is_null($enroll)) {
+        WorkshopEnroll::create($request->all());
+        return response()->json(['message' => 'data saved successfully']);
+
+    }else{
+        return response()->json(['message' => 'you already enroll in this workshop ']);
+
+    }
+}
 }

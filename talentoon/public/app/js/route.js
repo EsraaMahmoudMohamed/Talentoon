@@ -6,9 +6,19 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
             controller: 'homec'
         })
 
-                .when('/post/:post_id', {
+
+                // .when('/category/createEvent', {
+                //     templateUrl: 'views/post.html',
+                //     controller: 'homec'
+                // })
+                    .when('/post/:post_id', {
                     templateUrl: 'views/post.html',
                     controller: 'homec'
+                })
+
+                .when('/category/:category_id/createEvent', {
+                    templateUrl: 'views/createEvent.html',
+                    controller: 'eventcontroller'
                 })
 
                 .when('/initial_review', {
@@ -77,10 +87,7 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                     controller: 'addworkshop'
                 })
 //add event
-                .when('/category/:category_id/addevent', {
-                    templateUrl: 'views/addevent.html',
-                    controller: 'addevents'
-                })
+
 
 //user routes
 
@@ -115,7 +122,15 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                   templateUrl: 'views/myprofile.html',
                   controller: 'userprofile'
                 })
+                .when('/category/:category_id/workshops', {
+                    templateUrl: 'views/categoryworkshops.html',
+                    controller: 'categories'
+                })
 
+                .when('/category/:category_id/workshops/:workshop_id', {
+                    templateUrl: 'views/categoryworkshop.html',
+                    controller: 'categories'
+                })
 
         $httpProvider.interceptors.push(['$q', '$location', function ($q, $location) {
                 return {
@@ -137,5 +152,6 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                     }
                 };
             }]);
+
 
     }]);

@@ -50,6 +50,27 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 
   		},
 
+		// 	var def =$q.defer();
+		// 	$http({
+		// 		url:'http://localhost:8000/api/category/'+index ,
+		// 		method:'GET'
+		// 	}).then(function(res){
+		// 		// console.log("response is " , res.data.posts);
+		// 		if(res.data.posts.length){
+		//      			def.resolve(res.data.posts);
+		// 					// 			console.log("res.data.posts is " , res.data.posts )
+		// 				// def.resolve(res.data[index])
+		// 		}else{
+		// 			def.reject('there is no data ')
+		// 		}
+    //
+		// 	},function(err){
+		// 		def.reject(err);
+		// 	})
+		// 	return def.promise ;
+    //
+		// },
+
         getCategoryPost: function (id) {
             //  var category_id= index;
             // console.log("category_id",category_id)
@@ -394,6 +415,55 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
             })
 
             return def.promise;
+        },getCategoryWorkshops:function(index){
+
+			var def =$q.defer();
+			$http({
+				url:'http://localhost:8000/api/category/'+index ,
+				method:'GET'
+			}).then(function(res){
+                console.log("workshops_bassant",res);
+				console.log("response is " , res.data.workshops);
+				if(res.data.workshops){
+		     			def.resolve(res.data.workshops);
+				}else{
+					def.reject('there is no data ')
+				}
+
+			},function(err){
+				def.reject(err);
+			})
+			return def.promise ;
+
+		},
+        getCategoryWorkshop: function (id) {
+            //  var category_id= index;
+            var id = id;
+            // console.log("category_id",category_id)
+            console.log("workshop id", id)
+            var def = $q.defer();
+            $http({
+                url: 'http://localhost:8000/api/workshop/' + id,
+                method: 'GET',
+                data: id
+            }).then(function (res) {
+                // console.log("single post from factory",res.data.post)
+                console.log("user",res.data.user);
+                console.log("single category from factory", res.data.workshop)
+
+                if (res) {
+                    var data = localStorage.setItem("workshop_data", JSON.stringify(res.data.workshop));
+                    def.resolve(res.data);
+
+                } else {
+                    def.reject('there is no data ')
+                }
+
+            }, function (err) {
+                def.reject(err);
+            })
+            return def.promise;
+
         },
 
     }

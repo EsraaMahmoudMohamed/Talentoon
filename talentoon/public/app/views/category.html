@@ -18,7 +18,7 @@
 <center><a href="#!/category/{{cat_id}}/addpost" class="btn btn-info" role="button">new post</a>
 <center><a href="#!/category/{{cat_id}}/addworkshop" class="btn btn-danger" role="button">new WorkShop</a>
 
-<a href="#!/category/{{cat_id}}/addevent" class="btn btn-info" role="button">new event</a>
+<!--<a href="#!/category/{{cat_id}}/addevent" class="btn btn-info" role="button">new event</a>-->
 
 
 <div ng-if="status == 1">
@@ -35,15 +35,15 @@
 
 <a href="#!/category/bementor/{{cat_id}}/{{user_id}}" class="btn btn-info" role="button">Be Mentor</a>
 
-<a ng-click="unmentor()" class="btn btn-info" role="button">un Mentor</a> </center>
+<a ng-click="unmentor()" class="btn btn-info" role="button">un Mentor</a>
+    <a href="#!/category/{{cat_id}}/createEvent" class="btn btn-info" role="button">Create Event</a>
+</center>
 
 
 <!-- <a class="btn btn-default" href ng-click="show()">Show a Modal</a> -->
 
-
-
-
 <br>
+
 
 <div class="container">
   <div ng-repeat="post in category3Posts | limitTo:3 track by $index">
@@ -72,7 +72,25 @@
   <p class="btnAction"><a ng-href ="#!/category/{{cat_id}}/posts" class="btn btn-primary btnAction" role="button" >show all posts</a></p>
 
 </div>
+<div class="container">
+  <div ng-repeat="workshop in categoryWorkshops | limitTo:3 track by $index">
 
+    <div class="thumbnail">
+      <img src="{{workshop.media.media_url}}" class="img-circle" style="height:80px;" />
+      <h4 style="color:Purple ">{{workshop.name}}</h4>
+      <h4 style="color:Purple ">{{workshop.date_from}}</h4>
+      <h4 style="color:Purple ">{{workshop.date_to}}</h4>
+      <h4 style="color:Purple ">{{workshop.time_from}}</h4>
+      <h4 style="color:Purple ">{{workshop.time_to}}</h4>
+      <h4 style="color:Purple ">{{workshop.max_capacity}}</h4>
+      <h4 style="color:Purple ">{{workshop.level}}</h4>
+      <h4 style="color:Purple ">{{workshop.description}}</h4>
+    </div>
+
+
+  <p  class="btnAction"><a href="#!/category/{{workshop.category_id}}/workshops" class="btn btn-primary btnAction" role="button" ng-click="allworkshops()">show all workshops</a></p>
+ </div>
+</div>
 
 
 

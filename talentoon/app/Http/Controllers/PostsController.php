@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Like;
 use DB;
 class PostsController extends Controller
 {
@@ -111,6 +112,30 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function mostLikablePosts(){
+
+
+        $posts_id=DB::table('likeables')
+            ->select('likeable_id',DB::raw('count(*) as total'))
+            ->where('likeable_type', '=', 'post')
+            ->groupBy('likeable_id')
+            ->orderBy('total', 'desc')
+            ->take(3)
+            ->get();
+//        dd($posts_id);
+        $data=array();
+        foreach ($posts_id as &$value) {
+            $post = DB::table('posts')
+                ->join('users', 'users.id', '=', 'posts.user_id')
+                ->select('posts.*','users.first_name as first_name', 'users.last_name as last_name', 'users.image as user_image')
+                ->where("posts.id",$value->likeable_id)
+                ->get();
+            array_push($data, $post[0]);
+//            dd($data);
+        }
+//        dd($data);
+        return response()->json(['msg'=>'success','posts'=>$data]);
+    }
     public function destroy($id)
     {
         //
