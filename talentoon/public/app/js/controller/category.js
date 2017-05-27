@@ -231,7 +231,7 @@ $scope.comment={};
     });
 // }
 //------------------------------------------------------------------
-
+//when click on show all posts
 $scope.allposts = function() {
 var index= $routeParams['category_id'];
 	$scope.cat_id=index;
@@ -256,7 +256,7 @@ var index= $routeParams['category_id'];
 var index= $routeParams['category_id'];
 	$scope.cat_id=index;
 	var user_id=1;
-	categories.getCategoryposts(index).then(function(data){
+	categories.getCategoryPosts(index).then(function(data){
 			// console.log("inside controller" , data)
 			$rootScope.categoryPosts=data;
 			// $location.url('/category/'+index+'/posts');
@@ -378,5 +378,69 @@ console.log(obj);
         url: 'http://localhost:8000/api/uploads/singleuploded'
 
 			});
+
+		categories.getCategoryWorkshop(index).then(function(data){
+		        // console.log("inside controller" , data)
+		$rootScope.category_workshops=data;
+		        // console.log("la2aa",$scope.category_posts);
+		console.log($scope.category_workshops);
+		    } , function(err){
+		        console.log(err);
+
+		    });
+
+
+			$scope.allworkshops = function() {
+			var index= $routeParams['category_id'];
+				$scope.cat_id=index;
+				var user_id=1;
+				categories.getCategoryWorkshops(index).then(function(data){
+						$rootScope.categoryWorkshops=data;
+
+						console.log("all workshops under category",data);
+
+
+				} , function(err){
+						console.log(err);
+
+				});
+			}
+
+
+				categories.getCategoryWorkshops(index).then(function(data){
+						var index= $routeParams['category_id'];
+						$scope.cat_id=index;
+						var user_id=1;
+						$rootScope.categoryWorkshops=data;
+						console.log('/category/'+index+'/workshops')
+						console.log("all workshops under category",$scope.categoryworkshops);
+
+
+				} , function(err){
+						console.log(err);
+
+				});
+
+
+			var index= $routeParams['category_id'];
+			var id= $routeParams['workshop_id'];
+			// var id=id
+				$scope.cat_id=index;
+				var user_id=1;
+				categories.getCategoryWorkshop(id).then(function(data){
+						// console.log("inside controller" , data)
+						$rootScope.category_workshop=data.workshop;
+						$rootScope.userId=data.user.id;
+						// $rootScope.category_post = localStorage.getItem("data");
+						console.log("single workshop from controller",$rootScope.category_workshop);
+
+				} , function(err){
+						console.log(err);
+				});
+
+
+
+
+
 
     });

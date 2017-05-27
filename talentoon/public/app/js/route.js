@@ -115,7 +115,15 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                   templateUrl: 'views/myprofile.html',
                   controller: 'userprofile'
                 })
+                .when('/category/:category_id/workshops', {
+                    templateUrl: 'views/categoryworkshops.html',
+                    controller: 'categories'
+                })
 
+                .when('/category/:category_id/workshops/:workshop_id', {
+                    templateUrl: 'views/categoryworkshop.html',
+                    controller: 'categories'
+                })
 
         $httpProvider.interceptors.push(['$q', '$location', function ($q, $location) {
                 return {

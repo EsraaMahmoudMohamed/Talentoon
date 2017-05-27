@@ -73,7 +73,25 @@
 <!-- <button class="btn btn-primary btnAction" role="button" ng-click="allposts()">show all posts</button> -->
 
 </div>
+<div class="container">
+  <div ng-repeat="workshop in categoryWorkshops | limitTo:3 track by $index">
 
+    <div class="thumbnail">
+      <img src="{{workshop.media.media_url}}" class="img-circle" style="height:80px;" />
+      <h4 style="color:Purple ">{{workshop.name}}</h4>
+      <h4 style="color:Purple ">{{workshop.date_from}}</h4>
+      <h4 style="color:Purple ">{{workshop.date_to}}</h4>
+      <h4 style="color:Purple ">{{workshop.time_from}}</h4>
+      <h4 style="color:Purple ">{{workshop.time_to}}</h4>
+      <h4 style="color:Purple ">{{workshop.max_capacity}}</h4>
+      <h4 style="color:Purple ">{{workshop.level}}</h4>
+      <h4 style="color:Purple ">{{workshop.description}}</h4>
+    </div>
+
+
+  <p  class="btnAction"><a href="#!/category/{{workshop.category_id}}/workshops" class="btn btn-primary btnAction" role="button" ng-click="allworkshops()">show all workshops</a></p>
+ </div>
+</div>
 
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\WorkShop;
 use Response;
 use Illuminate\Http\Request;
 use JWTAuth;
@@ -80,9 +81,11 @@ class CategoriesController extends Controller
     {
         $category=Category::find($id);
         $posts=Post::where('category_id','=', $id)->get();
+        $workshops=WorkShop::where('category_id','=', $id)->get();
+
         // dd($posts);
         // dd(response()->json(['category_details' => $category,'posts' => $posts,'status' => '1','message' => 'data sent successfully']));
-        return response()->json(['category_details' => $category,'posts' => $posts,'status' => '1','message' => 'data sent successfully']);
+        return response()->json(['category_details' => $category,'workshops' => $workshops,'posts' => $posts,'status' => '1','message' => 'data sent successfully']);
         // return view('category.show',['category'=>$category]);
     }
 
