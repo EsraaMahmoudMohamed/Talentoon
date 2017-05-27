@@ -8,6 +8,7 @@
 
                 <img src="{{workshop.media.media_url}}" style=" height:200px">
                 <div class="caption">
+
                   <h4 style="color:Purple ">Title: {{category_workshop.name}}</h4>
                   <h4 style="color:Purple ">Description: {{category_workshop.description}}</h4>
                   <h4 style="color:Purple ">level: {{category_workshop.level}}</h4>
@@ -23,7 +24,7 @@
 
                 </div>
             </div>
-            <a href=""  ng-click="workshop_enroll(category_workshop.id)" ng-controller="workshop" class="btn btn-success" role="button">Enroll </a>
+            <a href=""  ng-click="workshop_enroll(category_workshop.id,userId)" ng-controller="workshop" class="btn btn-success" role="button">Enroll </a>
 
             <a href="#!/category/{{category_post.category_id}}" class="btn btn-default" role="button">GO To My Category </a>
 

@@ -12,7 +12,7 @@ workshop_enroll:function(data){
     data:data
 
   }).then(function(res){
-    console.log("res from workshop",res);
+    console.log("resssssssssssssss",res);
     if(res.data){
       console.log(res.data);
      def.resolve(res.data);

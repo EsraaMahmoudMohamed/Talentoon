@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\WorkShop;
+use App\Models\WorkshopEnroll;
 use DB;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
@@ -112,15 +113,10 @@ class WorkShopsController extends Controller
             return response()->json(['token_absent'], $e->getStatusCode());
         }
 
-
       $workshop = DB::table('workshops')
           ->join('categories', 'workshops.category_id', '=', 'categories.id')
-          // ->join('users', 'posts.user_id', '=', 'users.id')
           ->select('workshops.*', 'categories.title as category_title')
-
-          // ->select('posts.*', 'categories.title as category_title', 'users.first_name', 'users.last_name', 'users.image')
-
-              ->where("workshops.id",$workshop_id)
+          ->where("workshops.id",$workshop_id)
           ->get()->first();
 
       return response()->json(['user'=>$user,'workshop' => $workshop,'status' => '1','message' => 'workshop sent successfully']);
@@ -128,4 +124,20 @@ class WorkShopsController extends Controller
 
 
     }
+    public function enroll(Request $request){
+
+            $enroll = DB::table('workshop_enrollment')
+            ->where('user_id', '=', $request->user_id)
+            ->where('workshop_id', '=', $request->workshop_id)
+            ->first();
+
+        if (is_null($enroll)) {
+        WorkshopEnroll::create($request->all());
+        return response()->json(['message' => 'data saved successfully']);
+
+    }else{
+        return response()->json(['message' => 'you already enroll in this workshop ']);
+
+    }
+}
 }
