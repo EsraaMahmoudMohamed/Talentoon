@@ -103,7 +103,7 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
 
                 .when('/category/:category_id/posts', {
                     templateUrl: 'views/categoryposts.html',
-                    controller: 'categories'
+                    controller: 'allCategoryPosts'
                 })
 
                 .when('/category/:category_id/posts/:post_id', {
