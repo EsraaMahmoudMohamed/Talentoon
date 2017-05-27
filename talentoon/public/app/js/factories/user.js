@@ -92,6 +92,32 @@ angular.module('myApp').factory("user", function ($http, $q) {
             })
             return def.promise;
 
+        },
+        userposts: function () {
+
+            var def = $q.defer();
+            $http({
+                url: 'http://localhost:8000/api/userprofile/userposts',
+                method: 'GET'
+
+            }).then(function (res) {
+                console.log("userpost",res);
+                if (res) {
+                    // if(res.data.length){
+                    def.resolve(res)
+                    // def.resolve(res.data)
+
+
+                } else {
+                    def.reject('there is no data ')
+                }
+
+            }, function (err) {
+                // console.log(err);
+                def.reject(err);
+            })
+            return def.promise;
+
         }
     };
 });

@@ -11,4 +11,15 @@ angular.module('myApp').controller("userprofile", function ($scope, $http, user,
 	});
 
 
+  user.userposts().then(function(data){
+     console.log(data.data);
+    $scope.userposts=data.data.post;
+    $scope.userinfo=data.data;
+        console.log("user profile posts",$scope.userposts);
+  } , function(err){
+    console.log(err);
+
+  });
+
+
 })

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Like;
 use DB;
 class PostsController extends Controller
 {
@@ -111,6 +112,26 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function mostLikablePosts(){
+
+        $users=DB::table('likeables')
+            ->select('likeable_id', DB::raw('count(*) as total'))
+            ->where('likeable_type', '=', 'post')
+            ->groupBy('likeable_id')
+            ->take(3)
+            ->get();
+        $data=array();
+        foreach ($users as &$value) {
+            $post = DB::table('posts')
+                ->select('posts.*')
+                ->where("posts.id",$value->likeable_id)
+                ->get();
+            array_push($data, array('post' => $post));
+//            dd($post);
+        }
+//        dd($data);
+        return response()->json(['msg'=>'success','posts'=>$data]);
+    }
     public function destroy($id)
     {
         //
@@ -124,10 +145,10 @@ public function showSinglePost($post_id){
 
   $post = DB::table('posts')
       ->join('categories', 'posts.category_id', '=', 'categories.id')
-      // ->join('users', 'posts.user_id', '=', 'users.id')
+      ->join('users', 'posts.user_id', '=', 'users.id')
       ->select('posts.*', 'categories.title as category_title')
 
-      // ->select('posts.*', 'categories.title as category_title', 'users.first_name', 'users.last_name', 'users.image')
+      ->select('posts.*', 'categories.title as category_title', 'users.first_name', 'users.last_name', 'users.image as user_image')
 
           ->where("posts.id",$post_id)
       ->get()->first();

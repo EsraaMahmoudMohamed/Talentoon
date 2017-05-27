@@ -6,9 +6,19 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
             controller: 'homec'
         })
 
-                .when('/post/:post_id', {
+
+                // .when('/category/createEvent', {
+                //     templateUrl: 'views/post.html',
+                //     controller: 'homec'
+                // })
+                    .when('/post/:post_id', {
                     templateUrl: 'views/post.html',
                     controller: 'homec'
+                })
+
+                .when('/category/:category_id/createEvent', {
+                    templateUrl: 'views/createEvent.html',
+                    controller: 'eventcontroller'
                 })
 
                 .when('/initial_review', {
@@ -77,10 +87,7 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                     controller: 'addworkshop'
                 })
 //add event
-                .when('/category/:category_id/addevent', {
-                    templateUrl: 'views/addevent.html',
-                    controller: 'addevents'
-                })
+
 
 //user routes
 
@@ -145,5 +152,6 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                     }
                 };
             }]);
+
 
     }]);

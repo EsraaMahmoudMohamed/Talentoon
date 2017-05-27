@@ -22,7 +22,14 @@ Route::post('/categorytalent',[
     'uses'=>'CategoryTalentController@store',
     'middleware'=> 'jwt.auth']);
 Route::resource('categories.posts','PostsController');
+
+Route::resource('categories.events','EventController');
+//Route::post('/categories/1/events','EventController@store');
+
+Route::get('/mostLikeabe','PostsController@mostLikablePosts');
+
 Route::resource('categories.workshops', 'WorkShopsController');
+
 
 //Route::get('/categorytalent/{talent_id}',[
 //    'before' => 'jwt-auth',
@@ -33,6 +40,7 @@ Route::resource('categories.workshops', 'WorkShopsController');
 Route::put('/categorytalent/{talent_id}','CategoryTalentController@update');
 
 Route::resource('category','CategoriesController');
+Route::get('/event/showall','EventController@index');
 
 
 Route::resource('initial_reviews','InitialReviewController');
@@ -51,6 +59,7 @@ Route::get('/get_media_for_initial_review/{category_talent_id}/{category_mentor_
 
 
 Route::post('/single_upload/{id}', 'UploadController@single_upload');
+Route::post('/event_upload/{id}', 'UploadController@event_upload');
 
 Route::post('/test2', 'UploadController@test2');
 Route::put('/categorymentor/update','CategoryMentorController@update');
@@ -70,6 +79,9 @@ Route::post('/dislike','LikeController@update');
 Route::get('/userprofile',[
     'uses'=>'UserProfile@index',
     'middleware'=> 'jwt.auth']);
+    Route::get('/userprofile/userposts',[
+        'uses'=>'UserProfile@userposts',
+        'middleware'=> 'jwt.auth']);
 
 Route::post('/categorytalent/store','CategoryTalentController@store');
 
