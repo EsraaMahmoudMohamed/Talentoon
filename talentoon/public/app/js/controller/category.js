@@ -1,11 +1,12 @@
 angular.module('myApp').controller("categories",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,$q){
 
+	$rootScope.token = JSON.parse(localStorage.getItem("token"));
+	console.log($rootScope.token);
 	var filesuploaded = []
     var filesmentoruploaded = []
     var reviewfilesuploaded=[]
 	var talent = {}
     var mentor = {}
-
 	//
     // $scope.show = function() {
     //     ModalService.showModal({
@@ -192,13 +193,11 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
 	//get all category
         //esraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	categories.getAllCategory().then(function(data){
-		 console.log(data);
+		 console.log("esraaaaa all data",data);
 		$scope.categories=data.data;
                 console.log("categories array",$scope.categories);
-        // console.log("la2aa sha3`alaa",$scope.categories);
 	} , function(err){
 		console.log(err);
-
 	});
 //----------------------------------------------------------------------
 $scope.comment={};
