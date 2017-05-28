@@ -18,6 +18,13 @@ class WorkShopsController extends Controller
     public function index()
     {
         //
+        $data = DB::table('workshops')
+            ->join('users', 'users.id', '=', 'workshops.mentor_id')
+            ->select('workshops.*','users.first_name as first_name', 'users.last_name as last_name', 'users.image as user_image')
+            ->get();
+//
+        return response()->json(['msg1'=>$data]);
+
     }
 
     /**

@@ -114,20 +114,24 @@ class PostsController extends Controller
      */
     public function mostLikablePosts(){
 
-        $users=DB::table('likeables')
-            ->select('likeable_id', DB::raw('count(*) as total'))
+
+        $posts_id=DB::table('likeables')
+            ->select('likeable_id',DB::raw('count(*) as total'))
             ->where('likeable_type', '=', 'post')
             ->groupBy('likeable_id')
+            ->orderBy('total', 'desc')
             ->take(3)
             ->get();
+//        dd($posts_id);
         $data=array();
-        foreach ($users as &$value) {
+        foreach ($posts_id as &$value) {
             $post = DB::table('posts')
-                ->select('posts.*')
+                ->join('users', 'users.id', '=', 'posts.user_id')
+                ->select('posts.*','users.first_name as first_name', 'users.last_name as last_name', 'users.image as user_image')
                 ->where("posts.id",$value->likeable_id)
                 ->get();
-            array_push($data, array('post' => $post));
-//            dd($post);
+            array_push($data, $post[0]);
+//            dd($data);
         }
 //        dd($data);
         return response()->json(['msg'=>'success','posts'=>$data]);

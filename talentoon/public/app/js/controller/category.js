@@ -224,13 +224,34 @@ $scope.comment={};
         $scope.category_posts=data;
         // console.log("la2aa",$scope.category_posts);
 
-    console.log($scope.category_posts);
+    console.log("post detalis",$scope.category_posts);
     } , function(err){
         console.log(err);
 
     });
 // }
 //------------------------------------------------------------------
+
+
+// $scope.allposts = function() {
+// var index= $routeParams['category_id'];
+// 	$scope.cat_id=index;
+// 	var user_id=1;
+// 	categories.getCategoryPosts(index).then(function(data){
+// 			// console.log("inside controller" , data)
+// 			$rootScope.categoryAllPosts=data;
+// 			console.log("aLLLLLLL",$rootScope.categoryAllPosts);
+// 			$location.url('/category/'+index+'/posts');
+// 			console.log('/category/'+index+'/posts')
+// 			console.log("all posts under category",$scope.categoryposts);
+//
+//
+// 	} , function(err){
+// 			console.log(err);
+//
+// 	});
+// }
+
 //when click on show all posts
 $scope.allposts = function() {
 var index= $routeParams['category_id'];
@@ -258,7 +279,7 @@ var index= $routeParams['category_id'];
 	var user_id=1;
 	categories.getCategoryPosts(index).then(function(data){
 			// console.log("inside controller" , data)
-			$rootScope.categoryPosts=data;
+			$rootScope.category3Posts=data;
 			// $location.url('/category/'+index+'/posts');
 			console.log('/category/'+index+'/posts')
 			console.log("all posts under category",$scope.categoryposts);
