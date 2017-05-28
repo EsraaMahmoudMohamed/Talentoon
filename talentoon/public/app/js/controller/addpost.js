@@ -79,16 +79,16 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
 
 
 
-          console.log("current file is ",$rootScope.currentFile)
-          var reader = new FileReader();
-
-          reader.onload = function(event) {
-              $scope.image_source = event.target.result
-              $scope.$apply(function($scope) {
-                  $scope.files = element.files;
-              });
-          }
-          reader.readAsDataURL(element.files[0]);
+          // console.log("current file is ",$rootScope.currentFile)
+          // var reader = new FileReader();
+          //
+          // reader.onload = function(event) {
+          //     $scope.image_source = event.target.result
+          //     $scope.$apply(function($scope) {
+          //         $scope.files = element.files;
+          //     });
+          // }
+          // reader.readAsDataURL(element.files[0]);
       }
 
 
