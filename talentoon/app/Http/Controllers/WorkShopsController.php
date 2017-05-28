@@ -126,8 +126,23 @@ class WorkShopsController extends Controller
           ->where("workshops.id",$workshop_id)
           ->get()->first();
 
-      return response()->json(['user'=>$user,'workshop' => $workshop,'status' => '1','message' => 'workshop sent successfully']);
+          $capacity=$workshop->max_capacity;
+          $countcapacity = DB::table('workshop_enrollment')
+          ->join('workshops','workshop_enrollment.workshop_id', '=','workshops.id')
+          ->select(DB::raw('count(workshop_enrollment.workshop_id) as workshop_count','workshop_enrollment.workshop_id'))
+          ->where([
+             ['workshop_enrollment.workshop_id','=',$workshop_id]])
+              ->groupBy('workshop_enrollment.workshop_id')
+              ->get()->first();
+              $countcapacity=get_object_vars($countcapacity);
+              if($countcapacity["workshop_count"]==$capacity){
 
+        return response()->json(['enroll'=>0,'user'=>$user,'workshop' => $workshop,'message' => 'workshop sent successfully']);
+
+        }else{
+
+      return response()->json(['enroll'=>1,'user'=>$user,'workshop' => $workshop,'message' => 'workshop sent successfully']);
+        }
 
 
     }
