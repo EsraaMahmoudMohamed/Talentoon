@@ -4,7 +4,7 @@ angular.module('myApp').controller("post", function ($scope, $http, posts, $rout
 
 $scope.likepost = function(post_id,user_id) {
 var likeable_id=post_id;
-var likeable_type="App\\post"
+var likeable_type="post"
 var user_id=user_id;
 console.log(likeable_id)
 console.log(likeable_type);
@@ -45,7 +45,7 @@ console.log(obj);
 
 $scope.dislikepost = function(post_id,user_id) {
 var likeable_id=post_id;
-var likeable_type="App\\post"
+var likeable_type="post"
 var user_id=user_id;
 console.log(likeable_id)
 console.log(likeable_type);

@@ -224,7 +224,7 @@ $scope.comment={};
         $scope.category_posts=data;
         // console.log("la2aa",$scope.category_posts);
 
-    console.log($scope.category_posts);
+    console.log("post detalis",$scope.category_posts);
     } , function(err){
         console.log(err);
 

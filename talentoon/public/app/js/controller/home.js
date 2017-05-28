@@ -1,4 +1,4 @@
-angular.module('myApp').controller("homec",function(Home,$scope,$http,$routeParams,$rootScope){
+angular.module('myApp').controller("homec",function(Home,$scope,$http,$routeParams,$rootScope,categories){
 
 	$rootScope.token = JSON.parse(localStorage.getItem("token"));
 	console.log($rootScope.token);
@@ -45,4 +45,18 @@ console.log("top posts",data[0].post);
 		console.log(err);
 
 	});
+
+
+
+	// categories.getCategoryPost(id).then(function(data){
+	// 		// console.log("inside controller" , data)
+	// 		$rootScope.category_post=data;
+	// 		// $rootScope.category_post = localStorage.getItem("data");
+	// 		console.log("single post from controller",$rootScope.category_post);
+	//
+	// } , function(err){
+	// 		console.log(err);
+	// });
+
+
 })
