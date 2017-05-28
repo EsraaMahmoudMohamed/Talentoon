@@ -82,11 +82,13 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
                 data: id
             }).then(function (res) {
                 // console.log("single post from factory",res.data.post)
-                console.log("single post from factory", res.data.post)
+                console.log("single post from factory", res.data)
 
                 if (res) {
                     var data = localStorage.setItem("data", JSON.stringify(res.data.post));
-                    def.resolve(res.data.post);
+                    // def.resolve(res.data.post);
+                    def.resolve(res.data);
+
 
                 } else {
                     def.reject('there is no data ')
