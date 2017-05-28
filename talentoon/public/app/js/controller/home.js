@@ -6,7 +6,7 @@ angular.module('myApp').controller("homec",function(Home,$scope,$http,$routePara
 
 		// console.log(data);
 		$scope.topposts=data;
-console.log("top posts",data[0].post);
+// console.log("top posts",data[0].post);
 	} , function(err){
 		console.log(err);
 
@@ -29,7 +29,7 @@ console.log("top posts",data[0].post);
     } , function(err){
         console.log(err);
 
-    });
+    }); 
 
 
 
