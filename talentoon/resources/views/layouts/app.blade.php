@@ -51,6 +51,8 @@
                             <li><a href="{{ route('user.index') }}">users</a></li>
                             <li><a href="{{ route('mentor.index') }}">Mentors</a></li>
                             <li><a href="{{ route('news.index') }}">News</a></li>
+                            <li><a href="{{ route('admin.register.form') }}">Create admin</a></li>
+
 
 
                             <li class="dropdown">
