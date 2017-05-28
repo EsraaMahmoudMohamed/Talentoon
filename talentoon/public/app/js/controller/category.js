@@ -324,9 +324,12 @@ var id= $routeParams['post_id'];
 	var user_id=1;
 	categories.getCategoryPost(id).then(function(data){
 			// console.log("inside controller" , data)
-			$rootScope.category_post=data;
+			$rootScope.category_post=data.post;
+			$rootScope.category_post_like_count=data.countlike;
 			// $rootScope.category_post = localStorage.getItem("data");
 			console.log("single post from controller",$rootScope.category_post);
+			console.log("single post from controller like count ",$rootScope.category_post_like_count);
+
 
 	} , function(err){
 			console.log(err);
