@@ -39,39 +39,39 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
      }
 
    }
-   ,
-      $scope.submit_post_file= function() {
-          // $scope.form.image = filesuploaded;
-          console.log("inside submit scope " ,filesuploaded)
-
-          $http({
-              method  : 'POST',
-              url     : 'http://localhost:8000/api/test',
-              processData: false,
-              transformRequest: function (data) {
-                  var formData = new FormData();
-
-                  for(var i =0;i< filesuploaded.length;i++){
-                      formData.append("file[]", filesuploaded[i]);
-                      console.log("file in loop",filesuploaded[i])
-                  }
-                  return formData;
-              },
-              data : filesuploaded,
-              headers: {
-                  'Content-Type': undefined,
-                  'Process-Data':false
-              }
-          }).then(function(data){
-              // alert(data);
-              console.log("thennnnn in add post",data)
-          });
-
-      }
-      ,
-      $scope.uploadedFile = function(element) {
-          console.log("element is ",element)
-          $rootScope.currentFile = element.files[0];
+  //  ,
+  //     $scope.submit_post_file= function() {
+  //         // $scope.form.image = filesuploaded;
+  //         console.log("inside submit scope " ,filesuploaded)
+   //
+  //         $http({
+  //             method  : 'POST',
+  //             url     : 'http://localhost:8000/api/test',
+  //             processData: false,
+  //             transformRequest: function (data) {
+  //                 var formData = new FormData();
+   //
+  //                 for(var i =0;i< filesuploaded.length;i++){
+  //                     formData.append("file[]", filesuploaded[i]);
+  //                     console.log("file in loop",filesuploaded[i])
+  //                 }
+  //                 return formData;
+  //             },
+  //             data : filesuploaded,
+  //             headers: {
+  //                 'Content-Type': undefined,
+  //                 'Process-Data':false
+  //             }
+  //         }).then(function(data){
+  //             // alert(data);
+  //             console.log("thennnnn in add post",data)
+  //         });
+   //
+  //     }
+      // ,
+      // $scope.uploadedFile = function(element) {
+      //     console.log("element is ",element)
+      //     $rootScope.currentFile = element.files[0];
           //filesuploaded.push(element.files[0]);
 
 
@@ -89,7 +89,7 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
           //     });
           // }
           // reader.readAsDataURL(element.files[0]);
-      }
+      // }
 
 
 

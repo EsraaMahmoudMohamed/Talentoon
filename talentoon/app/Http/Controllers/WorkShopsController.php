@@ -57,14 +57,14 @@ class WorkShopsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show_old($cat_id,$workshop_id)
     {
         //
         $workshop = DB::table('workshops')
             ->join('categories', 'workshops.category_id', '=', 'categories.id')
             ->join('users', 'workshops.mentor_id', '=', 'users.id')
             ->select('workshops.*', 'categories.title as category_title', 'users.first_name', 'users.last_name')
-            ->where("workshops.id",$id)
+            ->where("workshops.id",$workshop_id)
             ->get();
 
         return response()->json(['post' => $workshop,'status' => '1','message' => 'data sent successfully']);
@@ -103,7 +103,7 @@ class WorkShopsController extends Controller
     {
         //
     }
-    public function showSingleWorkshop($workshop_id){
+    public function show($cat_id,$workshop_id){
         try {
             //dd($request->all());
             if (!$user = JWTAuth::parseToken()->authenticate()) {

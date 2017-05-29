@@ -49,31 +49,49 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
   			return def.promise ;
 
   		},
+        getCategoryEvent:function(cat_id,event_id){
+            console.log('beforee ajaaaaaaaaaaaxxx',event_id);
+  			var def =$q.defer();
+  			$http({
+  				url:'http://localhost:8000/api/categories/'+cat_id+'/events/'+event_id ,
+  				method:'GET'
+  			}).then(function(res){
+  				console.log("all events in factory " , res.data);
+  				if(res.data.posts.length){
+  		     			def.resolve(res.data.posts);
 
-		// 	var def =$q.defer();
-		// 	$http({
-		// 		url:'http://localhost:8000/api/category/'+index ,
-		// 		method:'GET'
-		// 	}).then(function(res){
-		// 		// console.log("response is " , res.data.posts);
-		// 		if(res.data.posts.length){
-		//      			def.resolve(res.data.posts);
-		// 					// 			console.log("res.data.posts is " , res.data.posts )
-		// 				// def.resolve(res.data[index])
-		// 		}else{
-		// 			def.reject('there is no data ')
-		// 		}
-    //
-		// 	},function(err){
-		// 		def.reject(err);
-		// 	})
-		// 	return def.promise ;
-    //
-		// },
+  				}else{
+  					def.reject('there is no data ')
+  				}
+
+  			},function(err){
+  				def.reject(err);
+  			})
+  			return def.promise ;
+
+  		},
+        getCategoryEvents:function(cat_id){
+  			var def =$q.defer();
+  			$http({
+  				url:'http://localhost:8000/api/categories/'+cat_id+'/events' ,
+  				method:'GET'
+  			}).then(function(res){
+  				console.log("all events in factory " , res.data.data);
+  				if(res.data.data.length){
+  		     			def.resolve(res.data.data);
+
+  				}else{
+  					def.reject('there is no data ')
+  				}
+
+  			},function(err){
+  				def.reject(err);
+  			})
+  			return def.promise ;
+
+  		},
 
         getCategoryPost: function (id) {
-            //  var category_id= index;
-            // console.log("category_id",category_id)
             console.log("post id", id)
             var def = $q.defer();
             $http({
@@ -438,16 +456,15 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 			return def.promise ;
 
 		},
-        getCategoryWorkshop: function (id) {
+        getCategoryWorkshop: function (cat_id,workshop_id) {
             //  var category_id= index;
-            var id = id;
             // // console.log("category_id",category_id)
             // console.log("workshop id", id)
             var def = $q.defer();
             $http({
-                url: 'http://localhost:8000/api/workshop/' + id,
+                url: 'http://localhost:8000/api/categories/' + cat_id+'/workshops/'+workshop_id,
                 method: 'GET',
-                data: id
+                // data: id
             }).then(function (res) {
                 console.log("single workshop from factory",res.data)
                 // console.log("user",res.data.user);
