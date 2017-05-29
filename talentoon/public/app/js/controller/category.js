@@ -1,11 +1,12 @@
 angular.module('myApp').controller("categories",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,$q){
 
+	$rootScope.token = JSON.parse(localStorage.getItem("token"));
+	console.log($rootScope.token);
 	var filesuploaded = []
     var filesmentoruploaded = []
     var reviewfilesuploaded=[]
 	var talent = {}
     var mentor = {}
-
 	//
     // $scope.show = function() {
     //     ModalService.showModal({
@@ -192,13 +193,11 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
 	//get all category
         //esraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	categories.getAllCategory().then(function(data){
-		 console.log(data);
+		 console.log("esraaaaa all data",data);
 		$scope.categories=data.data;
                 console.log("categories array",$scope.categories);
-        // console.log("la2aa sha3`alaa",$scope.categories);
 	} , function(err){
 		console.log(err);
-
 	});
 //----------------------------------------------------------------------
 $scope.comment={};
@@ -224,13 +223,34 @@ $scope.comment={};
         $scope.category_posts=data;
         // console.log("la2aa",$scope.category_posts);
 
-    console.log($scope.category_posts);
+    console.log("post detalis",$scope.category_posts);
     } , function(err){
         console.log(err);
 
     });
 // }
 //------------------------------------------------------------------
+
+
+// $scope.allposts = function() {
+// var index= $routeParams['category_id'];
+// 	$scope.cat_id=index;
+// 	var user_id=1;
+// 	categories.getCategoryPosts(index).then(function(data){
+// 			// console.log("inside controller" , data)
+// 			$rootScope.categoryAllPosts=data;
+// 			console.log("aLLLLLLL",$rootScope.categoryAllPosts);
+// 			$location.url('/category/'+index+'/posts');
+// 			console.log('/category/'+index+'/posts')
+// 			console.log("all posts under category",$scope.categoryposts);
+//
+//
+// 	} , function(err){
+// 			console.log(err);
+//
+// 	});
+// }
+
 //when click on show all posts
 $scope.allposts = function() {
 var index= $routeParams['category_id'];
@@ -258,7 +278,7 @@ var index= $routeParams['category_id'];
 	var user_id=1;
 	categories.getCategoryPosts(index).then(function(data){
 			// console.log("inside controller" , data)
-			$rootScope.categoryPosts=data;
+			$rootScope.category3Posts=data;
 			// $location.url('/category/'+index+'/posts');
 			console.log('/category/'+index+'/posts')
 			console.log("all posts under category",$scope.categoryposts);
@@ -303,9 +323,12 @@ var id= $routeParams['post_id'];
 	var user_id=1;
 	categories.getCategoryPost(id).then(function(data){
 			// console.log("inside controller" , data)
-			$rootScope.category_post=data;
+			$rootScope.category_post=data.post;
+			$rootScope.category_post_like_count=data.countlike;
 			// $rootScope.category_post = localStorage.getItem("data");
 			console.log("single post from controller",$rootScope.category_post);
+			console.log("single post from controller like count ",$rootScope.category_post_like_count);
+
 
 	} , function(err){
 			console.log(err);
@@ -428,9 +451,10 @@ console.log(obj);
 				$scope.cat_id=index;
 				var user_id=1;
 				categories.getCategoryWorkshop(id).then(function(data){
-						// console.log("inside controller" , data)
+						console.log("inside controller" , data)
 						$rootScope.category_workshop=data.workshop;
 						$rootScope.userId=data.user.id;
+						$rootScope.enroll=data.enroll;
 						// $rootScope.category_post = localStorage.getItem("data");
 						console.log("single workshop from controller",$rootScope.category_workshop);
 

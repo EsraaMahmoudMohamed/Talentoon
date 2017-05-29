@@ -10,6 +10,7 @@ return {
 				method:'GET'
 
 			}).then(function(res){
+				console.log(res)
 				console.log('y bashrrrrr',res.data.posts);
 				if(res.data.posts){
 					def.resolve(res.data.posts)

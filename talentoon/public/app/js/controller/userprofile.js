@@ -16,6 +16,8 @@ angular.module('myApp').controller("userprofile", function ($scope, $http, user,
     $scope.userposts=data.data.post;
     $scope.userinfo=data.data;
         console.log("user profile posts",$scope.userposts);
+        console.log("user profile info",$scope.userinfo);
+
   } , function(err){
     console.log(err);
 

@@ -29,29 +29,50 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
         },
         getCategoryPosts:function(index){
 
-			var def =$q.defer();
-			$http({
-				url:'http://localhost:8000/api/category/'+index ,
-				method:'GET'
-			}).then(function(res){
-				// console.log("response is " , res.data.posts);
-				if(res.data.posts.length){
-		     			def.resolve(res.data.posts);
-							// 			console.log("res.data.posts is " , res.data.posts )
-						// def.resolve(res.data[index])
-				}else{
-					def.reject('there is no data ')
-				}
+  			var def =$q.defer();
+  			$http({
+  				url:'http://localhost:8000/api/category/'+index ,
+  				method:'GET'
+  			}).then(function(res){
+  				// console.log("response is " , res.data.posts);
+  				if(res.data.posts.length){
+  		     			def.resolve(res.data.posts);
+  							// 			console.log("res.data.posts is " , res.data.posts )
+  						// def.resolve(res.data[index])
+  				}else{
+  					def.reject('there is no data ')
+  				}
 
-			},function(err){
-				def.reject(err);
-			})
-			return def.promise ;
+  			},function(err){
+  				def.reject(err);
+  			})
+  			return def.promise ;
 
-		},
+  		},
+
+		// 	var def =$q.defer();
+		// 	$http({
+		// 		url:'http://localhost:8000/api/category/'+index ,
+		// 		method:'GET'
+		// 	}).then(function(res){
+		// 		// console.log("response is " , res.data.posts);
+		// 		if(res.data.posts.length){
+		//      			def.resolve(res.data.posts);
+		// 					// 			console.log("res.data.posts is " , res.data.posts )
+		// 				// def.resolve(res.data[index])
+		// 		}else{
+		// 			def.reject('there is no data ')
+		// 		}
+    //
+		// 	},function(err){
+		// 		def.reject(err);
+		// 	})
+		// 	return def.promise ;
+    //
+		// },
+
         getCategoryPost: function (id) {
             //  var category_id= index;
-            var id = id;
             // console.log("category_id",category_id)
             console.log("post id", id)
             var def = $q.defer();
@@ -61,11 +82,13 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
                 data: id
             }).then(function (res) {
                 // console.log("single post from factory",res.data.post)
-                console.log("single post from factory", res.data.post)
+                console.log("single post from factory", res.data)
 
                 if (res) {
                     var data = localStorage.setItem("data", JSON.stringify(res.data.post));
-                    def.resolve(res.data.post);
+                    // def.resolve(res.data.post);
+                    def.resolve(res.data);
+
 
                 } else {
                     def.reject('there is no data ')
@@ -418,17 +441,18 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
         getCategoryWorkshop: function (id) {
             //  var category_id= index;
             var id = id;
-            // console.log("category_id",category_id)
-            console.log("workshop id", id)
+            // // console.log("category_id",category_id)
+            // console.log("workshop id", id)
             var def = $q.defer();
             $http({
                 url: 'http://localhost:8000/api/workshop/' + id,
                 method: 'GET',
                 data: id
             }).then(function (res) {
-                // console.log("single post from factory",res.data.post)
-                console.log("user",res.data.user);
-                console.log("single category from factory", res.data.workshop)
+                console.log("single workshop from factory",res.data)
+                // console.log("user",res.data.user);
+                // console.log("enroll",res.data.enroll);
+                // console.log("single category from factory", res.data.workshop)
 
                 if (res) {
                     var data = localStorage.setItem("workshop_data", JSON.stringify(res.data.workshop));
