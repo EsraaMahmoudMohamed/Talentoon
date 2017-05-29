@@ -441,17 +441,18 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
         getCategoryWorkshop: function (id) {
             //  var category_id= index;
             var id = id;
-            // console.log("category_id",category_id)
-            console.log("workshop id", id)
+            // // console.log("category_id",category_id)
+            // console.log("workshop id", id)
             var def = $q.defer();
             $http({
                 url: 'http://localhost:8000/api/workshop/' + id,
                 method: 'GET',
                 data: id
             }).then(function (res) {
-                // console.log("single post from factory",res.data.post)
-                console.log("user",res.data.user);
-                console.log("single category from factory", res.data.workshop)
+                console.log("single workshop from factory",res.data)
+                // console.log("user",res.data.user);
+                // console.log("enroll",res.data.enroll);
+                // console.log("single category from factory", res.data.workshop)
 
                 if (res) {
                     var data = localStorage.setItem("workshop_data", JSON.stringify(res.data.workshop));

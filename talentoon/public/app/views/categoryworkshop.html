@@ -24,8 +24,13 @@
 
                 </div>
             </div>
+            <div ng-if="enroll == 1">
             <a href=""  ng-click="workshop_enroll(category_workshop.id,userId)" ng-controller="workshop" class="btn btn-success" role="button">Enroll </a>
+            </div>
+            <div ng-if="enroll == 0">
+            <button type="button" href=""  ng-click="workshop_enroll(category_workshop.id,userId)" ng-controller="workshop" class="btn btn-success" disabled>Enroll </button>
 
+            </div>
             <a href="#!/category/{{category_post.category_id}}" class="btn btn-default" role="button">GO To My Category </a>
 
 

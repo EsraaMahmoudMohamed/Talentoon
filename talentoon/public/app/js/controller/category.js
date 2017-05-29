@@ -1,11 +1,13 @@
 angular.module('myApp').controller("categories",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,$q){
 
+	$rootScope.token = JSON.parse(localStorage.getItem("token"));
+	$rootScope.cur_user = JSON.parse(localStorage.getItem("cur_user"));
+	console.log("category controller current user",$rootScope.cur_user);
 	var filesuploaded = []
     var filesmentoruploaded = []
     var reviewfilesuploaded=[]
 	var talent = {}
     var mentor = {}
-
 	//
     // $scope.show = function() {
     //     ModalService.showModal({
@@ -192,13 +194,11 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
 	//get all category
         //esraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	categories.getAllCategory().then(function(data){
-		 console.log(data);
+		 console.log("esraaaaa all data",data);
 		$scope.categories=data.data;
                 console.log("categories array",$scope.categories);
-        // console.log("la2aa sha3`alaa",$scope.categories);
 	} , function(err){
 		console.log(err);
-
 	});
 //----------------------------------------------------------------------
 $scope.comment={};
@@ -452,9 +452,10 @@ console.log(obj);
 				$scope.cat_id=index;
 				var user_id=1;
 				categories.getCategoryWorkshop(id).then(function(data){
-						// console.log("inside controller" , data)
+						console.log("inside controller" , data)
 						$rootScope.category_workshop=data.workshop;
 						$rootScope.userId=data.user.id;
+						$rootScope.enroll=data.enroll;
 						// $rootScope.category_post = localStorage.getItem("data");
 						console.log("single workshop from controller",$rootScope.category_workshop);
 

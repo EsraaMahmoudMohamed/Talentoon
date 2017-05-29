@@ -1,12 +1,13 @@
 angular.module('myApp').controller("homec",function(Home,$scope,$http,$routeParams,$rootScope,categories){
 
 	$rootScope.token = JSON.parse(localStorage.getItem("token"));
+	$rootScope.cur_user = JSON.parse(localStorage.getItem("cur_user"));
 	console.log($rootScope.token);
 	Home.getTopPosts().then(function(data){
 
 		// console.log(data);
 		$scope.topposts=data;
-console.log("top posts",data[0].post);
+// console.log("top posts",data[0].post);
 	} , function(err){
 		console.log(err);
 

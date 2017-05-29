@@ -8,11 +8,10 @@
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
 	<!-- <script type="text/javascript" src="node_modules/angular-modal-service/dst/angular-modal-service.js"></script> -->
 	<script type="text/javascript" src="node_modules/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="node_modules/aos/dist/aos.js"></script>
+	<script>AOS.init();</script>
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
-
-
 
   	<!-- angular file upload -->
     <script type="text/javascript"  src="node_modules/angular-file-upload/dist/angular-file-upload.js"></script>
@@ -63,13 +62,32 @@
 	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.css">
-	<link rel="stylesheet" href="css/categories.css">
-    <link rel="stylesheet" href="css/categorySelected.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/aos/dist/aos.css">
 	<link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="css/categories.css">
+	<link rel="stylesheet" href="css/categorySelected.css">
     <link rel="stylesheet" href="css/fonts.css">
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
+
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+	<script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(["init", {
+            appId: "5e0081b4-a54d-46be-b6bb-a42fa5af576b",
+            autoRegister: false, /* Set to true to automatically prompt visitors */
+            subdomainName: 'simona',
+			/*
+			 subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
+			 */
+            httpPermissionRequest: {
+                enable: true
+            },
+            notifyButton: {
+                enable: true /* Set to false to hide */
+            }
+        }]);
+	</script>
 
 </head>
 <body>
@@ -109,7 +127,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <!--            main links-->
                         <ul class="nav navbar-nav">
-                            <li ><a href="#">Home</a></li>
+                            <li ><a href="#!/">Home</a></li>
                             <li class="dropdown">
 
                                 <!--                                drop menu for categories-->
@@ -134,7 +152,6 @@
 
                             <li><a href="#">Workshops</a></li>
                             <li><a href="#">Posts</a></li>
-														<li ><a href="#!/myprofile">my profile</a></li>
                             <li ><a href="#!/categories">categories</a></li>
 
                         </ul>
@@ -143,7 +160,7 @@
                         <!--                    main 4 link on lg right-->
                         <ul class="navbar-left list-unstyled list-inline">
                             <li><a href="#"> Store</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a href="#!/initial_review">Initial review</a></li>
                             <li><a href="#">Competition</a></li>
                             <li><a href="#">Questionnaire</a></li>
                         </ul>
@@ -168,11 +185,11 @@
 
 
 							<!-- if logged in : -->
-							<ay7aga ng-if="token != 5">
+							<logged ng-if="token">
 								<li class="dropdown">
-	                                <a href="#" id="userpic" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="Persons/face3.jpg" alt=""><span class="caret"></span></a>
+	                                <a href="#" id="userpic" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="http://localhost:8000/{{cur_user.image}}" alt=""><span class="caret"></span></a>
 	                                <ul class="dropdown-menu">
-	                                    <li><a href="#">Profile</a></li>
+	                                    <li><a href="#!/myprofile">Profile</a></li>
 	                                    <li><a href="#">Settings</a></li>
 	                                    <li role="separator" class="divider"></li>
 	                                    <li><a href="#">Log Out</a></li>
@@ -193,16 +210,16 @@
 
 	                                </ul>
 	                            </li>
-							</ay7aga>
+							</logged>
 
-							<!-- <notlogged ng-if="token == 5"> -->
+							<notlogged ng-if="! token">
 								<!-- else if not logged in -->
 	                            <!--                            btn register-->
 	                          <a href="#!/login">  <button type="button" class="btn btn-default">Log In </button></a>
 
 	                           <a href="#!/register"> <button type="button" class="btn btn-primary ">Sign Up</button></a>
 
-							<!-- </notlogged> -->
+							</notlogged>
 
                         </ul>
                         <!--                 end  nav right-->
@@ -298,6 +315,11 @@
         }
       }
     }]);
+  </script>
+  <script type="text/javascript">
+	  $(window).on('load', function() {
+	  AOS.refresh();
+	});
   </script>
 
 </body>
