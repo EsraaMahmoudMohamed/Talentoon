@@ -33,6 +33,31 @@ return response()->json(['status' => 1,
         ->select('posts.*')
         ->where("posts.user_id",$user->id)
         ->get();
+
+
+
+
+      //   // for($i=0;$i<count($post);$i++){
+      //   for($i=0;$i<count($post);$i++){
+      //     $countlike = DB::table('likeables')
+      //
+      // ->join('posts','likeables.likeable_id', '=',$post[$i]->id)
+      // ->select(DB::raw('count(likeables.liked) as liked_count','likeables.liked'))
+      // ->where([
+      //    ['likeables.likeable_id','=',$post[$i]->id,
+      //    ['likeables.liked', '=', '1']
+      //   ]])
+      // ->groupBy('likeables.liked')
+      //
+      // ->get();
+      //   }
+
+
+
+
+
+
+
     return response()->json(['status' => 1,
                     'message' => 'user data send successfully',
                   'user_id'=>$user->id,
@@ -40,6 +65,7 @@ return response()->json(['status' => 1,
                 'last_name'=>$user->last_name,
                 'image'=>$user->image,
                 'post'=>$post,
+                'countlike'=>$countlike
               ]);
 
 
