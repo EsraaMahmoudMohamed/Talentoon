@@ -19,6 +19,7 @@ class CreateEventsTable extends Migration
             $table->date('date_from');
             $table->date('date_to');
             $table->string('location');
+            $table->string('title');
             $table->string('description');
             $table->boolean('is_approved');
             $table->boolean('is_paid');
