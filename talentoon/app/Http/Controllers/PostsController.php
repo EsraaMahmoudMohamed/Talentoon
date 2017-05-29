@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Like;
+use App\Services\Notification;
 use DB;
 class PostsController extends Controller
 {
@@ -134,6 +135,11 @@ class PostsController extends Controller
 //            dd($data);
         }
 //        dd($data);
+//        $notify=new Notification();
+//        $device=$notify->addDevice();
+//        $response = $notify->sendMessageAll();
+//        $return["allresponses"] = $response;
+//        $return = json_encode( $return);
         return response()->json(['msg'=>'success','posts'=>$data]);
     }
     public function destroy($id)
@@ -162,7 +168,6 @@ public function showSinglePost($post_id){
 
 
 }
-
 
 
 }
