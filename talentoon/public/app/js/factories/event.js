@@ -12,14 +12,16 @@ angular.module('myApp').factory("event",function($q,$http,$rootScope){
                 url: 'http://localhost:8000/api/categories/' + eventdata.category_id + '/events',
                 method: 'POST',
                 data: eventdata
+
             }).then(function (res) {
 
-                console.log("____________in res add post ", res.data.id)
+                console.log("____________in res add post ", res.data)
                 console.log("____________media type ", $rootScope.currentFile.type)
                 console.log('_________', $rootScope.currentFile.name)
-
+                console.log("____________in res add post ", res.data.id)
 
                 /////////////////////////
+
                 $http({
                     method: 'POST',
                     url: 'http://localhost:8000/api/event_upload/' + res.data.id,

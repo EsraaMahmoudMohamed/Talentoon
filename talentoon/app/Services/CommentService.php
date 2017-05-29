@@ -12,23 +12,23 @@ use DB;
 class CommentService
 {
 
-    public function CreateComment($request){
+    public function CreateComment($request,$user_id){
 
 
 
         Comment::create(array(
             'text' => $request['text'],
-            'user_id' => $request['user_id'],
+            'user_id' => $user_id,
             'commentable_id' => $request['commentable_id'],
             'commentable_type' => $request['commentable_type']
         ));
 
         return Response::json(array('success' => true));
     }
-    public function DeleteComment($data){
+    public function DeleteComment($data,$id){
 
         //let id will be comment_id which will be deleted
-        $id=1;
+
         $affectedRows = Comment::where('id', '=', $id)
             ->where('user_id', '=', $data['user_id'])
             ->where('commentable_id','=',$data['commentable_id'])

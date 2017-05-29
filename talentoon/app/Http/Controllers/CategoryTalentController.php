@@ -24,7 +24,6 @@ class CategoryTalentController extends Controller
     }
 
     public function update(Request $request) {
-
         $CTS_Obj=new CategoryTalentService();
 
         $response=$CTS_Obj->mentorApprove($request);

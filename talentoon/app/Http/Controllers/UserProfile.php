@@ -10,7 +10,7 @@ use DB;
 
 class UserProfile extends Controller
 {
-    //
+
   public function index(Request $request){
 
 $user= JWTAuth::parseToken()->toUser();
