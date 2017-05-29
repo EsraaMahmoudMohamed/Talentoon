@@ -7,10 +7,15 @@ use App\Services\EventService;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Event;
 use DB;
+use JWTAuth;
+
 class EventController extends Controller
 {
+
+
     public function index(){
 
+//            $user->id;
             $data = DB::table('events')
                 ->join('users', 'users.id', '=', 'events.mentor_id')
                 ->select('events.*','users.first_name as first_name', 'users.last_name as last_name', 'users.image as user_image')
@@ -21,11 +26,13 @@ class EventController extends Controller
     //store the created events
     public function store(Request $request)
     {
+        $user= JWTAuth::parseToken()->toUser();
+        return $user;
         $new_event= new EventService();
         $event=$request->all();
-        $data = $new_event->add_event($event);
+        $data = $new_event->add_event($event,$user->id);
 //        return response()->json(['data' => $data,'status' => '1','message' => 'data sent successfully']);
-        return $data;
+        return response()->json(['data'=>$data]);
     }
     //to give the creator the avaliblity to update in event's data
     //it is'nt found in back log

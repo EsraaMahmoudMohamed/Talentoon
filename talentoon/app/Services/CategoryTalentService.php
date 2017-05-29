@@ -7,6 +7,7 @@ use App\Http\Requests;
 use DB;
 use Tymon\JWTAuth\JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
+use JWTAuth;
 
 class CategoryTalentService
 {

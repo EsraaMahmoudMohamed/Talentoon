@@ -11,8 +11,9 @@ use Carbon\Carbon ;
 class CategoryMentorService
 {
 
-    public function beMentor($mentor_data){
-//        dd($mentor_data['id']);
+    public function beMentor($mentor_data,$mentor_id){
+
+//        dd($mentor_id);
     $rules = [
 //        $mentor_data['id'] => 'required|unique:category_mentors',
 //        $mentor_data['mentor_id'] =>'required|numeric',
@@ -22,8 +23,8 @@ class CategoryMentorService
 
     ];
     $messages=[
-        $mentor_data['mentor_id'].'required' => 'you didn\'t choose a mentor',
-        $mentor_data['mentor_id'].'numeric' => 'mentor id is numeric',
+//        $mentor_data['mentor_id'].'required' => 'you didn\'t choose a mentor',
+//        $mentor_data['mentor_id'].'numeric' => 'mentor id is numeric',
         $mentor_data['category_id'].'required' => 'you didn\'t choose a category',
         $mentor_data['category_id'].'numeric' => 'category id is numeric',
         $mentor_data['experience'].'required' => 'experience is required',
@@ -37,8 +38,8 @@ class CategoryMentorService
     if ($validator->passes())
     {
 
-        $mentor = DB::table('subscribers')
-            ->where('mentor_id', '=', $mentor_data->mentor_id)
+        $mentor = DB::table('category_mentors')
+            ->where('mentor_id', '=', $mentor_id)
             ->where('category_id', '=', $mentor_data->category_id)
             ->first();
         if (is_null($mentor)) {
@@ -51,8 +52,7 @@ class CategoryMentorService
         }
 
     }else{
-        //al validation sa7 bass na2s an ab3t al message al json de ll client
-;
+
         return response()->json(['errors'=>$validator->messages()]);
 //
 
@@ -61,10 +61,10 @@ class CategoryMentorService
 
     }
 
-    public function UnMentor($update_data){
+    public function UnMentor($update_data,$mentor_id){
 
         $category=$update_data['category_id'];
-        $mentor=$update_data['mentor_id'];
+        $mentor=$mentor_id;
 
 
 
