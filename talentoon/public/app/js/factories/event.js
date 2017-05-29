@@ -14,8 +14,9 @@ angular.module('myApp').factory("event",function($q,$http,$rootScope){
                 data: eventdata
 
             }).then(function (res) {
+              console.log("____________in res add post ", res)
 
-                console.log("____________in res add post ", res.data)
+                console.log("____________in res  data add post ", res.data)
                 console.log("____________media type ", $rootScope.currentFile.type)
                 console.log('_________', $rootScope.currentFile.name)
                 console.log("____________in res add post ", res.data.id)
