@@ -9,6 +9,7 @@ use Response;
 use Illuminate\Http\Request;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
+use App\Services\Notification;
 
 
 class CategoriesController extends Controller
@@ -43,6 +44,7 @@ class CategoriesController extends Controller
         // $path=$categories[0]->getAttributes()['image'];
         // $categories[5]->getAttributes()['image'] = '/uploads/files/'.$categories[5]->getAttributes()['image'];
         // dd($categories[5]->getAttributes()['image']);
+
         return response()->json(['user' => $user,'data' => $categories,'status' => '1','message' => 'data sent successfully'
                 ]);
         // return view('categories.index',['categories'=>$categories]);
@@ -82,6 +84,7 @@ class CategoriesController extends Controller
         $category=Category::find($id);
         $posts=Post::where('category_id','=', $id)->get();
         $workshops=WorkShop::where('category_id','=', $id)->get();
+
 
         // dd($posts);
         // dd(response()->json(['category_details' => $category,'posts' => $posts,'status' => '1','message' => 'data sent successfully']));

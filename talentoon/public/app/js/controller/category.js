@@ -452,9 +452,10 @@ console.log(obj);
 				$scope.cat_id=index;
 				var user_id=1;
 				categories.getCategoryWorkshop(id).then(function(data){
-						// console.log("inside controller" , data)
+						console.log("inside controller" , data)
 						$rootScope.category_workshop=data.workshop;
 						$rootScope.userId=data.user.id;
+						$rootScope.enroll=data.enroll;
 						// $rootScope.category_post = localStorage.getItem("data");
 						console.log("single workshop from controller",$rootScope.category_workshop);
 
