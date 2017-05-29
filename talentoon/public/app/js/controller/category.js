@@ -1,7 +1,8 @@
 angular.module('myApp').controller("categories",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,$q){
 
 	$rootScope.token = JSON.parse(localStorage.getItem("token"));
-	console.log($rootScope.token);
+	$rootScope.cur_user = JSON.parse(localStorage.getItem("cur_user"));
+	console.log("category controller current user",$rootScope.cur_user);
 	var filesuploaded = []
     var filesmentoruploaded = []
     var reviewfilesuploaded=[]
