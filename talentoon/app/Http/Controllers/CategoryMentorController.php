@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\CategoryMentorService;
 use Illuminate\Support\Facades\Auth;
+use DB;
 use JWTAuth;
 class CategoryMentorController extends Controller
 {
@@ -35,5 +36,11 @@ class CategoryMentorController extends Controller
         }else{
             return response()->json(['status' => 0, 'message' => 'unkown action']);
         }
+    }
+    public function get_mentor_details(Request $request,$id){
+        $mentor = DB::table('users')
+            ->where('id', '=', $id)
+            ->first();
+        return response()->json(['status' => 1,'mentor'=>$mentor, 'message' => 'Mentor details retrieved successfully']);
     }
 }

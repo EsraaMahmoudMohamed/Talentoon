@@ -38,7 +38,6 @@ class EventService
             ->select('users.*', 'categories.title as category_title', 'users.first_name', 'users.last_name', 'users.image')
             ->where("events.id",$id)
             ->get();
-        dd($event);
         return response()->json(['event' => $event,'status' => '1','message' => 'data sent successfully']);
 
 

@@ -24,7 +24,6 @@ Route::post('/categorytalent',[
 Route::resource('categories.posts','PostsController');
 
 Route::resource('categories.events','EventController');
-//Route::post('/categories/1/events','EventController@store');
 
 Route::get('/mostLikeabe','PostsController@mostLikablePosts');
 
@@ -101,6 +100,11 @@ Route::get('/post/{post_id}','PostsController@showSinglePost');
 Route::post('/review_files_upload/{category_talent_id}', 'UploadController@review_files_upload');
 Route::post('/workshop_upload/{id}', 'UploadController@workshop_upload');
 Route::post('/share','ShareController@store');
-Route::get('/workshop/{workshop_id}','WorkShopsController@showSingleWorkshop');
+Route::get('/workshop/{workshop_id}','WorkShopsController@show');
 
 Route::post('/workshop_enroll','WorkShopsController@enroll');
+
+
+Route::get('/categorymentor/get_mentor_details/{mentor_id}', 'CategoryMentorController@get_mentor_details');
+Route::post('/conference/add_teacher', 'VideoConferenceController@add_wiziq_teacher');
+Route::post('/conference/create_class', 'VideoConferenceController@create_wiziq_class');
