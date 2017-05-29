@@ -137,7 +137,14 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                     controller: 'oneCategory'
                 })
 
-        $httpProvider.interceptors.push(['$q', '$location', function ($q, $location) {
+
+                .when('/videoconference', {
+                    templateUrl: 'views/create_video_conference_class.html',
+                    controller: 'videoconference'
+                })
+
+
+    $httpProvider.interceptors.push(['$q', '$location', function ($q, $location) {
                 return {
                     'request': function (config) {
                         config.headers = config.headers || {};

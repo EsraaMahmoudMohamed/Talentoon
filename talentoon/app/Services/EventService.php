@@ -6,9 +6,10 @@ use App\Models\Event;
 use App\Http\Requests;
 use DB;
 
+
 class EventService
 {
-    public function add_event($request){
+    public function add_event($request,$mentor_id){
 //        dd($request);
 
         $A=Event::create(array(
@@ -19,7 +20,7 @@ class EventService
             'location' => $request['location'],
             'description' => $request['description'],
 //            'is_approved' => $request['is_approved'],
-            'mentor_id' => $request['mentor_id'],
+            'mentor_id' => $mentor_id,
             'is_paid' => $request['is_paid'],
             'category_id' => $request['category_id'],
 //            'media_url' => $request['media_url'],

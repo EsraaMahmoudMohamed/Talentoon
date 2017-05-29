@@ -43,7 +43,7 @@ angular.module('myApp').controller("oneCategory",function($location,$scope,$http
 	});
 
 
-	$scope.completeTalentProfile = function(){
+    $scope.completeTalentProfile = function(){
 
 		if (reviewfilesuploaded.length > 0)
 		{
@@ -126,19 +126,16 @@ angular.module('myApp').controller("oneCategory",function($location,$scope,$http
         mentor.experience =$scope.mentor.experience;
         mentor.status=0;
 
-
         console.log("Mentor Object is ",mentor);
 
-    categories.complete_mentor_profile(mentor).then(function(data){
-        console.log(data)
+		categories.complete_mentor_profile(mentor).then(function(data){
+			console.log(data)
+			console.log("in complete mentor profile")
 
-        }, function (err) {
-                console.log(err)
-            });
-
-
-
-
+			}, function (err) {
+					console.log(err)
+					console.log("in complete mentor profile error")
+		});
     }
 
     $scope.unmentor = function(){
@@ -162,6 +159,8 @@ angular.module('myApp').controller("oneCategory",function($location,$scope,$http
 
 
     }
+
+
 
 
     //assuming we have user id and the role that define him as mentor
@@ -291,6 +290,19 @@ console.log(obj);
 		});
 
 
+}
+
+
+
+//be teacher in wizIQ
+$scope.add_wiziq_teacher = function() {
+    var mentor_id=1;
+    console.log("Add Wiziq Teacher");
+	videoconference.add_teacher(mentor_id).then(function(data){
+	} , function(err){
+        console.log("Add Wiziq Teacher ERROR section");
+		console.log(err);
+	});
 }
 
 //--------------------------------------------------------------------
