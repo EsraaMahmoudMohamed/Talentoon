@@ -1,7 +1,7 @@
 //angular.module('myApp').config(['$routeProvider', function ($routeProvider) {
 angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
 
-        $routeProvider.when('/', { 
+        $routeProvider.when('/', {
             templateUrl: 'views/home.html',
             controller: 'homec'
         })
@@ -44,19 +44,19 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
 //allposts in category
                 .when('/category/:category_id', {
                     templateUrl: 'views/category.html',
-                    controller: 'categories'
+                    controller: 'oneCategory'
                 })
 
 //user subscribe in category
 
                 .when('/category/subscribe/:category_id/:user_id', {
                     // templateUrl:'views/category.html',
-                    controller: 'categories'
+                    controller: 'oneCategory'
                 })
 
                 .when('/category/unsubscribe/:category_id/:user_id', {
                     // templateUrl:'views/category.html',
-                    controller: 'categories'
+                    controller: 'oneCategory'
                 })
 
 
@@ -115,7 +115,12 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
 
                 .when('/category/:category_id/posts/:post_id', {
                     templateUrl: 'views/categorypost.html',
-                    controller: 'categories'
+                    controller: 'oneCategory'
+                })
+
+                .when('/category/:category_id/events/:event_id', {
+                    templateUrl: 'views/categorypost.html',
+                    controller: 'oneCategory'
                 })
 
                 .when('/myprofile', {
@@ -124,12 +129,12 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                 })
                 .when('/category/:category_id/workshops', {
                     templateUrl: 'views/categoryworkshops.html',
-                    controller: 'categories'
+                    controller: 'oneCategory'
                 })
 
                 .when('/category/:category_id/workshops/:workshop_id', {
                     templateUrl: 'views/categoryworkshop.html',
-                    controller: 'categories'
+                    controller: 'oneCategory'
                 })
 
         $httpProvider.interceptors.push(['$q', '$location', function ($q, $location) {
@@ -138,8 +143,6 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                         config.headers = config.headers || {};
                         var token = JSON.parse(localStorage.getItem("token"));
                         if (token) {
-                            console.log("inside http provider");
-                            console.log("token is:", token);
                             config.headers.Authorization = 'Bearer ' + token;
                         }
                         return config;

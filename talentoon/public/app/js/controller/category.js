@@ -1,4 +1,4 @@
-angular.module('myApp').controller("categories",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,$q){
+angular.module('myApp').controller("oneCategory",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,$q){
 
 	$rootScope.token = JSON.parse(localStorage.getItem("token"));
 	$rootScope.cur_user = JSON.parse(localStorage.getItem("cur_user"));
@@ -8,21 +8,39 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
     var reviewfilesuploaded=[]
 	var talent = {}
     var mentor = {}
-	//
-    // $scope.show = function() {
-    //     ModalService.showModal({
-    //         templateUrl: 'talent_complete_profile.html',
-    //         controller: "talents"
-    //     }).then(function(modal) {
-    //         modal.element.modal();
-    //         modal.close.then(function(result) {
-    //             $scope.message = "You said " + result;
-    //         });
-    //     });
-    // };
-	//
-	//
+	var user_id=1;
 
+	$scope.cat_id= $routeParams['category_id'];
+	$scope.workshop_id=$routeParams['workshop_id'];
+	$scope.event_id=$routeParams['event_id'];
+
+	categories.getCategoryWorkshops($scope.cat_id).then(function(data){
+			$rootScope.categoryWorkshops=data;
+	} , function(err){
+			console.log(err);
+
+	});
+
+
+	categories.getCategoryWorkshop($scope.cat_id,$scope.workshop_id).then(function(data){
+			console.log("inside controller" , data)
+			$rootScope.category_workshop=data.workshop;
+			$rootScope.userId=data.user.id;
+			$rootScope.enroll=data.enroll;
+			// $rootScope.category_post = localStorage.getItem("data");
+			console.log("single workshop from controller",$rootScope.category_workshop);
+
+	} , function(err){
+			console.log(err);
+	});
+
+	categories.getCategoryEvents($scope.cat_id).then(function(data){
+			var user_id=1;
+			$rootScope.events=data;
+	} , function(err){
+			console.log(err);
+
+	});
 
 
 	$scope.completeTalentProfile = function(){
@@ -61,38 +79,6 @@ angular.module('myApp').controller("categories",function($location,$scope,$http,
 		}
 
 	}
-
-
-
-     $scope.submit = function() {
-            // $scope.form.image = filesuploaded;
-            console.log("inside submit scope " ,filesuploaded)
-
-            $http({
-              method  : 'POST',
-              url     : 'http://localhost:8000/api/test',
-              processData: false,
-              transformRequest: function (data) {
-                  var formData = new FormData();
-                  for(var i =0;i< filesuploaded.length;i++){
-                        formData.append("file", filesuploaded[i]);
-                        console.log("file in loop",filesuploaded[i])
-                  }
-
-                  return formData;
-              },
-              data : filesuploaded,
-              headers: {
-                     'Content-Type': undefined,
-                     'Process-Data':false
-              }
-           }).then(function(data){
-                // alert(data);
-                console.log("thennnnnnn",data)
-           });
-
-    };
-
 
 
 
@@ -216,10 +202,8 @@ $scope.comment={};
 //---------------------------------------------------------------
 	//get 3  posts under category
 	// $scope.allposts = function() {
-	var index= $routeParams['category_id'];
-    $scope.cat_id=index;
     var user_id=1;
-    categories.getCategoryPost(index).then(function(data){
+    categories.getCategoryPost($scope.cat_id).then(function(data){
         // console.log("inside controller" , data)
         $scope.category_posts=data;
         // console.log("la2aa",$scope.category_posts);
@@ -229,41 +213,15 @@ $scope.comment={};
         console.log(err);
 
     });
-// }
-//------------------------------------------------------------------
-
-
-// $scope.allposts = function() {
-// var index= $routeParams['category_id'];
-// 	$scope.cat_id=index;
-// 	var user_id=1;
-// 	categories.getCategoryPosts(index).then(function(data){
-// 			// console.log("inside controller" , data)
-// 			$rootScope.categoryAllPosts=data;
-// 			console.log("aLLLLLLL",$rootScope.categoryAllPosts);
-// 			$location.url('/category/'+index+'/posts');
-// 			console.log('/category/'+index+'/posts')
-// 			console.log("all posts under category",$scope.categoryposts);
-//
-//
-// 	} , function(err){
-// 			console.log(err);
-//
-// 	});
-// }
 
 //when click on show all posts
 $scope.allposts = function() {
-var index= $routeParams['category_id'];
-	$scope.cat_id=index;
+
 	var user_id=1;
-	categories.getCategoryPosts(index).then(function(data){
+	categories.getCategoryPosts($scope.cat_id).then(function(data){
 			// console.log("inside controller" , data)
 			$rootScope.categoryPosts=data;
-			$location.url('/category/'+index+'/posts');
-			console.log('/category/'+index+'/posts')
-			console.log("all posts under category",$scope.categoryposts);
-
+			$location.url('/category/'+$scope.cat_id+'/posts');
 
 	} , function(err){
 			console.log(err);
@@ -272,75 +230,26 @@ var index= $routeParams['category_id'];
 }
 //--------------------------------------------------------------
 
-
-
-var index= $routeParams['category_id'];
-	$scope.cat_id=index;
 	var user_id=1;
-	categories.getCategoryPosts(index).then(function(data){
-			// console.log("inside controller" , data)
+	categories.getCategoryPosts($scope.cat_id).then(function(data){
 			$rootScope.category3Posts=data;
-			// $location.url('/category/'+index+'/posts');
-			console.log('/category/'+index+'/posts')
-			console.log("all posts under category",$scope.categoryposts);
-
-
 	} , function(err){
 			console.log(err);
 
 	});
 
-//---------------------------------------------------------------
-//get all post under category
-// $scope.allposts = function() {
-//     $rootScope.cat_id=index;
-//     var user_id=1;
-// 		categories.getAllCategoryPosts(index).then(function(data){
-// 				// console.log("inside controller" , data)
-// 				$scope.categoryposts=data;
-// 				// console.log("la2aa",$scope.category_posts);
-//
-// 		console.log($scope.categoryposts);
-// 		} , function(err){
-// 				console.log(err);
-//
-// 		});
-//
-// }
-	// subscribe in category
-		  // var unsubscribe_status=0;
-		// console.log("user id ",user_id);
-		// 	console.log("cat id",index);
-// var obj={index,user_id,subscribe_status};
-
-
-
 //----------------------------single----post---------------------------------------
-// $scope.singlepost=function(id){
-var index= $routeParams['category_id'];
-var id= $routeParams['post_id'];
-// var id=id
-	$scope.cat_id=index;
+$scope.post_id= $routeParams['post_id'];
 	var user_id=1;
-	categories.getCategoryPost(id).then(function(data){
+	categories.getCategoryPost($scope.post_id).then(function(data){
 			// console.log("inside controller" , data)
 			$rootScope.category_post=data.post;
 			$rootScope.category_post_like_count=data.countlike;
-			// $rootScope.category_post = localStorage.getItem("data");
-			console.log("single post from controller",$rootScope.category_post);
-			console.log("single post from controller like count ",$rootScope.category_post_like_count);
-
 
 	} , function(err){
 			console.log(err);
 	});
 
-
-
-
-
-// }
-//---------------------------------------------------------
 
 // subscribe in category
 $scope.subscribe = function() {
@@ -351,13 +260,9 @@ $scope.subscribe = function() {
 var obj={subscriber_id, category_id,subscribed }
 console.log(obj);
 		categories.subscribe(obj).then(function(data){
-			// $rootScope.status=data;
-			console.log('the data basant is' , data)
 			localStorage.setItem('status',data);
 			$rootScope.status = localStorage.getItem("status");
-			console.log("status in controller",$rootScope.status);
 			 $location.url('/category/'+category_id);
-			// console.log("hiii")
 		} , function(err){
 			console.log(err);
 
@@ -378,7 +283,6 @@ console.log(obj);
 			localStorage.setItem('status',data);
 			$rootScope.status = localStorage.getItem("status");
 			// $rootScope.status=data;
-			console.log("status in controller",$rootScope.status);
 			  $location.url('/category/'+category_id);
 			// console.log("hiii")
 		} , function(err){
@@ -403,22 +307,13 @@ console.log(obj);
 
 			});
 
-		categories.getCategoryWorkshop(index).then(function(data){
-		        // console.log("inside controller" , data)
-		$rootScope.category_workshops=data;
-		        // console.log("la2aa",$scope.category_posts);
-		console.log($scope.category_workshops);
-		    } , function(err){
-		        console.log(err);
 
-		    });
 
 
 			$scope.allworkshops = function() {
-			var index= $routeParams['category_id'];
-				$scope.cat_id=index;
+
 				var user_id=1;
-				categories.getCategoryWorkshops(index).then(function(data){
+				categories.getCategoryWorkshops($scope.cat_id).then(function(data){
 						$rootScope.categoryWorkshops=data;
 
 						console.log("all workshops under category",data);
@@ -431,37 +326,10 @@ console.log(obj);
 			}
 
 
-				categories.getCategoryWorkshops(index).then(function(data){
-						var index= $routeParams['category_id'];
-						$scope.cat_id=index;
-						var user_id=1;
-						$rootScope.categoryWorkshops=data;
-						console.log('/category/'+index+'/workshops')
-						console.log("all workshops under category",$scope.categoryworkshops);
 
 
-				} , function(err){
-						console.log(err);
-
-				});
 
 
-			var index= $routeParams['category_id'];
-			var id= $routeParams['workshop_id'];
-			// var id=id
-				$scope.cat_id=index;
-				var user_id=1;
-				categories.getCategoryWorkshop(id).then(function(data){
-						console.log("inside controller" , data)
-						$rootScope.category_workshop=data.workshop;
-						$rootScope.userId=data.user.id;
-						$rootScope.enroll=data.enroll;
-						// $rootScope.category_post = localStorage.getItem("data");
-						console.log("single workshop from controller",$rootScope.category_workshop);
-
-				} , function(err){
-						console.log(err);
-				});
 
 
 

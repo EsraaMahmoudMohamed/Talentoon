@@ -33,13 +33,11 @@ class EventController extends Controller
 
     }
     //by clicking on the event a page is opened to see it's contents
-    public function show(Request $request){
-
+    public function show($cat_id, $event_id){
+        return response()->json(['eventttttttttttttt' => $event_id]);
         $new_event= new EventService();
-        $event=$request->all();
-        $data = $new_event->show_event($event);
+        $data = $new_event->show_event($event_id);
         return $data;
-
     }
 
 }
