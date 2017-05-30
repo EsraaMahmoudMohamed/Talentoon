@@ -456,15 +456,15 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
 			return def.promise ;
 
 		},
-        getCategoryWorkshop: function (cat_id,workshop_id) {
+        getCategoryWorkshop: function (id) {
             //  var category_id= index;
             // // console.log("category_id",category_id)
             // console.log("workshop id", id)
             var def = $q.defer();
             $http({
-                url: 'http://localhost:8000/api/categories/' + cat_id+'/workshops/'+workshop_id,
+                url: 'http://localhost:8000/api/workshop/'+id,
                 method: 'GET',
-                // data: id
+                data: id
             }).then(function (res) {
                 console.log("single workshop from factory",res.data)
                 // console.log("user",res.data.user);
