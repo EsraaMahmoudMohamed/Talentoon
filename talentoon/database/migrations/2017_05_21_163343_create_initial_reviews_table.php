@@ -29,7 +29,7 @@ class CreateInitialReviewsTable extends Migration
             $table->foreign('review_media_id')->references('id')->on('review_media')->onDelete('cascade');
 
 
-            $table->string('points');
+            $table->integer('level_single');
             $table->string('comment');
 
 

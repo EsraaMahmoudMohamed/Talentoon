@@ -57,7 +57,7 @@ class AdminCategoryController extends Controller
         $fileName = 'null';
         if ($request->hasFile('image')) {
             if($request->file('image')->isValid()) {
-            $destinationPath = public_path('uploads/files');
+            $destinationPath = public_path('uploads/categories_pic');
            $extension =$request->file('image')->getClientOriginalExtension();
            $fileName = uniqid().'.'.$extension;
            $request->file('image')->move($destinationPath, $fileName);
@@ -65,7 +65,7 @@ class AdminCategoryController extends Controller
    }
          Category::create([
             'title' => $data['title'],
-            'image' => $fileName,
+            'image' => 'uploads/categories_pic/'.$fileName,
         ]);
         return redirect()->route('category.index');
     }
