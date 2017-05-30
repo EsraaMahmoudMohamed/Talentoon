@@ -1,9 +1,9 @@
-@extends('../../layouts/app')
+@extends('layouts/admin')
 @section('title')
     news create
 @endsection
 
-@section('content')
+@section('body')
 
     welcome from create news
     @if(count($errors) > 0)
@@ -26,7 +26,7 @@
             <label> Enter Description</label>
             <input type="text" name="description">
             <br>
-            <label> Enter Category</label>
+            <label> Enter Country</label>
 
             <select id="category_id" name="category_id">
             @foreach ($categories as $category)

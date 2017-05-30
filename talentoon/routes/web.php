@@ -20,11 +20,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('categories.posts','PostsController');
 Route::resource('category','CategoriesController');
-//Route::resource('/posts/{id}','PostsController');
+Route::resource('/posts','PostsController');
 
 
-//Route::get('/posts/create', 'PostsController@create');
-//Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
+Route::get('/posts/create', 'PostsController@create');
+Route::post('/posts/',['uses'=> 'PostsController@store','as'=>'post.store']);
 
 
 
@@ -34,9 +34,6 @@ Route::prefix('admin')->group(function(){
   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
   Route::get('/', 'Admin\AdminController@index')->name('admin.dashboard');
-  Route::get('/register','Auth\AdminRegisterController@create')->name('admin.register.form');
-  Route::post('/register','Auth\AdminRegisterController@store')->name('admin.register');
-
 
   Route::resource('post','Admin\AdminPostController');
   Route::resource('category','Admin\AdminCategoryController');

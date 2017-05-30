@@ -23,12 +23,6 @@
         "classmap": [
             "database"
         ],
-        "files": [
-            "/var/www/html/Talentoon_backup_before_wiziq/talentoon/app/Http/Controllers/WizIQClass/AuthBase.php",
-            "/var/www/html/Talentoon_backup_before_wiziq/talentoon/app/Http/Controllers/WizIQClass/WiZiQService.php",
-            "/var/www/html/Talentoon_backup_before_wiziq/talentoon/app/Http/Controllers/WizIQClass/AddTeacher.php",
-            "/var/www/html/Talentoon_backup_before_wiziq/talentoon/app/Http/Controllers/WizIQClass/EditTeacher.php"
-        ],
         "psr-4": {
             "App\\": "app/"
         }

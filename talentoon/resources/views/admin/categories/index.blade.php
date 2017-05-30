@@ -1,9 +1,9 @@
-@extends('../../layouts/app')
+@extends('layouts.admin')
 @section('title')
     category show
 @endsection
 
-@section('content')
+@section('body')
 <a class="btn btn-danger" href="{{route('category.create')}}">Create</a>
 
     <table class="table table-striped" border="1">

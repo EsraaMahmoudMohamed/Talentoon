@@ -1,9 +1,9 @@
-@extends('../../layouts/app')
+@extends('layouts.admin')
 @section('title')
     Edit Post
 @endsection
 
-@section('content')
+@section('body')
 
     welcome from Edit post
     <form method="POST" action="{{route('category.update',$category->id)}}}">

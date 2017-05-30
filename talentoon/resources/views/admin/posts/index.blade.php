@@ -1,9 +1,9 @@
-@extends('../../layouts/app')
+@extends('layouts.admin')
 @section('title')
     post show
 @endsection
 
-@section('content')
+@section('body')
 
     <table class="table table-striped" border="1">
       <thead>

@@ -41,8 +41,9 @@ class InitialReviewController extends Controller
      */
     public function store(Request $request)
     {
-        // $data = '{"mentor_initial_review":[{"category_talent_id":"1","category_mentor_id":"1","review_media_id":"1","points":"2","comment":"no comment one"},{"category_talent_id":"1","category_mentor_id":"2","review_media_id":"8","points":"2","comment":"no comment two"},{"category_talent_id":"1","category_mentor_id":"1","review_media_id":"9","points":"3","comment":"no comment three"}]}';
-        // $mentor_initial_review = (array)json_decode($data,true);
+
+        $data = '{"mentor_initial_review":[{"category_talent_id":"1","category_mentor_id":"1","review_media_id":"1","points":"2","comment":"no comment one"},{"category_talent_id":"1","category_mentor_id":"2","review_media_id":"8","points":"2","comment":"no comment two"},{"category_talent_id":"1","category_mentor_id":"1","review_media_id":"9","points":"3","comment":"no comment three"}]}';
+        $mentor_initial_review = (array)json_decode($data,true);
 
         $mentor_initial_review = $mentor_initial_review['mentor_initial_review'];
 
@@ -183,30 +184,5 @@ class InitialReviewController extends Controller
     public function destroy(InitialReview $initialReview)
     {
         //
-    }
-
-    public function show_not_reviewed_initial_posts(Request $request,$mentor_id)
-    {
-        $all_media_id=InitialReview::select("review_media_id")->get();
-        $arr=[];
-        for ($i=0; $i <count($all_media_id) ; $i++) {
-            array_push($arr,$all_media_id[$i]['review_media_id']);
-        }
-        $all_initial_posts = DB::table('category_talents')
-            ->join('review_media', 'category_talents.id', '=', 'review_media.category_talent_id')
-            ->join('users', 'category_talents.talent_id', '=', 'users.id')
-            ->join('categories', 'category_talents.category_id', '=', 'categories.id')
-            ->join('initial_reviews', 'category_talents.id', '=', 'initial_reviews.category_talent_id')
-            ->select('category_talents.*','review_media.*', 'categories.title as category_title', 'users.first_name', 'users.last_name', 'users.image')
-            ->whereNotIn("review_media.id", $arr)
-            ->where("initial_reviews.mentor_id","!=",$mentor_id)
-            ->get();
-        return response()->json(['all_initial_posts' => $all_initial_posts,'status' => '1','message' => 'data sent successfully']);
-    }
-
-    public function store_single_review(Request $request)
-    {
-        InitialReview::create($request->all());
-        return response()->json(['status' => '1','message' => 'review saved successfully']);
     }
 }

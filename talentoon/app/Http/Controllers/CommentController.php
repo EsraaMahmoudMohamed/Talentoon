@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Services\CommentService;
 use \Response;
-use JWTAuth;
 
 class CommentController extends Controller
 {
@@ -28,10 +27,10 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        $user= JWTAuth::parseToken()->toUser();
+
 
         $comment=new CommentService();
-        $data=$comment->CreateComment($request,$user->id);
+        $data=$comment->CreateComment($request);
 
         return Response::json(array('message' => $data));
     }
@@ -45,13 +44,9 @@ class CommentController extends Controller
     public function destroy(Request $request)
     {
         //will be checked later
-
-        // dd($request->all());
-
-//        dd('simonaaaaaaaaaa');
-        $user= JWTAuth::parseToken()->toUser();
+        dd($request->all());
         $comment=new CommentService();
-        $data=$comment->DeleteComment($request,$user->id);
+        $data=$comment->DeleteComment($request);
 
         return Response::json(array('message' => $data));
     }

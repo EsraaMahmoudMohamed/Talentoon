@@ -1,14 +1,14 @@
-@extends('../../layouts/app')
+@extends('layouts.admin')
 @section('title')
     post show
 @endsection
 
-@section('content')
+@section('body')
 
     welcome from show post
     <ul>
       <li>Title:->  {{$category->title}}</li>
-      <li>Image:-> <img src={{asset("$category->image")}} width="100" height="100" ></li>
+      <li>Image:-> <img src={{asset("/uploads/files/$category->image")}} width="100" height="100" ></li>
     </ul>
 
 @endsection
