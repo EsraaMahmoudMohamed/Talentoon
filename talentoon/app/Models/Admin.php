@@ -8,8 +8,6 @@ use Illuminate\Support\Facades\Route;
 
 class Admin extends Authenticatable
 {
-    protected $table = 'admins';
-
     use Notifiable;
     protected $guard='admin';
 

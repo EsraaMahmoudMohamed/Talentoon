@@ -1,9 +1,9 @@
-@extends('../../layouts/app')
+@extends('layouts.admin')
 @section('title')
     category show
 @endsection
 
-@section('content')
+@section('body')
 <a class="btn btn-danger" href="{{route('news.create')}}">Create</a>
 
     <table class="table table-striped" border="1">
@@ -21,7 +21,7 @@
                   <td>{{$news->title}}</td>
                   <td>{{$news->description}}</td>
                   <td>{{$news->name}}</td>
-                  <td>{{$news->cat_title}}</td>
+                  <td>{{$news->title}}</td>
                   <td><form method="post" action="{{route('news.destroy',$news->id)}}">
                   <input name="_method" type="hidden" value="DELETE">
                   <div class="form-group">

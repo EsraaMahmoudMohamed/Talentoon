@@ -21,8 +21,6 @@ class CreatePostsTable extends Migration
             $table->boolean('is_approved')->default(0);
             $table->integer('category_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->string('media_url');
-            $table->string('media_type');
         });
     }
 

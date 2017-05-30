@@ -15,7 +15,6 @@ class Like extends Model
         'user_id',
         'likeable_id',
         'likeable_type',
-        'liked',
     ];
 
     /**

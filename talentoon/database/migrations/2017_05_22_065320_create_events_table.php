@@ -19,12 +19,11 @@ class CreateEventsTable extends Migration
             $table->date('date_from');
             $table->date('date_to');
             $table->string('location');
-            $table->string('title');
             $table->string('description');
             $table->boolean('is_approved');
             $table->boolean('is_paid');
-            $table->integer('category_id')->unsigned()->nullable();
-            $table->integer('mentor_id')->unsigned()->nullable();
+            $table->integer('category_id')->unsigned();
+            $table->integer('mentor_id')->unsigned();
             $table->foreign('mentor_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });

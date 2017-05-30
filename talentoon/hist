@@ -1,0 +1,500 @@
+   41  rails g migration lectures_users
+   42  rake db:migrate
+   43  rails s
+   44  rails s
+   45  bundle install
+   46  rails generate devise:install User
+   47  rails s
+   48  cd /usr/lib/cgi-bin
+   49  perl test.pl
+   50  perl test.pl /etc/passwd
+   51  perl test.pl /etc/passwd
+   52  cat /etc/passwd grep|nnmms
+   53  cat /etc/passwd grep | nnmms
+   54  grep "nnmms" /etc/passwd
+   55  perl test.pl grep "nnmms" /etc/passwd
+   56  perl test.pl grep "nnmms" /etc/passwd
+   57  perl test.pl /etc/passwd nnmms
+   58  perl test.pl /etc/passwd nnmms
+   59  perl test.pl /etc/passwd nnmms
+   60  perl test.pl /etc/passwd nnmms
+   61  perl test.pl /etc/passwd nnmms
+   62  perl test.pl /etc/passwd nnmms
+   63  perl test.pl /etc/passwd root
+   64  perl test.pl /etc/passwd root
+   65  perl test.pl /etc/passwd root
+   66  perl test.pl /etc/passwd root
+   67  perl test.pl /etc/passwd roasd
+   68  perl test.pl /etc/passwd roasd
+   69  perl test.pl /etc/passwd roaot
+   70  perl test.pl /etc/passwd roat
+   71  perl test.pl /etc/passwd root
+   72  perl test.pl /etc/passwd root
+   73  perl test.pl /etc/passwd root
+   74  perl test.pl /etc/passwd root
+   75  perl test.pl /etc/passwd root
+   76  sudo touch text.txt
+   77  sudo gedit text.txt
+   78  perl test.pl text.txt 
+   79  perl test.pl text.txt 
+   80  perl test.pl text.txt 
+   81  perl test.pl text.txt 
+   82  perl test.pl text.txt 
+   83  perl test.pl text.txt 
+   84  perl test.pl text.txt 
+   85  perl test.pl text.txt 
+   86  perl test.pl text.txt 
+   87  perl test.pl text.txt 
+   88  perl test.pl text.txt 
+   89  perl test.pl text.txt 
+   90  perl test.pl text.txt 
+   91  perl test.pl text.txt 
+   92  sudo touch text1.txt
+   93  sudo gedit text1.txt
+   94  perl test.pl
+   95  perl test.pl
+   96  perl test.pl
+   97  perl test.pl
+   98  perl test.pl
+   99  perl test.pl
+  100  perl test.pl
+  101  perl test.pl
+  102  perl test.pl
+  103  sudo cpan
+  104  sudo cpan
+  105  ls
+  106  sudo gedit test.pl 
+  107  perl test.pl
+  108  fg
+  109  perl test.pl
+  110  fg
+  111  perl test.pl
+  112  fg
+  113  perl test.pl
+  114  fg
+  115  perl test.pl
+  116  jobs
+  117  fg
+  118  perl test.pl
+  119  fg
+  120  perl test.pl
+  121  fg
+  122  perl test.pl
+  123  fg
+  124  perl test.pl
+  125  fg
+  126  rails new mooc1
+  127  bundle install
+  128  cd mooc1
+  129  bundle install
+  130  rails generate devise:install
+  131  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  132  rails generate devise User
+  133  rake db:migrate
+  134  rails generate User:views
+  135  rails generate user:views
+  136  rails generate users:views
+  137  rails generate devise:views
+  138  rails generate devise:views users
+  139  rails s
+  140  rails g migration users
+  141  rake db:migrate
+  142  rails s
+  143  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');
+  144  php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  145  php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  146   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  147  php -r "if (hash_file('SHA384', 'composer-setup.php') === '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  148  php composer-setup.php
+  149  php -r "unlink('composer-setup.php');"
+  150  sudo mv composer.phar /usr/local/bin/composer
+  151  composer --version
+  152  composer create-project --prefer-dist laravel/laravel laravelblog
+  153  php --version
+  154  composer require barryvdh/laravel-ide-helper
+  155  cd laravelblog/
+  156  php artisan clear-compiled
+  157  php artisan ide-helper:generate
+  158  php artisan clear-compiled
+  159  php artisan ide-helper:generate
+  160  composer dumpautoload
+  161  php artisan clear-compiled
+  162  composer require barryvdh/laravel-ide-helper
+  163  php artisan clear-compiled
+  164  php artisan ide-helper:generate
+  165  php artisan optimize
+  166  artisian
+  167  artisan
+  168  php artisan serve 
+  169  php artisan serve
+  170  php artisan make:controller PostsController
+  171  php artisan make:controller posts
+  172  php artisan make:controller PostsController
+  173  php artisan serve
+  174  php artisan make:migration create_posts_table --create=posts
+  175  php artisan migrate
+  176  php artisan migrate
+  177  mysql
+  178  mysql -u root -p
+  179  php artisan migrate
+  180  php artisan serve
+  181  php artisan serve
+  182  php artisan make:model Post 
+  183  php artisan serve
+  184  php artisan make:migration create_comments_table --create=comments
+  185  php artisan migrate
+  186  php artisan make:model comment
+  187  php artisan make:migration add_foreignkey_to_comments comments
+  188  php artisan make:migration add_foreignkey_to_comments=comments
+  189  php artisan make:migration add_foreignkey_to_comments
+  190  php artisan make:migration add_foreignkeypost_to_comments
+  191  php artisan make:migration add_post_id_to_comments --create=comments
+  192  php artisan migrate
+  193  php artisan migrate
+  194  php artisan migrate
+  195  php artisan serve
+  196  php artisan migrate
+  197  php artisan serve
+  198  php artisan serve
+  199  php artisan
+  200  rake routes
+  201  rails s
+  202  rails s
+  203  rails c
+  204  rails generate controller welcome index
+  205  rails s
+  206  cd mooc1
+  207  rails serve
+  208  rails s
+  209  rails s
+  210  rails s
+  211  rails g scaffold course title:string user:references
+  212  rails g scaffold lecture content:string attachment:string course:references user:references
+  213  rake db:migrate
+  214  cd mooc1
+  215  rails s
+  216  rake db:dump
+  217  rake routes
+  218  rake db:dump
+  219  rails s
+  220  sudo gem install mysql
+  221  gem install mysql
+  222  rake db:drop
+  223  rake db:drop
+  224  sudo apt-get install sqlitebrowser
+  225  cd laravelblog/
+  226  php artisan serve
+  227  php artisan
+  228  php artisan make:request posts_validation
+  229  php artisan serve
+  230  php artisan make:request comments_validation
+  231  php artisan serve
+  232  php artisan make:controller CommentsController
+  233  php artisan serve
+  234  cd Desktop
+  235  cd mooc1
+  236  rails s
+  237  rails s
+  238  rails -v
+  239  bundle install
+  240  rails generate migration add_image_to_users
+  241  rake db:migrate
+  242  rails generate uploader Image
+  243  rails generate uploader Image
+  244  rails generate uploader Image
+  245  rails s
+  246  bundle install
+  247  rails s
+  248  rake db:migrate
+  249  rails s
+  250  rails generate uploader Attachment
+  251  rails s
+  252  bundle install 
+  253  rails g acts_as_votable:migration
+  254  rake db:migrate
+  255  rails c
+  256  rails s
+  257  bundle install
+  258  rails g active_admin:install
+  259  rake db:migrate
+  260  rake db:seed
+  261  rails s
+  262  cd Desktop/mooc1/
+  263  rails s
+  264  rails g migration create_lectures_users
+  265  rake db:migrate
+  266  rails s
+  267  rails s
+  268  rails s
+  269  rails s
+  270  rails s
+  271  rails s
+  272  git init
+  273  git clone https://github.com/NNMMs/Mooc.git
+  274  git status
+  275  git add .
+  276  git status
+  277  git status
+  278  git commit -m "mooc project"
+  279  git push origin master
+  280  git status 
+  281  git commit -am 'delete vendor' 
+  282  git push origin master 
+  283  git status 
+  284  git add .
+  285  git status 
+  286  git status
+  287  git add .
+  288  git commit -m "uploading mooc"
+  289  git push origin master
+  290  rails s
+  291  cd mooc1
+  292  rails s
+  293  rails g model Comment content:text user:references lecture:references
+  294  rake db:migrate
+  295  rails g controller comments
+  296  rails c
+  297  rails c
+  298  rails s
+  299  rake routes
+  300  rails s
+  301  Course.connection
+  302  rails c
+  303  rails s
+  304  bundle install
+  305  rails s
+  306  mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
+  307  rails s
+  308  rake routes
+  309  rails s
+  310  rails s
+  311  rails s
+  312  rake routes
+  313  rails s
+  314  bundle
+  315  rails g rspec:install
+  316  rspec spec/models/course_model_rspec.rb 
+  317  rspec spec/models/course_model_rspec.rb 
+  318  rspec spec/models/course_model_rspec.rb 
+  319  rspec spec/models/course_model_rspec.rb 
+  320  rspec spec/models/course_model_rspec.rb 
+  321  rspec spec/models/course_model_rspec.rb 
+  322  rspec spec/models/user_model_rspec.rb 
+  323  rspec spec/models/user_model_rspec.rb 
+  324  rspec spec/models/user_model_rspec.rb 
+  325  rspec spec/models/user_model_rspec.rb 
+  326  rails s
+  327  git init
+  328  gedit .gitignore
+  329  git commit -m "adding ignore file"
+  330  git push origin master
+  331  rails -v
+  332  ruby -v
+  333  cd nodejs/ChatMe/
+  334  ionic run android
+  335  ionic run android
+  336  ionic resources
+  337  ionic run android
+  338  ionic run android
+  339  npm start
+  340  npm start
+  341  npm start
+  342  npm start
+  343  npm start
+  344  npm start
+  345  npm start
+  346  npm start
+  347  npm start
+  348  npm start
+  349  npm start
+  350  npm start
+  351  npm start
+  352  npm start
+  353  npm start
+  354  mongo
+  355  ionic serve
+  356  ionic run android
+  357  ionic run android
+  358  ionic run android
+  359  ionic run android
+  360  ionic run android
+  361  ionic run android
+  362  ionic serve
+  363  git clone https://github.com/NNMMs/ionic_chatApp.git
+  364  git add .
+  365  cd ionic_chatApp/
+  366  git status
+  367  git add .
+  368  git status
+  369  git commit -m "uploading chat app backend and front end"
+  370  git push origin master
+  371  git clone https://github.com/EsraaMahmoudMohamed/Talentoon.git
+  372  mysql -u root -p
+  373  bundle install
+  374  composer install
+  375  cp .env.example .env
+  376  php artisan serve
+  377  php artisan key:generate
+  378  php artisan cache:clear
+  379  php artisan serve
+  380  git status
+  381  git pull
+  382  git status
+  383  git pull
+  384  php artisan migrate
+  385  php artisan migrate
+  386  git pull
+  387  git status
+  388  git status
+  389  git add .
+  390  git commit -m "editing gitignore"
+  391  git pull
+  392  git status
+  393  git add .
+  394  git commit -m "resolving conflict"
+  395  git pull
+  396  php artisan migrate
+  397  git pull
+  398  php artisan migrate
+  399  php artisan migrate:install
+  400  php artisan migrate
+  401  php artisan serve
+  402  php artisan
+  403  php artisan make:controller ProfileController
+  404  php artisan serve
+  405  git status
+  406  git pull
+  407  git add . 
+  408  git commit "commit to pull"
+  409  git commit -m "commit to pull"
+  410  git pull
+  411  php artisan serve
+  412  cd nodejs/ChatMe/
+  413  ionic serve
+  414  ionic run android
+  415  ionic run android
+  416  ionic run android
+  417  ionic run android
+  418  ionic run android
+  419  ionic run android
+  420  ionic run android
+  421  ionic run android
+  422  ionic run android
+  423  ionic run android
+  424  cd nodejs
+  425  cd chatApp\ backend/
+  426  ls
+  427  npm start
+  428  npm start
+  429  npm start
+  430  npm start
+  431  cd nodejs/chatApp\ backend/
+  432  cd
+  433  cd nodejs/ChatMe/
+  434  ionic serve
+  435  clear
+  436  cd
+  437  clear
+  438  cd Talentoon/
+  439  cd talentoon/
+  440  php artisan serve
+  441  cd Talentoon/talentoon/
+  442  php artisan serve
+  443  composer install
+  444  npm install
+  445  npm init
+  446  npm install bootstrap
+  447  php artisan serve
+  448  npm install tether jquery
+  449  php artisan serve
+  450  php artisan serve
+  451  php artisan --version
+  452  mysql -u root -p
+  453  laravel -v
+  454  laravel --version
+  455  php
+  456  composer create-project --prefer-dist laravel/laravel laraveltest
+  457  cd laraveltest/
+  458  php artisan serve
+  459  cd
+  460  cd Talentoon/talentoon/
+  461  php artisan serve
+  462  cd laraveltest
+  463  cd ~/laraveltest/
+  464  ls
+  465  artisan serve
+  466  php artisan 
+  467  artisan make:controller 
+  468  artisan --help make:controller 
+  469  artisan  make:model --help
+  470  artisan  make:model -m -c -r PostController
+  471  artisan  make:contorller --help  -m -c -r PostController
+  472  artisan  make:controller --help
+  473  artisan  make:migrate --help
+  474  artisan  make:migration --help
+  475  artisan  make:controller --help
+  476  artisan  make:model --help
+  477  artisan  make:model Post -m -c
+  478  artisan  make:model Post -m -c -r
+  479  artisan  make:model Post -m -c -r
+  480  artisan  
+  481  artisan  cache:clear
+  482  php
+  483  php -v
+  484  php artisan  cache:clear
+  485  artisan  make:model Post -m -c -r
+  486  php artisan  cache:clear
+  487  artisan  make:model Post -m -c -r
+  488  php artisan  cache:clear
+  489  composer cacheClear
+  490  composer clearCache
+  491  composer clearcache
+  492  php artisan  cache:clear
+  493  artisan  make:model Post -m -c -r
+  494  composer dump-autoload
+  495  php artisan  cache:clear
+  496  composer dump-autoload
+  497  composer dump-autoload
+  498  php artisan  cache:clear
+  499  composer clearcache
+  500  artisan  make:model Post -m -c -r
+  501  cd Desktop
+  502  git clone https://github.com/EsraaMahmoudMohamed/Talentoon.git
+  503  cd Talentoon
+  504  composer install
+  505  cd talentoon
+  506  composer install
+  507  artisan migrate
+  508  cp .env.example .env
+  509  composer install
+  510  composer update dwij/laraadmin
+  511  composer install
+  512  artisan migrate
+  513  artisan make:migration add_soft_delete_to_categories_talents_table
+  514  artisan make:migrate
+  515  artisan migrate
+  516  php artisan  cache:clear
+  517  composer dump-autoload
+  518  composer clearcache
+  519  artisan migrate
+  520  artisan serve
+  521  artisan key:generate
+  522  artisan config:cache
+  523  artisan serve
+  524  composer dump-autoload
+  525  artisan serve
+  526  composer dump-autoload
+  527  artisan serve
+  528  artisan make:model CategoryTalent
+  529  artisan migrate
+  530  artisan --help make:model CategoryTalent
+  531  artisan make:model CategoryTalent -m
+  532  php artisan  cache:clear
+  533  composer dump-autoload
+  534  composer clearcache
+  535  artisan migrate
+  536  artisan serve
+  537  artisan serve
+  538  artisan make:controller CategoryTalentsController
+  539  artisan 
+  540  history > hist
