@@ -103,7 +103,7 @@ class WorkShopsController extends Controller
     {
         //
     }
-    public function show($cat_id,$workshop_id){
+    public function show($workshop_id){
         try {
             //dd($request->all());
             if (!$user = JWTAuth::parseToken()->authenticate()) {
@@ -134,18 +134,33 @@ class WorkShopsController extends Controller
              ['workshop_enrollment.workshop_id','=',$workshop_id]])
               ->groupBy('workshop_enrollment.workshop_id')
               ->get()->first();
-              $countcapacity=get_object_vars($countcapacity);
-              if($countcapacity["workshop_count"]==$capacity){
+    //           $countcapacity=get_object_vars($countcapacity);
+    //           if($countcapacity["workshop_count"]==$capacity){
+    //
+    //     return response()->json(['enroll'=>0,'user'=>$user,'workshop' => $workshop,'message' => 'workshop sent successfully']);
+    //
+    //     }else{
+    //
+    //   return response()->json(['enroll'=>1,'user'=>$user,'workshop' => $workshop,'message' => 'workshop sent successfully']);
+    //     }
+    //
+    //
+    // }
+    if(is_null($countcapacity)){
+        return response()->json(['enroll'=>1,'user'=>$user,'workshop' => $workshop,'message' => 'workshop sent successfully']);
 
-        return response()->json(['enroll'=>0,'user'=>$user,'workshop' => $workshop,'message' => 'workshop sent successfully']);
+    }else{
+    $countcapacity=get_object_vars($countcapacity);
+    if($countcapacity["workshop_count"]==$capacity){
 
-        }else{
+return response()->json(['enroll'=>0,'workshop' => $workshop,'user'=>$user,'message' => 'workshop sent successfully']);
 
-      return response()->json(['enroll'=>1,'user'=>$user,'workshop' => $workshop,'message' => 'workshop sent successfully']);
-        }
+}else{
 
-
-    }
+return response()->json(['enroll'=>1,'workshop' => $workshop,'user'=>$user,'message' => 'workshop sent successfully']);
+}
+}
+}
     public function enroll(Request $request){
 
             $enroll = DB::table('workshop_enrollment')
