@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Like;
 use App\Services\Notification;
+use JWTAuth;
+use Tymon\JWTAuth\Exceptions\JWTException;
 use DB;
 class PostsController extends Controller
 {
@@ -44,8 +46,19 @@ class PostsController extends Controller
         // return response()->json(['cat_id'=>$cat_id,'status' => $request->all(),'message' => 'data saved successfully']);
 
         //Post::create($request->all());
+         $user= JWTAuth::parseToken()->toUser();
+        // $id = Post::create($request->all())->id;
 
-        $id = Post::create($request->all())->id;
+        $id=Post::create(array(
+            'user_id' => $user->id,
+            'category_id' => $request['category_id'],
+            'title' => $request['title'],
+            'description' => $request['description'],
+        ))->id;
+
+
+
+
 
         return response()->json(['post_id' => $id,'message' => 'data saved successfully']);
         // return redirect('/post');
