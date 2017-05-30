@@ -1,4 +1,4 @@
-angular.module('myApp').controller("oneCategory",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,$q){
+angular.module('myApp').controller("oneCategory",function($location,$scope,$http,categories,$routeParams,$rootScope,$timeout,FileUploader,$q,videoconference){
 
 	$rootScope.token = JSON.parse(localStorage.getItem("token"));
 	$rootScope.cur_user = JSON.parse(localStorage.getItem("cur_user"));
