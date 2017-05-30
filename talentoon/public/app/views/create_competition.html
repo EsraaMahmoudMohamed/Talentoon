@@ -1,0 +1,82 @@
+<style>
+    .container{
+        font-size: 10px;
+    }
+</style>
+
+
+<div class="container" >
+    <form ng-submit="submitted=true;newcompetition(addcompetition.$valid)" name="addcompetition"  novalidate >
+
+        <!--`mentor_id`-->
+        <!--`category_id`-->
+        <!--`winner_talent_id`-->
+        <!--`winner_points`-->
+
+        <div class="field">
+            <h4 style="color:Purple ">Competition Level</h4>
+            <input type="text" name="competition_level" required ng-model="competition.competition_level" class="form-control">
+            <p class="error" ng-if="addcompetition.competition_level.$error.required && submitted" >This field is required</p>
+        </div>
+
+
+
+
+
+        <div class="field">
+            <h4 style="color:Purple ">Competition Starts on Date</h4>
+            <input type="date" name="competition_start_date" required ng-model="competition.competition_start_date" class="form-control">
+            <p class="error" ng-if="addcompetition.competition_start_date.$error.required && submitted" >This field is required</p>
+        </div>
+        <div class="field">
+            <h4 style="color:Purple ">Competition Starts on Time</h4>
+            <input type="time" name="competition_start_time" required ng-model="competition.competition_start_time" class="form-control">
+            <p class="error" ng-if="addcompetition.competition_start_time.$error.required && submitted" >This field is required</p>
+        </div>
+
+
+        <div class="field">
+            <h4 style="color:Purple ">Competition Ends on Date</h4>
+            <input type="date" name="competition_end_date" required ng-model="competition.competition_end_date" class="form-control">
+            <p class="error" ng-if="addcompetition.competition_end_date.$error.required && submitted" >This field is required</p>
+        </div>
+        <div class="field">
+            <h4 style="color:Purple ">Competition Ends on Time</h4>
+            <input type="time" name="competition_end_time" required ng-model="competition.competition_end_time" class="form-control">
+            <p class="error" ng-if="addcompetition.competition_end_time.$error.required && submitted" >This field is required</p>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="field">
+            <h4 style="color:Purple ">voting Starts on Date</h4>
+            <input type="date" name="voting_start_date" required ng-model="competition.voting_start_date" class="form-control">
+            <p class="error" ng-if="addcompetition.voting_start_date.$error.required && submitted" >This field is required</p>
+        </div>
+        <div class="field">
+            <h4 style="color:Purple ">voting Starts on Time</h4>
+            <input type="time" name="voting_start_time" required ng-model="competition.voting_start_time" class="form-control">
+            <p class="error" ng-if="addcompetition.voting_start_time.$error.required && submitted" >This field is required</p>
+        </div>
+
+
+        <div class="field">
+            <h4 style="color:Purple ">voting Ends on Date</h4>
+            <input type="date" name="voting_end_date" required ng-model="competition.voting_end_date" class="form-control">
+            <p class="error" ng-if="addcompetition.voting_end_date.$error.required && submitted" >This field is required</p>
+        </div>
+        <div class="field">
+            <h4 style="color:Purple ">voting Ends on Time</h4>
+            <input type="time" name="voting_end_time" required ng-model="competition.voting_end_time" class="form-control">
+            <p class="error" ng-if="addcompetition.voting_end_time.$error.required && submitted" >This field is required</p>
+        </div>
+
+        <button  type="submit" name="button">Save Competition Details</button>
+    </form>
+</div>

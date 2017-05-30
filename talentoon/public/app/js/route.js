@@ -143,6 +143,11 @@ angular.module('myApp').config(['$routeProvider', '$httpProvider', function ($ro
                     controller: 'videoconference'
                 })
 
+                .when('/competition', {
+                    templateUrl: 'views/create_competition.html',
+                    controller: 'competition'
+                })
+
 
     $httpProvider.interceptors.push(['$q', '$location', function ($q, $location) {
                 return {
