@@ -173,7 +173,7 @@ angular.module('myApp').factory("categories", function ($q, $http, $rootScope) {
         }
         ,
         addpost: function (postdata) {
-            // console.log("Post Dataaaa",postdata);
+            console.log("Post Dataaaa",postdata);
             var def = $q.defer();
             // console.log('the url ya esraa', 'http://172.16.2.239:8000/api/categories/'+postdata.category_id+'/posts');
             $http({

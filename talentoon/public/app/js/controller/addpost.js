@@ -4,31 +4,13 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
   $scope.newpost = function(vaild) {
      if (vaild) {
        var category= $routeParams['category_id'];
-       var user_id= 1;
        var postdata = $scope.post;
-
-         // console.log("post file is ",postdata.file)
-
-
        $scope.post.category_id=category
-        $scope.post.user_id=user_id
-       // console.log("for mina post daa",postdata);
-
-
+       console.log("for mina post daa",postdata);
          //here upload
-
-
-
-
-
-
-
-
          //end here upload
-
        categories.addpost(postdata).then(function(data){
-
-           console.log("the post request from server is ",data);
+          //  console.log("the post request from server is ",data);
 //when data retrived from server
            $location.url('/category/'+$scope.post.category_id);
        } , function(err){
@@ -36,9 +18,19 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
 
        });
 
-     }
+     }}
 
-   }
+     $scope.uploadedFile = function(element) {
+         console.log("element is ",element)
+         $rootScope.currentFile = element.files[0];
+         filesuploaded.push(element.files[0]);
+}
+
+});//end of module
+
+
+
+
   //  ,
   //     $scope.submit_post_file= function() {
   //         // $scope.form.image = filesuploaded;
@@ -69,12 +61,6 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
    //
   //     }
       // ,
-      // $scope.uploadedFile = function(element) {
-      //     console.log("element is ",element)
-      //     $rootScope.currentFile = element.files[0];
-          //filesuploaded.push(element.files[0]);
-
-
 
 
 
@@ -90,7 +76,3 @@ angular.module('myApp').controller("addpost",function($scope,$http,categories,$r
           // }
           // reader.readAsDataURL(element.files[0]);
       // }
-
-
-
-});
