@@ -26,7 +26,6 @@ class CommentService
         return Response::json(array('success' => true));
     }
     public function DeleteComment($id){
-        dd($id);
         $user = Comment::find($id);
 
         $user->delete();

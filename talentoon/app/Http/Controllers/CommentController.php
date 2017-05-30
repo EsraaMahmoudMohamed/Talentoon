@@ -44,7 +44,7 @@ class CommentController extends Controller
     public function destroy(Request $request)
     {
         //will be checked later
-        dd('hiii simona');
+        dd($request->all());
         $comment=new CommentService();
         $data=$comment->DeleteComment($request);
 
