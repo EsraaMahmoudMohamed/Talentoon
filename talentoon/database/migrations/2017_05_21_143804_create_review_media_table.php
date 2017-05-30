@@ -36,5 +36,6 @@ class CreateReviewMediaTable extends Migration
     public function down()
     {
         //
+        Schema::dropIfExists('review_media');
     }
 }

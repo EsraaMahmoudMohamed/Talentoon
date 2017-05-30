@@ -26,7 +26,7 @@ class AdminNewsController extends Controller
         $news=DB::table('news')
             ->join('admins', 'admins.id', '=', 'news.admin_id')
             ->join('categories', 'categories.id', '=', 'news.category_id')
-            ->select('admins.*', 'news.*','categories.*')
+            ->select('admins.*', 'news.*','categories.title as cat_title')
             ->get();
         return view('admin.news.index',['news'=>$news]);
     }
